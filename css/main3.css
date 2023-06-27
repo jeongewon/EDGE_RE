@@ -1,13 +1,13 @@
 /* body layout */
 
 
-section >  div {
+.main_total >  .main3_container,.main4_container {
   font-size: 30px;
   text-align: center; 
 } 
 
 .all_btn {  
-  float:right; 
+  position: absolute;
 }
 
 .test_screening li{
@@ -173,12 +173,10 @@ position: relative;
   transform: translateX(-50%);
 }
 
-.main4_content .zz p:first-child{
+.main4_content .zz p{
   font-size: 26px;
 }
-.main4_content .zz p:last-child{
-  font-size: 22px;
-}
+
 
 .main4_content .zz a {
   border:1px solid #3a3a3a;  
