@@ -1,36 +1,42 @@
 /* body layout */
 
-
-.main_total >  .main3_container,.main4_container {
-  font-size: 30px;
+/* 중앙정렬 */
+.main_total >  .main3_container,
+.main4_container {
   text-align: center; 
 } 
 
-.all_btn {  
-  position: absolute;
+/* main3 */
+
+/* 기준잡고 버튼 위치조절 */
+.main3_container {
+  position: relative;
 }
 
-.test_screening li{
+.main3_container .main3_btn {
+  position: absolute;
+  transform: translateY(50%);
+  top:10%;
+  right:1%;
+}
+
+/* 시사회/무대인사 셀(li) 크기,효과,float left */
+.test_screening .screen_cell{
   width:402px;
-  height: 237px;  
+  height:237px;  
   border-radius: 15px;
   overflow: hidden; 
   float: left;
   margin-right:33px;
   position: relative;  
-  box-sizing: content-box;
-  
 }
 
-.test_screening li:last-child {
+/* 셀 마지막에는 margin-right:0 */
+.test_screening .screen_cell:last-child {
   margin-right: 0px ;
 }
 
-
-.test_screening .figcaption{
-  background: #063d6c;
-}
-
+/* 셀안의 img에 트랜지션 및 호버시 이미지 스케일 + 필터로 어둡게 */
 .test_screening .screen_cell img{
   transition: transform 0.3s;
 }
@@ -39,29 +45,23 @@
   filter: brightness(0.7);
 }
 
-.screen_cell h3 {
+
+/* 셀안의 h3 텍스트 효과 */
+
+.screen_cell .cell_tt {
   color: #fff;
   position: absolute;
   left:30px;
-  bottom: 20px;  
-  z-index: 3;
+  bottom: 20px;    
   text-align:left;
-  
+  font-size: 21px;
 }  
 
-.screen_cell h3 span {
+/* 셀안의 span텍스트 효과 */
+.screen_cell .cell_tt .con_tt {
   display: block;  
 }
  
-.main3_content {
-position: relative;
-
-}
-
-.main3_btn {
-  position: absolute;
-  top:50%;
-}
 
 /* main4 */
 
@@ -71,26 +71,18 @@ position: relative;
   float:left;
   box-sizing: border-box;
   overflow: hidden;
+  font-size: 26px;  
+}
+
+
+.main4_theater  {
 
 }
 
-.main4_cellcontrols {
-  
-}
 .main4_title {
  word-spacing: 497px;
 }
 
-.main4_content {
-  font-size: 26px;
-}
-
-.main4_content p  {
-  line-height: 28px;
-
-}
-
-/* main4 */
 .main4_cellbox .qna_cell a{
   border:1px solid #3a3a3a;  
   padding: 12px 30px;
@@ -107,9 +99,7 @@ position: relative;
   margin-top:66px;
   margin-bottom: 75px;  
   text-align:left;  
-  /* margin-left: 60px; */
 }
-
 
 .main4_content {
   position: relative;
@@ -161,11 +151,13 @@ position: relative;
 }
 
 .main4_content p{
-  font-family: 'CJ ONLYONE','sans-serif';
+  font-family: 'CJ ONLYONE','sans-serif';  
+  font-size: 21px;
+  line-height: 27px;
 }
 
 
-.main4_content .zz{
+.main4_content .sns{
   position: absolute;
   color:#fff;  
   text-align: center;
@@ -173,12 +165,9 @@ position: relative;
   transform: translateX(-50%);
 }
 
-.main4_content .zz p{
-  font-size: 26px;
-}
 
 
-.main4_content .zz a {
+.main4_content .main4_theater a {
   border:1px solid #3a3a3a;  
   padding: 12px 30px;
   margin-right:15%;
@@ -209,6 +198,8 @@ position: relative;
   float:left;
 
 }
+
+
 
 /* footer */
 footer * {
@@ -341,17 +332,3 @@ aside .wr div:nth-child(3) i {
   top:30%;  
 }
 
-.all_btn {
-  
-  height: 27px;
-  width: 83px;
-  line-height: 27px;        
-  position: absolute;
-  vertical-align: center;
-  text-align: center;
-  right:0; 
-  transform: translateY(-50%);
-}
-.cell_tt {
-  font-size: 21px;
-}
