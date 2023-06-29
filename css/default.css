@@ -76,10 +76,10 @@
  
 
 /* main4 */
-.main4_left_box{
-  background-color: #d74357;
+.main4_left_box{  
   width:635px;
   height:613px;
+  position: relative;
 }
 .main4_left_box h2 {
   text-align: center;
@@ -92,11 +92,14 @@
 }
 
 .main4_left_box .main4_mapbox {
+  background-color: #d74357;
   position: relative;
+  text-align: center;
 }
 
 .main4_box .main4_left_box .main4_cgv{
-  font-family: 'CJ ONLYONE','sans-serif';    
+  font-family: 'CJ ONLYONE','sans-serif';
+  position: absolute;    
   line-height: 27px;
   color: #fff;  
 }
@@ -111,19 +114,19 @@
 .main4_box .main4_left_box p:first-child span{  
   font-weight: bold;
 }
-.main4_box .main4_left_box span + span{  
-  top:50%;
-  left:127px;
-  font-size: 15px;
-  position: absolute;
-  line-height: 27px;
-}
 
-.main4_left_box .main4_mapbox {
-  text-align: center;
+.main4_mapbox > span {
+  left:35%;
+  text-align: center;  
+  line-height: 27px;
+  transform: translateY(400%);
+  
 }
 .main4_left_box .main4_mapbox a{
-  background: #fff;
+  position: absolute;
+  top:50%;
+  left:50%;
+  background: 1px solid #fff;
   border:1px solid #3a3a3a;
   border-radius: 27.5%;
   display: inline-block; 
