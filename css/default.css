@@ -82,6 +82,7 @@
   height:613px;
   float:left;
   box-sizing: border-box;
+  
 }
 .main4_left_box h2 {
   text-align: center;
@@ -93,8 +94,14 @@
   height: 354px;
 }
 
-.main4_left_box .main4_mapbox {
+.main4_allbox .main4_mapbox {
+  text-align: center;  
   position: relative;
+  width: 635px;
+  height: 354px;
+  background: #8a8a8a;
+
+
 }
 
 .main4_box .main4_left_box .main4_cgv{
@@ -104,12 +111,7 @@
   color: #fff;  
 }
 
-.main4_left_box .main4_mapbox {
-  text-align: center;  
-  position: relative;
-  
-  
-}
+
 .main4_mapbox p, p.span {  
   top:81px;
   left:50%;
@@ -136,7 +138,7 @@
   transform: translate(-50%, -50%);
 }
 
-.main4_mapbox a{
+.main4_mapleft a{
   position: absolute;
   line-height: 55px;
   width:160px;
@@ -158,10 +160,53 @@ left:50%;
 transform: translate(-50%);
 } 
 
+
 .main4_qnabox {
   width:506px;
-  width: 226px;
+  height: 226px;
+  margin:74px 70px 58px 66px;  
+  position: absolute;  
   background: yellow;
+}
+
+
+.main4_qnabox h4 {
+  font-size: 23px;
+}
+.main4_qnabox h3 {
+  font-size: 43px;
+  font-weight: bold;
+}
+.main4_qnabox h5 {
+  font-size: 14px;
+}
+
+.main4_qnabox h6 {
+  font-size: 12px;
+}
+
+.main4_qnabox .snsbtn li , .main4_qnabox .helpbtn li {
+  float:left;    
+  padding-left:10px;
+}
+
+.main4_qnabox .helpbtn li a {
+  width:106px;
+  height:42px;
+  border: 1px solid #8a8a8a;  
+  background: #fff;
+  font-size: 15px;
+  line-height: 27px;
+  display: inline-block;
+}
+.main4_qnabox .snsbtn li a {
+  width:40px;
+  height:40px;
+  border-radius: 50%;  
+  background: 1px solid green;
+  text-indent: -9999999em;
+  display: block;
+  
 }
 
 /* footer */
