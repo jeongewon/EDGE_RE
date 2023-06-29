@@ -50,7 +50,7 @@
 
 /* 셀안의 img에 트랜지션 및 호버시 이미지 스케일 + 필터로 어둡게 */
 .test_screening .screen_cell img{
-  transition: transform 0.3s;
+  transition: transform .3s ease-in-out;
 }
 .test_screening .screen_cell:hover img{
   transform: scale(1.1);   
@@ -76,9 +76,12 @@
  
 
 /* main4 */
-.main4_left_box{  
+
+.main4_allbox{  
   width:635px;
   height:613px;
+  float:left;
+  box-sizing: border-box;
 }
 .main4_left_box h2 {
   text-align: center;
@@ -96,54 +99,70 @@
 
 .main4_box .main4_left_box .main4_cgv{
   font-family: 'CJ ONLYONE','sans-serif';    
+  padding-top: 81px;
   line-height: 27px;
   color: #fff;  
 }
 
-.main4_box .main4_left_box p:first-child{  
-  top:79px;
-  left:128px;
+.main4_left_box .main4_mapbox {
+  text-align: center;  
+  position: relative;
+  
+  
+}
+.main4_mapbox p, p.span {  
+  top:81px;
+  left:50%;
+  padding-bottom: 26px;
   position: absolute;
   font-size: 21px;
-  line-height: 27px;
+  line-height: 27px;  
+  transform: translate(-50%, -50%);  
+  white-space: nowrap;
 }
-.main4_box .main4_left_box p:first-child span{  
-  font-weight: bold;
+.main4_mapbox p span{ 
+  font-weight: bold;  
 }
-.main4_box .main4_left_box span:nth-child(2){  
-  transform: translateY(150px);
-  right:35%;
-  font-size: 15px;
-  position: absolute;
-  line-height: 27px;
-}
-
-.main4_left_box .main4_mapbox {
-  text-align: center;
-  position: relative;
-}
-.main4_left_box .main4_mapbox button{
-  position: absolute;
+.main4_mapbox span:nth-child(2){  
+  transform: translateY(20px);  
+  margin-top: 20px;  
+  top:81px;
   left:50%;
-  top:80%;  
+  text-align: center;
+  font-size: 22px;
+  position: absolute;
+  line-height: 27px;
+  
+  transform: translate(-50%, -50%);
+}
+
+.main4_mapbox a{
+  position: absolute;
+  line-height: 55px;
+  width:160px;
+  height:55px;
+  left:50%;
+  bottom:81px;
   background: #fff;  
-  border-radius: 26.5px;    
   text-align: center;
-  text-align: center;
-  vertical-align: center;
+  vertical-align: top;
+  display: inline-block;
+  border-radius:27.5px;
+  transform: translate(-50%);  
+  font-size: 20px;
+  font-weight: bold;  
 } 
-.main4_left_box .main4_mapbox button a{
-  background: #fff;    
-  display: inline-block; 
-  vertical-align: middle;
-    font-size: 12px;
-    top:50%;
-  text-align: center;
-  vertical-align: center;
+.main4_mapbox i{
+font-size:18px;
+left:50%;
+transform: translate(-50%);
 } 
 
-
-
+.main4_qnabox {
+  width:506px;
+  width: 226px;
+  background: yellow;
+}
 
 /* footer */
 footer * {
