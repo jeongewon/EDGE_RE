@@ -480,11 +480,12 @@
     position: relative;
     margin-right: 40px;
     float: left;
+    text-align: center;
 }
 
 .MovieChart_slide h3 {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0 12px;
     letter-spacing: -0.03em;
 }
 
@@ -498,10 +499,11 @@
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-}
-
-.poster:after {
+  }
+  
+  .poster:after {
     content:'';
+    transition: 0.2s;
     position: absolute;
     left: 0;
     right: 0;
@@ -529,8 +531,9 @@
 }
 
 .MovieChart_wrap span {
-    float: left;
+    display: inline-block;
 }
+
 
 .MovieChart_wrap span:after{
     display: block;
@@ -538,20 +541,16 @@
     content: '';
 }
 
-.egg {
-    color: #303030;
-    margin: 15px 12px 0 0;
+.movieInfo *{
+  vertical-align: middle;
+  line-height: 26px;
 }
 
-.egg img{
-    vertical-align: top;
+.movieInfo span {
+  margin-right: 8px;
 }
 
-.screenType {
-    margin-top: 10px;
-}
-
-.poster_hover a{
+.movieChart_btn a{
     position: absolute;
     font-size: 17px;
     width: 130px;
@@ -560,6 +559,7 @@
     text-align: center;
     border-radius: 12px;
     line-height: 40px;
+    display: none;
 }
 
 .poster:hover:after {
@@ -567,9 +567,7 @@
     opacity: 0.5;
 }
 
-.poster_hover {
-    display: none;
-}
+
 
 
 .ticketing {
