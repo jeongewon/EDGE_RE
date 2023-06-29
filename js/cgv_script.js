@@ -1,7 +1,40 @@
 /* HEADER 시작 (유림) */
+/* ADD BANNER SLIDE*/
+let adWrapper = document.querySelector('.ad_wrapper'),
+    adSlide = document.querySelectorAll('.ad_wrapper li'),
+    adCount = adSlide.length,
+    curentAddIndex = 0,
+    adTimer,
+    adWidth = 1920;
+
+    adWrapper.style.width = `${adCount * adWidth}px`;
+  
+
+function adMove(num){
+  adWrapper.style.transform = `translateX(${adWidth*-num}px)`;
+  curentAddIndex = num;
+}
+function adAutoMove(){
+  adTimer = setInterval(()=>{
+  //let nextIdx = curentSlideIndex+1;
+  let nextIdx = (curentAddIndex+1)%slideCount;
+  adMove(nextIdx);
+}, 3000);
+}
+adAutoMove();
+
+// slideWrapper에 mouseenter 이벤트가 일어나면 자동 슬라이드 멈추기
+adWrapper.addEventListener('mouseenter',()=>{
+  adMove(adTimer);
+})
+adWrapper.addEventListener('mouseleave',()=>{
+  adMove()
+})
+
+
 /* ADD BANNER */
 let adClose = document.querySelector('.ad_close'),
-    ad =  document.querySelector('.ad_wrap');
+    ad = document.querySelector('.ad_wrap');
 
 adClose.addEventListener('click',()=>{
   ad.classList.toggle('active');

@@ -10,17 +10,22 @@
     <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
-<!-- HEADER 시작 (유림21) -->
+<!-- HEADER 시작 (유림) -->
   <header>
     <section class="ad_top"> 
+      <h2 class="hidden">Ad Banner</h2>
       <div class="ad_wrap">
-        <a href="#"><img src="images/add_elemental.jpg" alt=""></a>
+        <ul class="ad_wrapper cf">
+          <li><a href="#"><img src="images/add_elemental.jpg" alt="영화 엘리멘탈 광고 배너"></a></li>
+          <li><a href="#"><img src="images/add_doraemon.jpg" alt="영화 도라에몽 광고 배너"></a></li>
+          <li><a href="#"><img src="images/add_mission.jpg" alt="영화 미션임파서블 광고 배너"></a></li>
+        </ul>
       </div>
       <button class="ad_close"><i class="fa-solid fa-xmark"></i></button>
     </section>
     <div class="header container sm_pd">
       <h1 class="logo">
-        <a href=""><img src="images/logo.png" alt="CGV"></a>
+        <a href="">CGV</a>
         <span>CULTUREFLEX</span>
       </h1>
       <nav class="user_nav">
@@ -65,11 +70,11 @@
               </ul>   
               <div class="past_qr">
                 <a href="#" class="past">
-                  <img src="images/paconi.png" alt="">
+                  <img src="images/paconi.png" alt="패스트 오더">
                   <p>패스트오더</p>
                 </a>
                 <div class="qr">
-                  <img src="images/App_qrcode.gif" alt="">
+                  <img src="images/App_qrcode.gif" alt="CGV 앱 다운로드 QR코드">
                   <p>앱 다운로드<br><strong>CGV앱</strong>에서 더 편리하게 이용하세요</p>
                 </div> 
               </div>             
@@ -117,27 +122,26 @@
     <div id="lightbox">
       <div class="modal_box">
         <div class="modal_left">
-            <div class="search_m">
-                <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="search_m">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h2>영화 검색</h2>
+          <form action="">
+            <label for="moviesearch">영화명</label>
+            <div class="search_box">
+              <input type="text" name="moviesearch" id="moviesearch" placeholder="Search...">
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <h2>영화 검색</h2>
-            <form action="">
-              <label for="moviesearch">영화명</label>
-              <div class="search_box">
-                <input type="text" name="moviesearch" id="moviesearch" placeholder="Search...">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-              </div>
-              
-            </form>
-            <div class="latest_wrap">
-              <h3>최근검색어</h3>
-              <a href="">전체삭제</a>
-            </div>
-            <ul class="latest cf">
-                <li>해리포터 <i class="fa-solid fa-xmark"></i></li>
-                <li>범죄도시3 <i class="fa-solid fa-xmark"></i></li>
-                <li>더 퍼스트 슬램덩크 <i class="fa-solid fa-xmark"></i></li>
-            </ul>
+          </form>
+          <div class="latest_wrap">
+            <h3>최근검색어</h3>
+            <a href="">전체삭제</a>
+          </div>
+          <ul class="latest cf">
+            <li>해리포터 <i class="fa-solid fa-xmark"></i></li>
+            <li>범죄도시3 <i class="fa-solid fa-xmark"></i></li>
+            <li>더 퍼스트 슬램덩크 <i class="fa-solid fa-xmark"></i></li>
+          </ul>
         </div>
         <div class="modal_right">
             <h2>인기 검색어</h2>

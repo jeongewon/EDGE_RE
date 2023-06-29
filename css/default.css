@@ -2,14 +2,25 @@
 /* ADD BANNER */
 .ad_top{
     position: relative;
-    background:#000;
+    background:#16547c;
+    width: 1920px;
+  }
+  /*슬라이드 5,760 */
+ .ad_wrapper{
+    transition: 0.5s ease-in-out;
+  }
+  .ad_wrapper li{
+    float: left;
   }
   .ad_top img{
-    width: 100%;
+    /* width: 100%; */
     height: 110px;
     z-index: 10;
     transition: height .3s ease-in;
   }
+  /* .ad_wrap{
+    height: 110px;
+  } */
   .ad_wrap.active{
     height: 0px;
     overflow: hidden;
@@ -39,11 +50,13 @@
     text-align: center;
     position: relative;
   } 
-  .logo img{
+  .logo a{
+    background: url(/images/logo.png) no-repeat center/cover;
+    display: block;
     width: 117px;
     height: 53px; 
-    display: block;
     margin: 0 auto 18px;
+    text-indent: -9999em;
   }
   .logo span{
     font-size: 22px;
@@ -380,8 +393,8 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(29, 31, 33, .7);
-    transition: opacity .3s ease-in;
+    background-color: rgba(29, 31, 33, .9);
+    transition: opacity .1s ease-in;
     z-index: 20;
   }
   #lightbox.visible {
