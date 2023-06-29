@@ -86,11 +86,29 @@
   vertical-align: middle;
 }
 
+<<<<<<< HEAD
 .main4_left_box img {
   width: 635px;
   height: 354px;
 }
 
+=======
+.main4_left_box{
+  background-color: #d74357;
+  width:635px;
+  height:613px;
+}
+.main4_left_box h2 {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.main4_left_box img {
+  width: 635px;
+  height: 354px;
+}
+
+>>>>>>> parent of 3822bdf (수정 :html및 css 수정)
 .main4_left_box .main4_mapbox {
   position: relative;
 }
@@ -121,6 +139,7 @@
 
 .main4_left_box .main4_mapbox {
   text-align: center;
+<<<<<<< HEAD
 }
 .main4_left_box .main4_mapbox a{
   background: #fff;
@@ -130,8 +149,23 @@
   font-size: 20px;
   text-align: center;
   vertical-align: center;
+=======
+>>>>>>> parent of 3822bdf (수정 :html및 css 수정)
 }
+.main4_left_box .main4_mapbox a{
+  background: #fff;
+  border:1px solid #3a3a3a;
+  border-radius: 27.5%;
+  display: inline-block; 
+  font-size: 20px;
+  text-align: center;
+  vertical-align: center;
+} 
 
+
+
+
+<<<<<<< HEAD
 /*
 
 .main4_left_box{
@@ -193,6 +227,8 @@
 
 
 
+=======
+>>>>>>> parent of 3822bdf (수정 :html및 css 수정)
 
 /* footer */
 footer * {
