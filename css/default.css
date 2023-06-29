@@ -22,7 +22,7 @@
 }
 
 /* EVENT 섹션 */
-.event h2 {text-align: center;}
+.event h2, .special h2 {text-align: center;}
 .event figure > a {
   display: inline-block; border-radius: 15px; overflow: hidden; 
   vertical-align: top;
@@ -47,6 +47,30 @@
 .event .next_btn {left: calc(100% - 25px);}
 
 /* 특별관 섹션 */
+.spe_main {float: left; margin-right: 20px;}
+.special figure .spe_sub {float: right;}
+.special figure .spe_sub .screenx {margin-bottom: 20px;}
+.special article > a {display: inline-block;}
+.special article > a img {border-radius: 5px; vertical-align: top;}
+.special  article {position: relative;}
+.special .spe_desc {
+  position: absolute; left:30px; bottom: 30px; color: #fff; z-index: 1;
+}
+.special .spe_desc h3 {
+  font-size: 40px; font-weight: bold; letter-spacing: -0.01em; 
+  text-transform: uppercase;
+}
+.special .spe_desc p {
+  font-size: 30px; font-weight: 500; letter-spacing: -0.03em;
+  position: absolute; white-space: nowrap; bottom: 50px; 
+}
+.special article .spe_hover {
+  position: absolute; left: 0; right: 0; opacity: 0;
+  transition: all 0.5s ease-out;}
+.special article:hover .spe_hover {opacity: 1;}
+.special .special_wrap .spe_tt {position: relative;}
+.special figure {position: relative;}
+.special .all_btn {position: absolute; right: 0; top: -76.1px;}
 /* MAIN_2 끝 (수연) */
 
 /* MAIN_3 시작 (정석) */
