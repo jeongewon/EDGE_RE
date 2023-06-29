@@ -76,18 +76,7 @@
  
 
 /* main4 */
-.main4_left_box{
-  background-color: #d74357;
-  width:635px;
-  height:613px;
-}
-.main4_left_box h2 {
-  text-align: center;
-  vertical-align: middle;
-}
-
-.main4_left_box{
-  background-color: #d74357;
+.main4_left_box{  
   width:635px;
   height:613px;
 }
@@ -121,9 +110,9 @@
 .main4_box .main4_left_box p:first-child span{  
   font-weight: bold;
 }
-.main4_box .main4_left_box span + span{  
-  top:50%;
-  left:127px;
+.main4_box .main4_left_box span:nth-child(2){  
+  transform: translateY(150px);
+  right:35%;
   font-size: 15px;
   position: absolute;
   line-height: 27px;
@@ -131,17 +120,27 @@
 
 .main4_left_box .main4_mapbox {
   text-align: center;
+  position: relative;
 }
-.main4_left_box .main4_mapbox a{
-  background: #fff;
-  border:1px solid #3a3a3a;
-  border-radius: 27.5%;
-  display: inline-block; 
-  font-size: 20px;
+.main4_left_box .main4_mapbox button{
+  position: absolute;
+  left:50%;
+  top:80%;  
+  background: #fff;  
+  border-radius: 26.5px;    
+  text-align: center;
   text-align: center;
   vertical-align: center;
 } 
-
+.main4_left_box .main4_mapbox button a{
+  background: #fff;    
+  display: inline-block; 
+  vertical-align: middle;
+    font-size: 12px;
+    top:50%;
+  text-align: center;
+  vertical-align: center;
+} 
 
 
 
