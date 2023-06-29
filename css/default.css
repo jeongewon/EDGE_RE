@@ -53,7 +53,7 @@
   transition: transform 0.3s;
 }
 .test_screening .screen_cell:hover img{
-  transform: scale(1.5);   
+  transform: scale(1.1);   
   filter: brightness(0.7);
 }
 
@@ -72,14 +72,14 @@
 /* 셀안의 span텍스트 효과 */
 .screen_cell .cell_tt .con_tt {
   display: block;  
-}
+ }
  
 
 /* main4 */
-.main4_left_box{  
+.main4_left_box{
+  background-color: #d74357;
   width:635px;
   height:613px;
-  position: relative;
 }
 .main4_left_box h2 {
   text-align: center;
@@ -92,14 +92,11 @@
 }
 
 .main4_left_box .main4_mapbox {
-  background-color: #d74357;
   position: relative;
-  text-align: center;
 }
 
 .main4_box .main4_left_box .main4_cgv{
-  font-family: 'CJ ONLYONE','sans-serif';
-  position: absolute;    
+  font-family: 'CJ ONLYONE','sans-serif';    
   line-height: 27px;
   color: #fff;  
 }
@@ -114,19 +111,19 @@
 .main4_box .main4_left_box p:first-child span{  
   font-weight: bold;
 }
-
-.main4_mapbox > span {
-  left:35%;
-  text-align: center;  
+.main4_box .main4_left_box span + span{  
+  top:50%;
+  left:127px;
+  font-size: 15px;
+  position: absolute;
   line-height: 27px;
-  transform: translateY(400%);
-  
+}
+
+.main4_left_box .main4_mapbox {
+  text-align: center;
 }
 .main4_left_box .main4_mapbox a{
-  position: absolute;
-  top:50%;
-  left:50%;
-  background: 1px solid #fff;
+  background: #fff;
   border:1px solid #3a3a3a;
   border-radius: 27.5%;
   display: inline-block; 
@@ -138,147 +135,38 @@
 /*
 
 
-
-
-.main4_content {
-  width:635px;
-  height:354px;
-  float:left;
-  box-sizing: border-box;
-  overflow: hidden;
-  font-size: 26px;  
-}
-
-
-.main4_theater  {
-
-}
-
-.main4_title {
- word-spacing: 497px;
-}
-
-.main4_cellbox .qna_cell a{
-  border:1px solid #3a3a3a;  
-  padding: 12px 30px;
-  margin-right:15%;
-  display: inline-block; 
-  font-size: 15px;
-  text-align: center;
-  line-height: 2;
-
-  vertical-align: center;
-}
-
-.main4_content > div {
-  margin-top:66px;
-  margin-bottom: 75px;  
-  text-align:left;  
-}
-
-.main4_content {
-  position: relative;
-}
-
-.main4_cellbox {
+.main4_left_box, .main4_right_box {
+  width: 636px;
+  height:356px;
   position: relative;
 }
 
 
-.main4_content .qna_cell a:first-child{
+.main4_left_box p, span {
   position: absolute;
-  left:50px;
-  top:180px;
-}
-.main4_content .qna_cell a:last-child{
-  position: absolute;
-  left:180px;
-  top:180px;
+  text-align: center;  
+  left:25%;
+  top:50%;  
+  color:#fff;
 }
 
-.main4_content h3 {
-  font-size:  43px;
-  line-height: 40px;
-  position: absolute;
-  right:234px;
-
-
-}
-.main4_content h4 {
-  font-size:  23px;
-  line-height: 40px;
-  position: absolute;
-  top:70px;
+.main4_left_box p {
+  transform:translateY(-30px);
   
 }
-.main4_content h2 {
-  font-size:  14px;  
-  line-height: 28px;
-  position: absolute;
-  top:120px;
-  
-}
-.main4_content h5 {
-  font-size: 12px;
-  line-height: 28px;
-  position: absolute;
-  top:150px;
-}
-
-.main4_content p{
-  font-family: 'CJ ONLYONE','sans-serif';  
-  font-size: 21px;
-  line-height: 27px;
-}
-
-
-.main4_content .sns{
-  position: absolute;
-  color:#fff;  
-  text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
-
-.main4_content .main4_theater a {
-  border:1px solid #3a3a3a;  
-  padding: 12px 30px;
-  margin-right:15%;
-  display: inline-block; 
-  font-size: 15px;
-  text-align: center;
-  vertical-align: center;
-  z-index: 3;
-}
-
-.main4_cellcontrols {
-  padding-left:50px;
-}
-
-
-.main4_cellbox ul {
-  position: absolute;
-}
-
-.main4_cellbox ul a {
-  width: 40px;
-  height: 40px;
+.main4_left_box span {
+  transform:translateY(150px);
+  transform: translateX(80px);
   display: block;
-  float:left;
 }
 
-.main4_cellbox ul {
-  float:left;
-
-} */
-
-
-
-
-
-
+.main3_left_box a {
+  border-radius: 50%;
+  background: 1px solid red;
+  width:50px;
+  height:50px;  
+  display: inline-block;  
+}
 
 /* footer */
 footer * {
@@ -361,7 +249,7 @@ aside .wr p a {
   width:76px;
   height:100px;
   background-color: none;
-  background-image: url(../images/paconi_07.png);
+  background-image: url(../images/paconi_05.png);
   background-repeat: no-repeat;
   display: block;
   text-indent: -9999px;  
