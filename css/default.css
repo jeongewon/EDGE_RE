@@ -341,7 +341,7 @@ footer li:first-child {
 
 aside {
   position: fixed;
-  right:15%;
+  right:30%;
   bottom:40%;
 }
 aside .wr {
@@ -397,9 +397,23 @@ aside .circle_pop {
   font-size: 30px;  
   left:50%;
   top:50%;
-  transform:translate(-50%, -50%);  
+  transform:translate(-50%, -50%);    
+}
+.circle_up a ,.circle_down a  {
+  display: block;
 }
 
+.circle_up a i{
+  transform: rotate(0deg);  
+  transform: translateX(-20px);
+  transition: 0.3s;
+}
+
+
+.circle_up:hover a i {
+  transform: rotate(90deg);
+  transform-origin: top;
+}
 
 @keyframes paconi {
   0% {top:60%;}     
