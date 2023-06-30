@@ -15,12 +15,7 @@
 /* 중앙정렬 */
 .main_total >  .main3_container{
   text-align: center; 
-}
-
-.section_pd {
-  padding-top: 54px 0;
-}
-
+} 
 
 /* main3 */
 
@@ -63,11 +58,26 @@
 }
 .test_screening .screen_cell:hover img{
   transform: scale(1.1);   
-  filter: brightness(0.7);
+  /* filter: brightness(0.7); */
 }
 
+.screen_cell figure {
+  position: relative;
+  background: rgb(0,0,0);
+}
+.screen_cell figure:hover::after
+{ 
+  background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
+  content:'';
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* z-index: 2; */
+}
 
-/* 셀안의 h3 텍스트 효과 */
+/* 셀안의 h3 텍스트 효과  */
 
 .screen_cell .cell_tt {
   color: #fff;
@@ -76,6 +86,7 @@
   bottom: 20px;    
   text-align:left;
   font-size: 21px;
+  z-index: 10;
 }  
 
 /* 셀안의 span텍스트 효과 */
@@ -87,7 +98,7 @@
 /* main4 */
 
 .main4_allbox{  
-  width:635px;
+  width:635px;  
   float:left;
   box-sizing: border-box;
   
@@ -106,6 +117,7 @@
   /* text-align: center;   */
   position: relative;
   width: 635px;
+  height: 354px;
   background: #8a8a8a;
 
 
@@ -240,6 +252,8 @@ margin-top: 13px;
 
 
 /* footer */
+
+
 footer * {
   font-size: 13px;
   text-align: left;
@@ -274,8 +288,10 @@ footer li:first-child {
 .footer_btm {
   position: relative;
 }
-.footer_btm form {  
-  
+.footer_btm form {
+  display: inline-block;
+  position: absolute;
+  right:0;
   top:110px;
 }
 
@@ -362,4 +378,5 @@ aside .wr div:nth-child(3) i {
   line-height: center;
   top:30%;  
 }
+
 /* MAIN_3 끝 (정석) */
