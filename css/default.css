@@ -295,23 +295,23 @@ footer li:first-child {
 .footer_upper {
    box-shadow: 1px 0 rgba(0, 0, 0, 0.1);  
 } */
-.footer_btm p {  
+.footer_write p {  
   white-space: pre-line;
   line-height: 27px;
 }
 
 
-.footer_btm {
+.footer_write {
   position: relative;
 }
-.footer_btm form {
+.footer_write form {
   display: inline-block;
   position: absolute;
   right:0;
-  top:110px;
+  bottom:10%;
 }
 
-.footer_btm form a {
+.footer_write form a {
   display: inline-block;
   color: white;
   background: red;
@@ -319,16 +319,22 @@ footer li:first-child {
   cursor: pointer;
 }
 
-.footer_btm #cgv_chain *{
+.footer_write #cgv_chain *{
   cursor:pointer;
 }
 
-.footer_btm span a {
+.footer_write span a {
   color:#d74357;
   font-weight: bold;
 }
 
+.footer_box {
+  padding:41px 0;
+}
 
+.footer_write {
+  margin-top: 47px;
+}
 
 /* aside */
  
@@ -342,17 +348,16 @@ aside .wr {
   margin: 0 0 58px 0;
 }
 aside .wr p a {
-  width:76px;
-  height:100px;
-  background-color: none;
-  background-image: url(../images/paconi_05.png);
+  width:230px;
+  height:204px;
+  background-image: url(../images/paconi_btn_07.png); 
   background-repeat: no-repeat;
   display: block;
   text-indent: -9999px;  
   margin: 0 auto;
   animation:paconi 1s ease-in-out infinite;
   position: absolute; 
-  top:-40%;  
+  /* top:-40%;   */
   left:calc(37%);
 }
 aside .wr h1{
