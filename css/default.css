@@ -1,4 +1,68 @@
 /* HEADER 시작 (유림) */
+/* 팝업 */
+header{
+  position: relative;
+}
+.notice_portfolio{
+  position: absolute;
+  right: 1400px;
+  top: 50px;
+  width: 320px;
+  height: 560px;
+  padding: 30px;
+  border: 3px solid #063d6c;
+  background: #f8f8f8;
+  color:#454545;
+  z-index: 1000;
+}
+.notice_portfolio strong{
+  font-weight: 700;
+}
+.popup_logo{
+  width: 117px;
+  height: 53px;
+  display: block;
+  margin: 0 auto 40px;
+}
+#notice_tt{
+  line-height: 1.2em;
+  margin-bottom: 14px;
+}
+#notice_tt h2{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+#notice_tt p{
+  font-size: 12px;
+}
+.notice_portfolio h2{
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.8em;
+}
+.notice_portfolio h3{
+  font-size: 13px;
+  line-height: 1.8em;
+}
+.popup_close{
+  background: none;
+  border: none;
+  position: absolute;
+  top:15px; 
+  right: 15px;
+  font-size: 20px;
+  color: #063d6c;
+}
+.cookie{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.cookie label{
+  font-size: 10px;
+  vertical-align: 3px;
+}
+
 /* ADD BANNER */
 .ad_top{
     position: relative;
