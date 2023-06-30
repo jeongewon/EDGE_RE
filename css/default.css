@@ -15,7 +15,12 @@
 /* 중앙정렬 */
 .main_total >  .main3_container{
   text-align: center; 
-} 
+}
+
+.section_pd {
+  padding-top: 54px 0;
+}
+
 
 /* main3 */
 
@@ -83,7 +88,6 @@
 
 .main4_allbox{  
   width:635px;
-  height:613px;
   float:left;
   box-sizing: border-box;
   
@@ -102,7 +106,6 @@
   /* text-align: center;   */
   position: relative;
   width: 635px;
-  height: 354px;
   background: #8a8a8a;
 
 
@@ -271,9 +274,8 @@ footer li:first-child {
 .footer_btm {
   position: relative;
 }
-.footer_btm form {
-  position: absolute;
-  right:0;
+.footer_btm form {  
+  
   top:110px;
 }
 
