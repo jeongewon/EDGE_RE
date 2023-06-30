@@ -1,4 +1,11 @@
 /* HEADER 시작 (유림) */
+
+:focus{ outline: 3px solid rgba(255, 169, 169, 0.6); 
+  border-radius: 3px;}
+  /* :focus:not(:focus-visible){
+    outline: none;
+  } */
+  
 /* ADD BANNER */
 .ad_top{
     position: relative;
