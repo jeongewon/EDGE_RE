@@ -15,6 +15,7 @@
   background: #fff; color: #3a3a3a; line-height: 81px;
   letter-spacing: -0.03em; padding: 4px 16px;
   border: 1px solid #ebebeb; border-radius: 15px;
+  transition: all 0.25s ease-in-out;
 }
 .keyword li:hover a {
   background: #e64947; color: #fff; font-weight: 500;
@@ -23,6 +24,14 @@
 
 /* EVENT 섹션 */
 .event h2, .special h2 {text-align: center;}
+.event .event_move_wrapper {
+  position: relative; width: 1272px; height: 302px; overflow: hidden;
+}
+.event .event_move_wrapper .event_lists { 
+  position: relative; width: 1272px; height: 302px;
+}
+.event .event_lists li {position: absolute; width: 402px; left: 0; top: 0;}
+.event .event_move_wrapper .event_lists.animated {transition: left 0.5s ease-in;}
 .event figure > a {
   display: inline-block; border-radius: 15px; overflow: hidden; 
   vertical-align: top;
@@ -32,19 +41,18 @@
   transition: all 0.3s ease-in-out;
 }
 .event figure:hover img {transform: scale(1.1);}
-.event li {float: left;}
 .event li:not(:last-child) {padding-right: 33px;}
 .event figcaption a {color: #3a3a3a;}
 .event figcaption h3 {padding: 15px 0 10px;}
 .event figcaption p {letter-spacing: -0.03em;}
-/* .event_wrap의 높이: 382px, .event h2의 높이: 40px, .all_btn의 높이: 32.75px */
+/* .event_wrap의 높이: 382px, .event h2의 높이: 40px, .all_btn의 높이: 32px */
 .event_wrap {position: relative;}
-/* (382 - 40) + (40의 50%) - (32.75 / 2) */
-.event .all_btn {position: absolute; right: 0; bottom: 345.625px;}
+/* (382 - 40) + (40의 50%) - (32 / 2) */
+.event .all_btn {position: absolute; right: 0; bottom: 346px;}
 .event .com_btn i {line-height: 50px;}
-.event .carousel {position: absolute; top: calc(100% - 208.5px); }
-.event .pre_btn {right: calc(100% - 25px);}
-.event .next_btn {left: calc(100% - 25px);}
+.event .move_controls {position: relative; top: -208.5px;}
+.event .pre_btn {position: absolute; left: -25px;}
+.event .next_btn {position: absolute; right: -25px;}
 
 /* 특별관 섹션 */
 .spe_main {float: left; margin-right: 20px;}
