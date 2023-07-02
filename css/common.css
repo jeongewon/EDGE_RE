@@ -77,13 +77,13 @@ body {
 }
 
 /* colors */
-.light-gray-bg { background: #ebebeb;}
-.dark-g1 { color: #3a3a3a; }
-.dark-g2 { color: #8a8a8a; }
-.dark-g3 { color: #303030; }
-.navy-bg { background: #063d6c; }
+.light_gray-bg { background: #ebebeb;}
+.dark_g1 { color: #3a3a3a; }
+.dark_g2 { color: #8a8a8a; }
+.dark_g3 { color: #303030; }
+.navy_bg { background: #063d6c; }
 .navy { color: #063d6c; }
-.highlight-bg { background: #e64947; }
+.highlight_bg { background: #e64947; }
 .highlight { color: #e64947; }
 .secondary { color: #f5a39d; }
 
@@ -101,10 +101,10 @@ body {
 .all_btn i { margin-right: 6px; }       
 
 .carousel {
-  background: rgba(58, 58, 58, .7);
   width:50px;
-  height:50px;
-  border-width: 50%;
+  background: rgba(58, 58, 58, .7);
+  border-radius:50%;
+  height:50px;  
   color:#fff;
   font-size: 32px;
 }

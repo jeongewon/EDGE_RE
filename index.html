@@ -1,304 +1,873 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CGV</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/main_1.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
-    <!-- HEADER 시작 (유림) -->
-    <!-- HEADER 끝 (유림) -->
-    
-    <!-- MAIN_1 시작 (이원) -->
+<!-- HEADER 시작 (유림) -->
+  <header>
+    <section class="ad_top"> 
+      <div class="ad_wrap">
+        <a href="#"><img src="images/add_elemental.jpg" alt=""></a>
+      </div>
+      <button class="ad_close"><i class="fa-solid fa-xmark"></i></button>
+    </section>
+    <div class="header container sm_pd">
+      <h1 class="logo">
+        <a href=""><img src="images/logo.png" alt="CGV"></a>
+        <span>CULTUREFLEX</span>
+      </h1>
+      <nav class="user_nav">
+        <ul class="cf">
+          <li class="user_li">
+            <a href="#">
+              <i class="fa-solid fa-lock"></i>
+              <span>로그인</span> 
+            </a>
+          </li>
+          <li class="user_li">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+                <span>회원가입</span> 
+            </a>
+          </li>
+          <li class="user_li">
+            <a href="#">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>MY CGV</span> 
+            </a>
+          </li>
+          <li>
+            <div class="search_btn" id="modal_open">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section class="menuwrap">
+      <div class="menu_bg">
+        <div class="main_menu">
+          <ul class="menu cf">
+            <li>
+              <h2 class="menu_li"><a href="#">영화</a></h2>   
+              <ul class="submenu devide">
+                  <li><a href="#">영화</a></li>
+                  <li><a href="#">무비차트</a></li>
+                  <li><a href="#">아트하우스</a></li>
+                  <li><a href="#">ICECON</a></li>
+              </ul>   
+              <div class="past_qr">
+                <a href="#" class="past">
+                  <img src="images/paconi.png" alt="">
+                  <p>패스트오더</p>
+                </a>
+                <div class="qr">
+                  <img src="images/App_qrcode.gif" alt="">
+                  <p>앱 다운로드<br><strong>CGV앱</strong>에서 더 편리하게 이용하세요</p>
+                </div> 
+              </div>             
+            </li>
+            <li>
+              <h2 class="menu_li"><a href="#">극장</a></h2>
+              <ul class="submenu devide">
+                  <li><a href="#">극장</a></li>
+                  <li><a href="#">CGV극장</a></li>
+                  <li><a href="#">특별관</a></li>
+              </ul>                      
+            </li>
+            <li>
+              <h2 class="menu_li"><a href="#">예매</a></h2>  
+              <ul class="submenu devide">
+                  <li><a href="#">예매</a></li>
+                  <li><a href="#">빠른예매</a></li>
+                  <li><a href="#">상영스케줄</a></li>
+              </ul>               
+            </li>
+            <li>
+              <h2 class="menu_li"><a href="#">스토어</a></h2> 
+              <ul class="submenu devide">
+                  <li><a href="#">스토어</a></li>
+                  <li><a href="#">패키지</a></li>
+                  <li><a href="#">영화관람권</a></li>
+                  <li><a href="#">기프트카드</a></li>
+                  <li><a href="#">콤보</a></li>
+                  <li><a href="#">씨네샵</a></li>
+              </ul>   
+            </li>
+            <li>
+              <h2 class="menu_li"><a href="#">프로모션</a></h2>    
+              <ul class="submenu">
+                  <li><a href="#">프로모션</a></li>
+                  <li><a href="#">영화/예매</a></li>
+                  <li><a href="#">CGV 할인정보</a></li>
+                  <li><a href="#">멤버십/클럽</a></li>
+              </ul>            
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div id="lightbox">
+      <div class="modal_box">
+        <div class="modal_left">
+            <div class="search_m">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h2>영화 검색</h2>
+            <form action="">
+              <label for="moviesearch">영화명</label>
+              <div class="search_box">
+                <input type="text" name="moviesearch" id="moviesearch" placeholder="Search...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+              
+            </form>
+            <div class="latest_wrap">
+              <h3>최근검색어</h3>
+              <a href="">전체삭제</a>
+            </div>
+            <ul class="latest cf">
+                <li>해리포터 <i class="fa-solid fa-xmark"></i></li>
+                <li>범죄도시3 <i class="fa-solid fa-xmark"></i></li>
+                <li>더 퍼스트 슬램덩크 <i class="fa-solid fa-xmark"></i></li>
+            </ul>
+        </div>
+        <div class="modal_right">
+            <h2>인기 검색어</h2>
+            <div>
+              <ol class="popular_w">
+                <li>
+                  <a href="#">
+                    <em>1</em>
+                    <span>엘리멘탈</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <em>2</em>
+                    <span>IMAX</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <em>3</em>
+                    <span>CGV연남</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <em>4</em>
+                    <span>인어공주</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <em>5</em>
+                    <span>범죄도시 3</span>
+                  </a>
+                </li>
+              </ol>
+              <ol class="popular_w">
+                <li>
+                  <a href="#">
+                    <em>6</em>
+                    <span>슬픔의 삼각형</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <em>7</em>
+                    <span>CGV 할인</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <em>8</em>
+                    <span>토이스토리 5</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <em>9</em>
+                    <span>여름날 우리</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <em>10</em>
+                    <span>가디언즈 오브.. </span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="search_btn modal_close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+      </div>
+  </header>
+<!-- HEADER 끝 (유림) -->
+
+<!-- MAIN_1 시작 (이원) -->
     <!-- 예고편 영상 -->
-	<div class="movieVideo">
-	  <div class="MovieVideo_wrap">
-	    <ul class="MovieVideo_slide_wrap">
-	      <!-- <li class="MovieVideo_slide">
-	        <video id="singStreet" src="video/Singstreet.mp4">           
-	        </video> 
-	      </li> -->
-	      <li class="MovieVideo_slide">
-	        <video id="eleMental" src="video/Elemental.mp4">   
-	        </video>
-	      </li>
-	      <!-- <li class="MovieVideo_slide">
-	        <video id="theQuietgril" src="video/TheQuietGirl.mp4"> 
-	        </video>
-	      </li> -->
-          <span class="mVbtn">
-              <button class="playbtn"><i class="fa-solid fa-play"></i></button>
-              <button class="pausebtn"><i class="fa-solid fa-pause"></i></button>
-          </span>
-	    </ul>
-
-	      <div class="movieVideo_Btn">
-		    <botton id="mV_carousel" class="mV_leftBtn" src="image/mV_left_carousel.png"></botton>
-		    <botton id="mV_carousel" class="mV_rightBtn" src="image/mV_right_carousel.png"></botton>
-	  	</div>
-	  </div>
-	</div> 
-
-    <!-- 무비차트 / 상영예정작 -->
-    <div class="movieChart container big_pd">
-            <h2 class="movieChart_tt main_mb">
-                <a href="#moviechart">무비차트</a>
-                <a href="#reservemovie">상영예정작</a>
-            </h2>
-            
-       
-
-        <div class="movieChart_list">
+    <div class="movieVideo container">
+      <div class="MovieVideo_wrap">
+        <ul class="MovieVideo_slide_wrap">
+          <li class="MovieVideo_slide">
+            <video id="harrypotter" src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688278186/Harry_Potter_ejldkl.mp4></video>  
+          </li>
+          <li class="MovieVideo_slide">
+            <video src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688273263/Elemental_l1ux17.mp4 muted></video>  
+          </li>
+          <li class="MovieVideo_slide">
+            <video src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688278187/SingStreet_ppqnbw.mp4 muted></video>
+          </li>
+        </ul>
+        <div class="mVbtn">
+            <button class="playbtn"><i class="fa-solid fa-play"></i></button>
+            <button class="pausebtn"><i class="fa-solid fa-pause"></i></button>
+            <!-- <button class="soundbtn"><i class="fa-solid fa-volume-high"></i></button>
+            <button class="soundoffbtn"><i class="fa-solid fa-volume-xmark"></i></button> -->
+        </div>
+          <div class="mVcrousel">
+            <button class="mV_leftCrousel"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="mV_rightCrousel"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+      </div>
+    </div> 
+  
+      <!-- 무비차트 / 상영예정작 -->
+      <div class="movieChart container big_pd">
+              <h2 class="movieChart_tt main_mb">
+                  <a href="#moviechart" id="btnMovieChart">무비차트</a>
+                  <a href="#reservemovie" id="btnReserMovie">상영예정작</a>
+              </h2>
+              
+          <div class="movieChart_list">
             <!-- 무비차트 -->
-          <div class="slidewrapper">
-                <div class="MovieChart_wrap">
-                    <ul class="MovieChart_slide_wrap">
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img1.jpg">
-                                <img class="angelimint" src="image/movie angelimint_all.png">
-                            </div>
-                            <span class="poster_hover">
+            <div class="slidewrapper">
+                  <div class="MovieChart_wrap">
+                      <ul class="MovieChart_slide_wrap">
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img1.jpg" alt="해리포터와 마법사의 돌 포스터">
+                                  <img class="angelimint" src="images/movie_angelimint_all.png" alt="전체 관람가">
+                                </div>
+                                <div class="movieChart_btn">
+                                  <a href="" class="ticketing">예매하기</a>
+                                  <a href="" class="detail">상세보기</a>
+                              </div>
+                              <h3 class="sub_p">해리포터와 마법사의 돌</h3>
+                              <div class="movieInfo con_tt">
+                                <img src="images/egg_golden.png" alt="에그 지수">
+                                <span>99%</span>
+                                <img src="images/4DX.png" alt="4DX">
+                                <img src="images/IMAX.png" alt="IMAX"> 
+                              </div>
+                          </li>
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img2.jpg" alt="더 퍼스트 슬램덩크">
+                                  <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                              </div>
+                              <div class="movieChart_btn">
                                 <a href="" class="ticketing">예매하기</a>
                                 <a href="" class="detail">상세보기</a>
-                            </span>
-                            <h3 class="sub_p">해리포터와 마법사의 돌</h3>
-                            <span class="egg con_tt"><img src="image/egg_golden.png"> 99%</span>
-                            <span class="screenType">
-                                <img src="image/4DX.png">
-                                <img src="image/IMAX.png"> 
-                            </span>
-                        </li>
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img2.jpg">
-                                <img class="angelimint" src="image/movie angelimint_12.png">
                             </div>
-                            <h3 class="sub_p">더 퍼스트 슬램덩크</h3>
-                            <span class="egg con_tt"><img src="image/egg_white.png"> 97%</span>
-                            <span class="screenType">
-                                <img src="image/IMAX.png"> 
-                            </span>
-                        </li>
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img3.jpg">
-                                <img class="angelimint" src="image/movie angelimint_12.png">
+                              <h3 class="sub_p">더 퍼스트 슬램덩크</h3>
+                              <div class="movieInfo con_tt">
+                                <img src="images/egg_white.png" alt="에그 지수">
+                                <span>97%</span>
+                                <img src="images/IMAX.png" alt="IMAX"> 
+                              </div>
+                          </li>
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img3.jpg" alt="엘리멘탈">
+                                  <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                              </div>
+                              <div class="movieChart_btn">
+                                <a href="" class="ticketing">예매하기</a>
+                                <a href="" class="detail">상세보기</a>
                             </div>
-                            <h3 class="sub_p">엘리멘탈</h3>
-                            <span class="egg con_tt"><img src="image/egg_golden.png"> 95%</span>
-                            <span class="screenType">
-                                <img src="image/4DX.png"> 
-                                <img src="image/3D.png"> 
-                            </span>
-                        </li>
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img4.jpg">
-                                <img class="angelimint" src="image/movie angelimint_15.png">
+                              <h3 class="sub_p">엘리멘탈</h3>
+                                <div class="movieInfo con_tt">
+                                  <img src="images/egg_golden.png" alt="에그 지수">
+                                  <span>95%</span>
+                                  <img src="images/4DX.png" alt="4DX"> 
+                                  <img src="images/3D.png" alt="3D"> 
+                                </div>
+                              </span>
+                          </li>
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img4.jpg" alt="싱 스트리트">
+                                  <img class="angelimint" src="images/movie_angelimint_15.png" alt="15세 관람가">
+                              </div>
+                              <div class="movieChart_btn">
+                                <a href="" class="ticketing">예매하기</a>
+                                <a href="" class="detail">상세보기</a>
                             </div>
-                            <h3 class="sub_p">싱 스트리트</h3>
-                            <span class="egg con_tt"><img src="image/egg_golden.png"> 92%</span>
-                            <span class="screenType">
-                                <img src="image/ScreenX.png"> 
-                            </span>
-                        </li>
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img5.jpg">
-                                <img class="angelimint" src="image/movie angelimint_18.png">
+                              <h3 class="sub_p">싱 스트리트</h3>
+                              <div class="movieInfo con_tt">
+                                <img src="images/egg_golden.png" alt="에그 지수">
+                                <span>92%</span>
+                                <img src="images/ScreenX.png" alt="ScreenX"> 
+                                </span>
+                              </div>
+                          </li>
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img5.jpg" alt="델마와 루이스">
+                                  <img class="angelimint" src="images/movie_angelimint_18.png" alt="18세 관람가">
+                              </div>
+                              <div class="movieChart_btn">
+                                <a href="" class="ticketing">예매하기</a>
+                                <a href="" class="detail">상세보기</a>
                             </div>
-                            <h3 class="sub_p">델마와 루이스</h3>
-                            <span class="egg con_tt"><img src="image/egg_white.png"> 90%</span>
-                            <span class="screenType">
-                                <img src="image/ScreenX.png">
-                            </span>
-                        </li>
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img6.jpg">
-                                <img class="angelimint" src="image/movie angelimint_12.png">
+                              <h3 class="sub_p">델마와 루이스</h3>
+                                <div class="movieInfo con_tt">
+                                  <img src="images/egg_white.png" alt="에그 지수">
+                                  <span>90%</span>
+                                  <img src="images/ScreenX.png" alt="ScreenX">
+                                </div>
+                          </li>
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img6.jpg" alt="포드 V 페라리">
+                                  <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                              </div>
+                              <div class="movieChart_btn">
+                                <a href="" class="ticketing">예매하기</a>
+                                <a href="" class="detail">상세보기</a>
                             </div>
-                            <h3 class="sub_p">포드 V 페라리</h3>
-                            <span class="egg con_tt"><img src="image/egg_golden.png"> 97%</span>
-                            <span class="screenType">
-                                <img src="image/IMAX.png"> 
-                                <img src="image/ScreenX.png"> 
-                            </span>
-                        </li>
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img7.jpg">
-                                <img class="angelimint" src="image/movie angelimint_12.png">
-                            </div>
-                            <h3 class="sub_p">가디언즈 오브 갤럭시</h3>
-                            <span class="egg con_tt"><img src="image/egg_golden.png"> 95%</span>
-                            <span class="screenType">
-                                <img src="image/IMAX.png"> 
-                            </span>
-                        </li>
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img8.jpg">
-                                <img class="angelimint" src="image/movie angelimint_all.png">
-                            </div>
-                            <h3 class="sub_p">말없는 소녀</h3>
-                            <span class="egg con_tt"><img src="image/egg_white.png"> 93%</span>
-                        </li>
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img9.jpg">
-                                <img class="angelimint" src="image/movie angelimint_12.png">
-                            </div>
+                              <h3 class="sub_p">포드 V 페라리</h3>
+                                <div class="movieInfo con_tt">
+                                  <img src="images/egg_golden.png" alt="에그 지수">
+                                  <span>97%</span>
+                                  <img src="images/IMAX.png" alt="IMAX"> 
+                                  <img src="images/ScreenX.png" alt="ScreenX"> 
+                                </div>
+                          </li>
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img7.jpg" alt="가디언즈 오브 갤럭시">
+                                  <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                              </div>
+                              <div class="movieChart_btn">
+                                <a href="" class="ticketing">예매하기</a>
+                                <a href="" class="detail">상세보기</a>
+                              </div>
+                              <h3 class="sub_p">가디언즈 오브 갤럭시</h3>
+                              <div class="movieInfo con_tt">
+                                <img src="images/egg_golden.png" alt="에그 지수"> 
+                                <span>95%</span>
+                                <img src="images/IMAX.png" alt="IMAX"> 
+                              </div>
+                          </li>
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img8.jpg" alt="말없는 소녀">
+                                  <img class="angelimint" src="images/movie_angelimint_all.png" alt="전체 관람가">
+                              </div>
+                              <div class="movieChart_btn">
+                                <a href="" class="ticketing">예매하기</a>
+                                <a href="" class="detail">상세보기</a>
+                              </div>
+                              <h3 class="sub_p">말없는 소녀</h3>
+                              <div class="movieInfo con_tt">
+                                <img src="images/egg_white.png" alt="에그 지수"> 
+                                <span>93%</span>
+                              </div>
+                          </li>
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img9.jpg" alt="애스터로이드 시티">
+                                  <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                              </div>
+                              <div class="movieChart_btn">
+                                <a href="" class="ticketing">예매하기</a>
+                                <a href="" class="detail">상세보기</a>
+                              </div>
                                 <h3 class="sub_p">애스터로이드 시티</h3>
-                                <span class="egg con_tt"><img src="image/egg_white.png"> 88%</span>
-                        </li>
-                        <li class="MovieChart_slide">
-                            <div class="poster">
-                                <img class="poster_img" src="image/movieChart_img10.jpg">
-                                <img class="angelimint" src="image/movie angelimint_12.png">
-                            </div>
-                            <h3 class="sub_p">그 여름</h3>
-                            <span class="egg con_tt"><img src="image/egg_white.png"> 85%</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mcCarousel">
-                    <button id="prev" class="mC_prevBtn carousel"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button id="next" class="mC_nextBtn carousel"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-</div>
+                                  <div class="movieInfo con_tt">
+                                    <img src="images/egg_white.png" alt="에그 지수">
+                                    <span>88%</span>
+                                  </div>
+                          </li>
+                          <li class="MovieChart_slide">
+                              <div class="poster">
+                                  <img class="poster_img" src="images/movieChart_img10.jpg" alt="그 여름">
+                                  <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                              </div>
+                              <div class="movieChart_btn">
+                                <a href="" class="ticketing">예매하기</a>
+                                <a href="" class="detail">상세보기</a>
+                              </div>
+                              <h3 class="sub_p">그 여름</h3>
+                              <div class="movieInfo con_tt">
+                                <img src="images/egg_white.png" alt="에그 지수">
+                                <span>85%</span>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="mcCarousel">
+                      <button id="prev" class="mC_prevBtn carousel"><i class="fa-solid fa-chevron-left"></i></button>
+                      <button id="next" class="mC_nextBtn carousel"><i class="fa-solid fa-chevron-right"></i></button>
+                  </div>
+            </div>
 
             <!-- 상영예정작 -->
-            <!-- <div class="MovieChart_wrap" id="moviechart">
-                <ul class="MovieChart_slide_wrap">
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img1.jpg">
-                            <img class="angelimint" src="image/movie angelimint_15.png">
-                        </div>
-                        <span class="poster_hover">
+            <div class="ReserveMovie_slidewrapper">
+              <div class="MovieChart_wrap">
+                  <ul class="MovieChart_slide_wrap">
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img1.jpg" alt="듄">
+                              <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                            </div>
+                            <div class="movieChart_btn">
+                              <a href="" class="ticketing">예매하기</a>
+                              <a href="" class="detail">상세보기</a>
+                          </div>
+                          <h3 class="sub_p">듄</h3>
+                          <div class="movieInfo con_tt">
+                            <img src="images/egg_golden.png" alt="에그 지수">
+                            <span>98%</span>
+                            <img src="images/IMAX.png" alt="IMAX"> 
+                          </div>
+                      </li>
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img2.jpg" alt="아바타-물의 길">
+                              <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                          </div>
+                          <div class="movieChart_btn">
                             <a href="" class="ticketing">예매하기</a>
                             <a href="" class="detail">상세보기</a>
-                        </span>
-                        <h3 class="sub_p">기생충</h3>
-                        <span class="egg con_tt"><img src="image/egg_golden.png"> 97%</span>
-                        <span class="screenType">
-                            <img src="image/IMAX.png"> 
-                        </span>
-                    </li>
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img2.jpg">
-                            <img class="angelimint" src="image/movie angelimint_12.png">
                         </div>
-                        <h3 class="sub_p">아바타-물의 길</h3>
-                        <span class="egg con_tt"><img src="image/egg_white.png"> 96%</span>
-                        <span class="screenType">
-                            <img src="image/IMAX.png"> 
-                        </span>
-                    </li>
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img3.jpg">
-                            <img class="angelimint" src="image/movie angelimint_all.png">
+                          <h3 class="sub_p">아바타-물의 길</h3>
+                          <div class="movieInfo con_tt">
+                            <img src="images/egg_white.png" alt="에그 지수">
+                            <span>97%</span>
+                            <img src="images/IMAX.png" alt="IMAX"> 
+                          </div>
+                      </li>
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img3.jpg" alt="토이스토리 4">
+                              <img class="angelimint" src="images/movie_angelimint_all.png" alt="전체 관람가">
+                          </div>
+                          <div class="movieChart_btn">
+                            <a href="" class="ticketing">예매하기</a>
+                            <a href="" class="detail">상세보기</a>
                         </div>
-                        <h3 class="sub_p">토이스토리 4</h3>
-                        <span class="egg con_tt"><img src="image/egg_golden.png"> 97%</span>
-                        <span class="screenType">
-                            <img src="image/4DX.png"> 
-                            <img src="image/3D.png"> 
-                        </span>
-                    </li>
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img4.jpg">
-                            <img class="angelimint" src="image/movie angelimint_15.png">
+                          <h3 class="sub_p">토이스토리 4</h3>
+                            <div class="movieInfo con_tt">
+                              <img src="images/egg_golden.png" alt="에그 지수">
+                              <span>97%</span>
+                              <img src="images/4DX.png" alt="4DX"> 
+                              <img src="images/3D.png" alt="3D"> 
+                            </div>
+                          </span>
+                      </li>
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img4.jpg" alt="1917">
+                              <img class="angelimint" src="images/movie_angelimint_15.png" alt="15세 관람가">
+                          </div>
+                          <div class="movieChart_btn">
+                            <a href="" class="ticketing">예매하기</a>
+                            <a href="" class="detail">상세보기</a>
                         </div>
-                        <h3 class="sub_p">1917</h3>
-                        <span class="egg con_tt"><img src="image/egg_golden.png"> 98%</span>
-                        <span class="screenType">
-                            <img src="image/IMAX.png"> 
-                        </span>
-                    </li>
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img5.jpg">
-                            <img class="angelimint" src="image/movie angelimint_15.png">
+                          <h3 class="sub_p">1917</h3>
+                          <div class="movieInfo con_tt">
+                            <img src="images/egg_golden.png" alt="에그 지수">
+                            <span>98%</span>
+                            <img src="images/IMAX.png" alt="IMAX"> 
+                            </span>
+                          </div>
+                      </li>
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img5.jpg" alt="비긴 어게인">
+                              <img class="angelimint" src="images/movie_angelimint_15.png" alt="15세 관람가">
+                          </div>
+                          <div class="movieChart_btn">
+                            <a href="" class="ticketing">예매하기</a>
+                            <a href="" class="detail">상세보기</a>
                         </div>
-                        <h3 class="sub_p">비긴 어게인</h3>
-                        <span class="egg con_tt"><img src="image/egg_white.png"> 88%</span>
-                    </li>
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img6.jpg">
-                            <img class="angelimint" src="image/movie angelimint_12.png">
+                          <h3 class="sub_p">비긴 어게인</h3>
+                            <div class="movieInfo con_tt">
+                              <img src="images/egg_white.png" alt="에그 지수">
+                              <span>90%</span>
+                            </div>
+                      </li>
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img6.jpg" alt="한산-용의 출연">
+                              <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                          </div>
+                          <div class="movieChart_btn">
+                            <a href="" class="ticketing">예매하기</a>
+                            <a href="" class="detail">상세보기</a>
                         </div>
-                        <h3 class="sub_p">한산-용의 출연</h3>
-                        <span class="egg con_tt"><img src="image/egg_golden.png"> 95%</span>
-                        <span class="screenType">
-                            <img src="image/IMAX.png"> 
-                            <img src="image/ScreenX.png"> 
-                        </span>
-                    </li>
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img7.jpg">
-                            <img class="angelimint" src="image/movie angelimint_15.png">
-                        </div>
-                        <h3 class="sub_p">헝거게임-모킹제이</h3>
-                        <span class="egg con_tt"><img src="image/egg_white.png"> 92%</span>
-                        <span class="screenType">
-                            <img src="image/IMAX.png"> 
-                            <img src="image/4DX.png">
-                        </span>
-                    </li>
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img8.jpg">
-                            <img class="angelimint" src="image/movie angelimint_15.png">
-                        </div>
-                        <h3 class="sub_p">스타 이즈 본</h3>
-                        <span class="egg con_tt"><img src="image/egg_white.png"> 90%</span>
-                    </li>
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img9.jpg">
-                            <img class="angelimint" src="image/movie angelimint_15.png">
-                        </div>
+                          <h3 class="sub_p">한산-용의 출연</h3>
+                            <div class="movieInfo con_tt">
+                              <img src="images/egg_golden.png" alt="에그 지수">
+                              <span>95%</span>
+                              <img src="images/IMAX.png" alt="IMAX"> 
+                              <img src="images/4DX.png" alt="4DX"> 
+                            </div>
+                      </li>
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img7.jpg" alt="헝거게임-모킹제이">
+                              <img class="angelimint" src="images/movie_angelimint_15.png" alt="15세 관람가">
+                          </div>
+                          <div class="movieChart_btn">
+                            <a href="" class="ticketing">예매하기</a>
+                            <a href="" class="detail">상세보기</a>
+                          </div>
+                          <h3 class="sub_p">헝거게임-모킹제이</h3>
+                          <div class="movieInfo con_tt">
+                            <img src="images/egg_golden.png" alt="에그 지수"> 
+                            <span>92%</span>
+                            <img src="images/IMAX.png" alt="IMAX"> 
+                            <img src="images/4DX.png" alt="4DX"> 
+                          </div>
+                      </li>
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img8.jpg" alt="스타 이즈 본">
+                              <img class="angelimint" src="images/movie_angelimint_15.png" alt="15세 관람가">
+                          </div>
+                          <div class="movieChart_btn">
+                            <a href="" class="ticketing">예매하기</a>
+                            <a href="" class="detail">상세보기</a>
+                          </div>
+                          <h3 class="sub_p">스타 이즈 본</h3>
+                          <div class="movieInfo con_tt">
+                            <img src="images/egg_white.png" alt="에그 지수"> 
+                            <span>90%</span>
+                          </div>
+                      </li>
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img9.jpg" alt="그랜드 부다페스트 호텔">
+                              <img class="angelimint" src="images/movie_angelimint_15.png" alt="15세 관람가">
+                          </div>
+                          <div class="movieChart_btn">
+                            <a href="" class="ticketing">예매하기</a>
+                            <a href="" class="detail">상세보기</a>
+                          </div>
                             <h3 class="sub_p">그랜드 부다페스트 호텔</h3>
-                            <span class="egg con_tt"><img src="image/egg_white.png"> 88%</span>
-                    </li>
-                    <li class="MovieChart_slide">
-                        <div class="poster">
-                            <img class="poster_img" src="image/movieReserve_img10.jpg">
-                            <img class="angelimint" src="image/movie angelimint_15.png">
-                        </div>
-                        <h3 class="sub_p">소공녀</h3>
-                        <span class="egg con_tt"><img src="image/egg_white.png"> 85%</span>
-                    </li>
-                </ul>
-                <div class="MovieChart_btn">
-                    <button id="mC_carousel" class="mC_prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button id="mC_prevBtn" class="mC_nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-            </div> -->
-           
-        </div>
-        <a href="" class="all_btn"><i class="fa-solid fa-plus"></i>전체보기</a>
+                              <div class="movieInfo con_tt">
+                                <img src="images/egg_white.png" alt="에그 지수">
+                                <span>88%</span>
+                              </div>
+                      </li>
+                      <li class="MovieChart_slide">
+                          <div class="poster">
+                              <img class="poster_img" src="images/movieReserve_img10.jpg" alt="리바운드">
+                              <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">
+                          </div>
+                          <div class="movieChart_btn">
+                            <a href="" class="ticketing">예매하기</a>
+                            <a href="" class="detail">상세보기</a>
+                          </div>
+                          <h3 class="sub_p">리바운드</h3>
+                          <div class="movieInfo con_tt">
+                            <img src="images/egg_white.png" alt="에그 지수">
+                            <span>85%</span>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+              <div class="mcCarousel">
+                  <button id="prev" class="mC_prevBtn carousel"><i class="fa-solid fa-chevron-left"></i></button>
+                  <button id="next" class="mC_nextBtn carousel"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+            </div>
+      
+          </div>
+          <a href="" class="all_btn"><i class="fa-solid fa-plus"></i>전체보기</a>
+      </div>
+ <!-- MAIN_1 끝 (이원) -->
+
+<!-- MAIN_2 시작 (수연) -->
+<section class="keyword big_pd">
+  <div class="keyword_wrap light-gray-bg">
+    <div class="container cf">
+      <h2 class="sub_tt">취향저격 추천 &num;키워드</h2>                 
+      <ul class="main_p">
+        <li><a href="#" target="_blank" class="hash">&num;으스스한 스릴러</a></li>
+        <li><a href="#" target="_blank" class="hash">&num;설렘 가득 로맨스</a></li>
+        <li><a href="#" target="_blank" class="hash">&num;온가족 함께 애니메이션</a></li>
+        <li><a href="#" target="_blank" class="hash">&num;짜릿 통쾌 액션</a></li>
+        <li><a href="#" target="_blank" class="hash">&num;가슴이 따뜻해지는 드라마</a></li>
+      </ul>   
     </div>
-<script src="./main1_script.js"></script>   
+  </div>
+</section>
+<section class="event big_pd container">
+  <div class="event_wrap">
+    <h2 class="main_tt main_mb">EVENT</h2>
+    <ul class="cf">
+      <li>
+        <figure>
+          <a href="" target="_blank">
+            <img src="images/elemental.jpg" alt="영화 엘리멘탈 관련 이벤트 홍보 이미지">
+          </a>
+          <figcaption>
+            <h3 class="sub_p"><a href="" target="_blank">&lbrack;엘리멘탈&rsqb; 필름마크</a></h3>
+            <p><a href="" target="_blank">2023.06.09 ~ 2023.06.22</a></p>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <a href="" target="_blank">
+            <img src="images/wooricard.jpg" alt="우리카드 제휴 이벤트 홍보 이미지">
+          </a>
+          <figcaption>
+            <h3 class="sub_p"><a href="" target="_blank">&lbrack;제휴&sol;할인&rsqb; CGV X 우리카드 PLCC 출시&excl;</a></h3>
+            <p><a href="" target="_blank">2023.01.01 ~ 2023.12.31</a></p>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <a href="" target="_blank">
+            <img src="images/happypoint.png" alt="해피포인트 제휴 이벤트 홍보 이미지">
+          </a>
+          <figcaption>
+            <h3 class="sub_p"><a href="" target="_blank">&lbrack;제휴&sol;할인&rsqb; 해피포인트 회원 상시 할인</a></h3>
+            <p><a href="" target="_blank">2023.01.01 ~ 2023.12.31</a></p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+    <button type="buttom" class="carousel pre_btn"><i class="fa-solid fa-chevron-left"></i></button>
+    <button type="buttom" class="carousel next_btn"><i class="fa-solid fa-chevron-right"></i></button>
+    <a href="" target="_blank" class="all_btn"><i class="fa-solid fa-plus"></i>전체보기</a>
+  </div>
+</section>
+<section class="special big_pd">
+  <div class="special_wrap container">
+    <h2 class="main_tt main_mb">특별관</h2>
+    
+  </div>
+</section>
+<!-- MAIN_2 끝 (수연) -->
 
-<!-- MAIN_1 끝 (이원) -->
+<!-- MAIN_3 시작 (정석) -->
+<section class="main_total container">    
+  <div class="main3_container big_pd main_mb">
+    <div class="main3_content cf">
+      <h2 class="main_tt">시사회/무대인사</h2>      
+    </div>
+    
+    <ul class="test_screening big_pd cf"> 
+      <li class="screen_cell">
+        <figure>
+           <a href="#">
+            <img src="images/mermaid_normal.jpg" alt="인어공주">
+          </a>  
+          <figcaption>
+            <h3 class="cell_tt"> <span class="con_tt">영화</span>   &lt; 인어공주 &gt; 상영회</h3>              
+          </figcaption>
+        </figure>
+      </li>
 
- <!-- MAIN_2 시작 (수연) -->
- <!-- MAIN_2 끝 (수연) -->
+      <li class="screen_cell">        
+        <figure>
+          <a href="#">
+            <img src="images/crime_normal.jpg" alt="범죄도시3">
+         </a>  
+         <figcaption>
+           <h3 class="cell_tt"> <span class="con_tt">시사회/무대인사</span>&lt; 범죄도시3 &gt; 무대인사</h3>
+         </figcaption>
+       </figure>         
+      </li>
+      <li class="screen_cell">       
+        <figure>
+          <a href="#">
+            <img src="images/elemental_normal.jpg" alt="엘레멘탈">
+          </a>  
+         <figcaption>
+          <h3 class="cell_tt"> <span class="con_tt">영화</span> &lt; 엘리멘탈 &gt; 제작 스토리</h3>              
+        </figcaption>
+       </figure> 
+      </li>
+    </ul>   
+    <a href="#" class="main3_btn all_btn ">+ 전체보기</a> 
+  </div>
 
- <!-- MAIN_3 시작 (정석) -->
- <!-- MAIN_3 끝 (정석) -->
+<div class="main4_box">
+    <div class="main4_left_box">
+      <h2 class="main_tt main_mb">극장찾기</h2>
+      <div class="main4_mapbox">
+        <p class="main4_cgv">내 주변 가장 가까운 <span>cgv</span>극장을 찾아보세요</p>
+        <span class="main4_cgv">영화 그 이상의 감동 cgv</span>
+        <img src="images/mapwithpopcorn.jpg" alt="map">          
+          <a href="#"><i><i class="fa-solid fa-magnifying-glass" style="color: #e64947;"></i></i>극장찾기</a>
+        </div>
+    </div class="main4_right_box">
+      <div>
+        <h2>고객센터</h2>
+       <div>
+          <p><span></span></p>
+          <p></p>
+          <p></p>
+  
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+       </div>
+      </div>
+    <div>
+      
+</div>
+
+  </div>
+  <!-- <div class="main4_container big1_pd main_mb cf"> 
+    <div class="main4_content main_tt cf">
+      <div class="zz">
+      <h2 class="main4_title  main_tt font_reg">극장찾기 고객센터</h2>
+        <p>내 주변 가장 가까운 cgv극장을 찾아보세요</p>
+        <p>영화 그 이상의 감동 CGV</p> 
+    <figur>             
+    <img class="popcorn" src="images/popcorn img_1.png" alt="" style="position: absolute; left: 50px; bottom:50px;">
+    <img class="popcorn" src="images/popcorn img_2.png" alt="" style="position: absolute; right: 130px; bottom:40px;">
+    <img class="popcorn" src="images/popcorn img_3.png" alt="" style="position: absolute; right: 50px; bottom:100px;">          
+    <img src="images/dot1_cover.png" alt="">  
+   </figure> 
+   
+      <p>내 주변 가장 가까운 cgv극장을 찾아보세요</p>
+      <p>영화 그 이상의 감동 CGV</p>
+        <div style="margin-top:20px">
+          <a href="#">극장찾기</a> 
+        </div>
+    </div>                  
+      <figcaption class="main4_leftbox">                      
+        <img src="images/map_img.jpg" alt="map">                    
+      </figcaption> 
+    </div>
+    <div class="main4_content main_tt cf">       
+        <div class="main4_cellcontrols">
+          <h3 class="footer_ff_bold">1544-1122</h3>
+          <h4>고객센터</h4>
+          <h2>운영시간 : 평일 09:00~18:00(점심시간 자동응답)</h2>
+          <h5>cjcgvmaster@cj.net</h5>          
+        </div>
+        <div class="main4_cellbox">
+          <div class="qna_cell">              
+            <ul>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">1:1문의</a></li>
+              <li> <a class="sns" href=""><img src="images/fb.jpg" alt="face"></a></li>
+              <li><a class="sns" href=""><img src="images/ig.jpg" alt=""></a></li>
+              <li><a class="sns" href=""><img src="images/youtube.jpg" alt=""></a></li>
+              <li><a class="sns" href=""><img src="images/kakaotalk.jpg" alt=""></a></li>                
+            </ul>     
+          </div>
+     </div>
+
+    </div>    
+  </div> 
+-->
+</section>   
+<aside>
+  <div class="wr">
+    <img class=re_paconi src="images/paconi.png">
+    <p><a href="#">cmain4_theatergv</a></p>
+    <div class="circle_up">
+      <a href="#" class="circle_link">
+        <i class="fa-solid fa-clock-rotate-left" style="color: #8a8a8a;"></i>
+      </a>
+    </div>
+    <div class="circle_down">
+      <a href="#top" class="circle_link">
+        <i class="fa-solid fa-chevron-up" style="color: #8a8a8a;"></i>
+      </a>
+    </div>
+  </div>
+</aside>
+<footer class="sm_pd">
+  <div class="footer_upper container">
+    <ul>
+      <li><a href="#">회사소개</a></li>
+      <li><a href="#">지속가능경영</a></li>
+      <li><a href="#">IR</a></li>
+      <li><a href="#">채용정보</a></li>
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">편성기준</a></li>
+      <li><span class="footer_bold"><a href="#">개인정보처리방침</a></span></li>
+      <li><a href="#">법적고지</a></li>
+      <li><a href="#">이메일주소무단수집거부</a></li>
+      <li><a href="#">윤리경영</a></li>
+      <li><a href="#">사이버감사실</a></li>
+    </ul>
+  </div>
+  <div class="footer_btm sm_pd font-tt">        
+    <div class="footer_write container">
+        <address>
+        <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동) </p>
+        <p><span>대표이사</span> 허민회 사업자등록번호 104-81-45690통신판매업신고번호 2017-서울용산-0662 <span><a href="https://www.ftc.go.kr/bi1CommPop.do?wrkr_no=1048145690">사업자정보확인</a></span></p>
+        <p><span>호스사업자</span> : CJ올리브네트웍스 <span>개인정보보호 책임자</span> : 조진호 <span>대표이메일</span> : cjcgvmaster@cj.net</p>
+        <p>&copy; CJ CGV. All Rights Reserve</p>          
+        </address>
+      <form class="footer_form container"> 
+        <select name="cgv_chain" id="cgv_chain">
+          <optgroup label="cj그룹">              
+            <option value="">CJ주식회사</option>
+          </optgroup>
+          <optgroup label="식품 &amp;	서비스">  
+            <option value="">CJ제일제당</option>
+            <option value="">CJ푸드빌</option>
+            <option value="">CJ프레시웨이</option>
+          </optgroup>
+          <optgroup label="생명공학"> 
+            <option value="">CJ제일제당 BIO 사업부</option>
+            <option label="">CJ FEED &amp; CARD></option>
+          </optgroup>
+          <optgroup label="물류 &amp; 신유통">
+            <option value="">CJ대한통운</option>
+            <option value="">CJ대한통운 &amp;건설</option>
+            <option value="">CJ올리브영</option>
+            <option value="">CJ올리브영네트웍스</option>
+            <option value="">CJ ENM 커머스 부문</option>
+          </optgroup>  
+          <optgroup label="CJ그룹">              
+            <option value="">CJ ENM 엔터테인먼트 부문</option>
+            <option value="">CJ ENM 엔터테인먼트 부문</option>
+          </optgroup>             
+        </select>
+        <a href="">Go!</a>
+      </form>
+    </div>
+  </div>
+</footer>
+<!-- MAIN_3 끝 (정석) -->
+
+<script src="js/cgv_script.js"></script>
 </body>
 </html>
