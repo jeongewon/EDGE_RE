@@ -26,9 +26,10 @@
 }
 .main3_btn {
   position: absolute; 
-  right:0;
-  top:calc(50px + 81px
-  );
+  right:0;  
+  top:0;
+  transform: translateY(50px);
+
 } 
 
 /* 시사회/무대인사 셀(li) 크기,효과,float left */
@@ -49,19 +50,23 @@
 /* 셀안의 img에 트랜지션 및 호버시 이미지 스케일 + 필터로 어둡게 */
 .test_screening .screen_cell img{
   transition: transform .3s ease-in-out;
+  background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
+
 }
 .test_screening .screen_cell:hover img{
   transform: scale(1.1);   
-  /* filter: brightness(0.7); */
+
 }
 
 .screen_cell figure {
   position: relative;
   background: rgb(0,0,0);
+  background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
+
+
 }
 .screen_cell figure:hover::after
 { 
-  background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
   content:'';
   position:absolute;
   top: 0;
@@ -81,7 +86,7 @@
   text-align:left;
   font-size: 22px;
   font-weight: bold;
-  line-height: 35px;
+  line-height: 27px;
   z-index: 5;
 }  
 
