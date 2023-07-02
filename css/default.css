@@ -20,21 +20,17 @@
 /* main3 */
 
 /* 기준잡고 버튼 위치조절 */
-.main3_container {
-  position: relative;
-}
 
-
-.main_content_teather {
+.main3_content {
   position: relative;
 }
 
 .main3_btn {
-  position: absolute;
-  right: 10px;
-  top:0;
-  transform: translateY(-100%);
-}
+  position: absolute; 
+  right:0;
+  top:0%;
+  transition: ;
+} 
 
 /* 시사회/무대인사 셀(li) 크기,효과,float left */
 .test_screening .screen_cell{
@@ -43,8 +39,7 @@
   border-radius: 15px;
   overflow: hidden; 
   float: left;
-  margin-right:33px;
-  position: relative;  
+  margin-right:33px;  
 }
 
 /* 셀 마지막에는 margin-right:0 */
@@ -341,7 +336,7 @@ footer li:first-child {
 
 aside {
   position: fixed;
-  right:30%;
+  right:10%;
   bottom:40%;
 }
 aside .wr {
@@ -406,7 +401,7 @@ aside .circle_pop {
 .circle_up a i{
   transform: rotate(0deg);  
   transform: translateX(-20px);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 
