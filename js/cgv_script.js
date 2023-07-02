@@ -1,4 +1,70 @@
 /* HEADER 시작 (유림) */
+/* POP UP PORTFOLIO*/
+let noticePopup = document.querySelector('.notice_portfolio'),
+    popupClose = noticePopup.querySelector('.popup_close'),
+    dontSee = noticePopup.querySelector('#dont_see');
+   
+
+//let allCookies = document.cookie; 
+  //console.log(document.cookie);
+/*
+popupClose.addEventListener('click',(e)=>{
+  e.preventDefault();
+  let dontSeeCk = dontSee.checked;
+  if(dontSeeCk){
+    setCookie('CGV','home',1)
+    noticePopup.style.display = 'none';
+  }else{
+    noticePopup.style.display = 'none';
+  }
+})
+*/
+
+//쿠키 생성
+function setCookie(name,value,day){
+  let date = new Date();
+  date.setDate(date.getDate()+day);
+  let setCookie = '';
+  setCookie += `${name}=${value};`;
+  setCookie += `expires=${date.toUTCString()}`;
+  document.cookie = setCookie;
+}
+setCookie('CGV','home', 1);
+
+popupClose.addEventListener('click',(e)=>{
+  e.preventDefault();
+  let dontSeeCk = dontSee.checked;
+  noticePopup.removeAttribute('open');
+  if(dontSeeCk){
+    setCookie('CGV','home', 1);
+    noticePopup.style.display = 'none';
+  }else{
+    setCookie('CGV','home', -1);
+  }
+ });
+
+
+
+// 쿠키 확인
+function cookieCheck(name){
+  let cookieArr = document.cookie.split(';');
+  let visited = false;
+  for(let cookie of cookieArr){
+    if(cookie.search(name) > -1){
+      visited = true;
+      break;
+    }
+    if(!visited){
+      popup.setAttribute('open','');
+    }
+  }}
+  // if(!visited){
+  //   popup.setAttribute('open','');
+  // }
+ cookieCheck('CGV');
+
+
+
 /* ADD BANNER SLIDE*/
 let adWrapper = document.querySelector('.ad_wrapper'),
     adSlide = document.querySelectorAll('.ad_wrapper li'),
