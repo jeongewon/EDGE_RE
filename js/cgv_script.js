@@ -1,12 +1,13 @@
 /* HEADER 시작 (유림) */
-/* POP UP PORTFOLIO*/
+
+/* POP UP PORTFOLIO NOTICE */
 let noticePopup = document.querySelector('.notice_portfolio'),
     popupClose = noticePopup.querySelector('.popup_close'),
     dontSee = noticePopup.querySelector('#dont_see');
    
 
 //let allCookies = document.cookie; 
-  //console.log(document.cookie);
+  console.log(document.cookie);
 /*
 popupClose.addEventListener('click',(e)=>{
   e.preventDefault();
@@ -44,7 +45,6 @@ popupClose.addEventListener('click',(e)=>{
  });
 
 
-
 // 쿠키 확인
 function cookieCheck(name){
   let cookieArr = document.cookie.split(';');
@@ -65,7 +65,8 @@ function cookieCheck(name){
 
 
 
-/* ADD BANNER SLIDE*/
+/* ADD BANNER */
+//BANNER SLIDE LOOP
 let adWrapper = document.querySelector('.ad_wrapper'),
     adSlide = document.querySelectorAll('.ad_wrapper li'),
     adCount = adSlide.length,
@@ -73,8 +74,8 @@ let adWrapper = document.querySelector('.ad_wrapper'),
     adTimer,
     adWidth = 1920;
 
-    adWrapper.style.width = `${adCount * adWidth}px`;
-  
+adWrapper.style.width = `${adCount * adWidth}px`;
+console.log(adCount);
 
 function adMove(num){
   adWrapper.style.transform = `translateX(${adWidth*-num}px)`;
@@ -97,8 +98,7 @@ adWrapper.addEventListener('mouseleave',()=>{
   adMove()
 })
 
-
-/* ADD BANNER */
+//BANNER CLOSE
 let adClose = document.querySelector('.ad_close'),
     ad = document.querySelector('.ad_wrap');
 
@@ -111,7 +111,8 @@ adClose.addEventListener('click',()=>{
   }
 })
 
-/* MENU DROPDOWN */
+/* MIAN MENU DROPDOWN */
+// MENU DROPDOWN
 let mainMenu = document.querySelectorAll('.menu li'),
     subMenu = document.querySelectorAll('.submenu'),
     menuDown = document.querySelector('.menu_bg'),
@@ -137,7 +138,7 @@ mainMenu.forEach(item=>{
 })
 
 
-/* MENU STICKY */
+// MENU STICKY
 let menuSticky = document.querySelector('.main_menu'),
     menuWrap = document.querySelector('.menuwrap')
     menuLi = document.querySelectorAll('.menu_li a'),
@@ -146,7 +147,6 @@ let menuSticky = document.querySelector('.main_menu'),
 
 
 window.addEventListener('scroll',()=>{
-  console.log(window.scrollY)
     if(window.scrollY > (menuScroll)){
       menuWrap.classList.add('sticky');
       menuSticky.style.background = "linear-gradient(to right, rgb(215, 67, 87), rgb(241,79,58) 59%, rgb(239, 100, 47))";
@@ -162,12 +162,12 @@ window.addEventListener('scroll',()=>{
     }
 })
 
+
 /* SEARCH MODAL */
 let lightbox = document.querySelector('#lightbox'),
     modalOpen = document.querySelector('#modal_open'),
     modalClose = document.querySelector('.modal_close'),
     modal = document.querySelector('.modal_box');
-
 
 modalOpen.addEventListener('click',()=>{
   modal.style.display = 'block';
