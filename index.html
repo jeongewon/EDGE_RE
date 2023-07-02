@@ -222,34 +222,37 @@
     <div class="movieVideo container">
       <div class="MovieVideo_wrap">
         <ul class="MovieVideo_slide_wrap">
-          <li class="MovieVideo_slide">
-            <video id="harrypotter" src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688278186/Harry_Potter_ejldkl.mp4></video>  
+          <li class="MovieVideo_slide cf">
+            <video id="elemental" src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688273263/Elemental_l1ux17.mp4 muted autoplay loop=""></video>  
+            <!-- <video id="harrypotter" src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688278186/Harry_Potter_ejldkl.mp4 muted autoplay loop=""></video>   -->
           </li>
           <li class="MovieVideo_slide">
-            <video src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688273263/Elemental_l1ux17.mp4 muted></video>  
+            <video id="elemental" src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688273263/Elemental_l1ux17.mp4 muted autoplay loop=""></video>  
           </li>
           <li class="MovieVideo_slide">
-            <video src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688278187/SingStreet_ppqnbw.mp4 muted></video>
+            <video id="singstreet" src=https://res.cloudinary.com/drlgal8fr/video/upload/v1688278187/SingStreet_ppqnbw.mp4 muted autoplay loop=""></video>
           </li>
         </ul>
         <div class="mVbtn">
             <button class="playbtn"><i class="fa-solid fa-play"></i></button>
             <button class="pausebtn"><i class="fa-solid fa-pause"></i></button>
-            <!-- <button class="soundbtn"><i class="fa-solid fa-volume-high"></i></button>
-            <button class="soundoffbtn"><i class="fa-solid fa-volume-xmark"></i></button> -->
+            <button class="soundbtn"><i class="fa-solid fa-volume-high"></i></button>
+            <button class="soundoffbtn"><i class="fa-solid fa-volume-xmark"></i></button>
         </div>
           <div class="mVcrousel">
-            <button class="mV_leftCrousel"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="mV_rightCrousel"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="mV_leftCrousel"><img src="images/leftCrousel.png"></button>
+            <button class="mV_rightCrousel"><img src="images/rightCrousel.png"></button>
+            <!-- <button class="mV_leftCrousel"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="mV_rightCrousel"><i class="fa-solid fa-chevron-right"></i></button> -->
           </div>
       </div>
     </div> 
   
       <!-- 무비차트 / 상영예정작 -->
       <div class="movieChart container big_pd">
-              <h2 class="movieChart_tt main_mb">
-                  <a href="#moviechart" id="btnMovieChart">무비차트</a>
-                  <a href="#reservemovie" id="btnReserMovie">상영예정작</a>
+              <h2 class="movieChart_tt checkbox main_mb">
+                  <a href="#movieChart" id="btnMovieChart">무비차트</a>
+                  <a href="#ReserveMovie" id="btnReserMovie">상영예정작</a>
               </h2>
               
           <div class="movieChart_list">
@@ -257,7 +260,7 @@
             <div class="slidewrapper">
                   <div class="MovieChart_wrap">
                       <ul class="MovieChart_slide_wrap">
-                          <li class="MovieChart_slide">
+                          <li class="MovieChart_slide cf">
                               <div class="poster">
                                   <img class="poster_img" src="images/movieChart_img1.jpg" alt="해리포터와 마법사의 돌 포스터">
                                   <img class="angelimint" src="images/movie_angelimint_all.png" alt="전체 관람가">
@@ -431,7 +434,7 @@
             <div class="ReserveMovie_slidewrapper">
               <div class="MovieChart_wrap">
                   <ul class="MovieChart_slide_wrap">
-                      <li class="MovieChart_slide">
+                      <li class="MovieChart_slide cf">
                           <div class="poster">
                               <img class="poster_img" src="images/movieReserve_img1.jpg" alt="듄">
                               <img class="angelimint" src="images/movie_angelimint_12.png" alt="12세 관람가">

@@ -94,42 +94,33 @@ slidesPerView = 5,
 currentIdx = 0,
 prevBtn = document.querySelector('#prev'),
 nextBtn = document.querySelector('#next'),
-video = document.querySelector('#harrypotter'),
+video = document.querySelector('.MovieVideo_slide video'),
 videoPlayBtn = document.querySelector('.playbtn'),
 videoPauseBtn = document.querySelector('.pausebtn'),
+videoSoundBtn = document.querySelector('.soundbtn'),
+videoSoundoffBtn = document.querySelector('.soundoffbtn'),
 videoToggleBtn = document.querySelector('.mVbtn button');
 
-// 영상 재생
-// videoPlayBtn.addEventListener('click',()=>{
-//     video.play();
-//     videoPauseBtn.style.display('block');
-// });
+videoSoundoffBtn.addEventListener('click', ()=>{
+  video.muted = false;
+}); 
 
-// videoPauseBtn.addEventListener('click',()=>{
-//     video.pause();
-// });
-
-videoToggleBtn.addEventListener('click',()=>{
-  videoToggleBtn.classList.toggle('active');
-  //videoToggleBtn에 active가 있으면 추가하고 없으면 제거 (=toggle)
-  if(videoToggleBtn.classList.contains('active')){
-      video.play();
-  } else {
-      video.pause();
-  }
+videoPauseBtn.addEventListener('click',()=>{
+  video.pause();
 });
 
-// 영상 슬라이드 구현
-// let videoslideWrapper = document.querySelector('.MovieVideo_wrap'),
-//     videoslideContainer = document.querySelector('.MovieVideo_slide_wrap'),
-//     videoslides = document.querySelectorAll('.MovieVideo_slide'),
-//     videoslideCount = videoslides.length,
-//     videoslidesPerView = 1,
-//     videoslideWidth = 960,
-//     videoslideMargin = 85,
-//     videocurrentIdx = 0,
-//     videoprevCrousel = MovieVideo_wrap.querySelector('.mV_leftCrousel'),
-//     videonextCroutsel = MovieVideo_wrap.querySelector('.mV_leftCrousel');
+//영상 슬라이드 구현
+let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
+    videoslides = document.querySelectorAll('.MovieVideo_slide'), //li
+    videoslideCount = videoslides.length,
+    videoslideWidth = 1272,
+    videoslideMargin = 0,
+    videocurrentIdx = 0,
+    videoprevCrousel = document.querySelector('.mV_leftCrousel'),
+    videonextCrousel = document.querySelector('.mV_rightCrousel');
+
+
+
 
 // for(let i = 0; i<videoslideCount;i++){
 //   let cloneSlide = videoslides[i].cloneNode(true);
@@ -137,7 +128,7 @@ videoToggleBtn.addEventListener('click',()=>{
 //   videoslideContainer.appendChild(cloneSlide);
 // }
 // for(let i = videoslideCount-1; i>=0 ;i--){
-//   let cloneSlide = slides[i].cloneNode(true);
+//   let cloneSlide = videoslides[i].cloneNode(true);
 //   cloneSlide.classList.add('clone');
 //   videoslideContainer.prepend(cloneSlide);
 // }
@@ -162,7 +153,6 @@ videoToggleBtn.addEventListener('click',()=>{
 //   videoslideContainer.style.left = -num*(videoslideWidth+videoslideMargin)+'px';
 //   videocurrentIdx = num;
 //   if(videocurrentIdx == -videoslideCount || videocurrentIdx == videoslideCount){
-    
 //     setTimeout(()=>{
 //       videoslideContainer.classList.remove('animated');
 //       videoslideContainer.style.left = '0px';
@@ -170,7 +160,7 @@ videoToggleBtn.addEventListener('click',()=>{
 //     },500);
 //     setTimeout(()=>{
 //       videoslideContainer.classList.add('animated');
-//     },600);
+//     },1272);
 //   }
 // }
 
@@ -192,17 +182,26 @@ videoToggleBtn.addEventListener('click',()=>{
 // videoprevCrousel.addEventListener('click',()=>{
 //     moveSlide(videocurrentIdx+1);
 // });
-// videonextCroutsel.addEventListener('click',()=>{
+// videonextCrousel.addEventListener('click',()=>{
 //     moveSlide(videocurrentIdx-1);
 // });
 
-
-
 // 타이틀 클릭
-let movieChartTitle = document.querySelector('#btnMovieChart'),
-movieReserveTitle = document.querySelector('#btnReserMovie'),
+let movieChart = document.querySelector('#btnMovieChart'),
+movieReserve = document.querySelector('#btnReserMovie'),
+allTitle = document.querySelectorAll('.movieChart_tt a'),
 MovieChartSlide = document.querySelector('.slidewrapper'),
 ReserveMovieSlide = document.querySelector('.ReserveMovie_slidewrapper');
+
+movieReserve.addEventListener('click',()=>{
+  ReserveMovieSlide.style.display = 'block';
+  MovieChartSlide.style.display = 'none';
+})
+
+movieChart.addEventListener('click',()=>{
+  MovieChartSlide.style.display = 'block';
+  ReserveMovieSlide.style.display = 'none';
+})
 
 // 무비차트 & 상영예정작 슬라이드 구현
 slideWrapper.style.width = slideCount*(slideWidth+slideMargin)+'px';
