@@ -4,48 +4,15 @@
 let noticePopup = document.querySelector('.notice_portfolio'),
     popupClose = noticePopup.querySelector('.popup_close'),
     dontSee = noticePopup.querySelector('#dont_see');
-   
 
-//let allCookies = document.cookie; 
-  console.log(document.cookie);
-/*
-popupClose.addEventListener('click',(e)=>{
-  e.preventDefault();
-  let dontSeeCk = dontSee.checked;
-  if(dontSeeCk){
-    setCookie('CGV','home',1)
-    noticePopup.style.display = 'none';
-  }else{
-    noticePopup.style.display = 'none';
-  }
-})
-*/
-
-//쿠키 생성
+//쿠키 생성 함수
 function setCookie(name,value,day){
   let date = new Date();
   date.setDate(date.getDate()+day);
-  let setCookie = '';
-  setCookie += `${name}=${value};`;
-  setCookie += `expires=${date.toUTCString()}`;
-  document.cookie = setCookie;
+  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
 }
-setCookie('CGV','home', 1);
 
-popupClose.addEventListener('click',(e)=>{
-  e.preventDefault();
-  let dontSeeCk = dontSee.checked;
-  noticePopup.removeAttribute('open');
-  if(dontSeeCk){
-    setCookie('CGV','home', 1);
-    noticePopup.style.display = 'none';
-  }else{
-    setCookie('CGV','home', -1);
-  }
- });
-
-
-// 쿠키 확인
+// 쿠키 확인 함수
 function cookieCheck(name){
   let cookieArr = document.cookie.split(';');
   let visited = false;
@@ -53,17 +20,30 @@ function cookieCheck(name){
     if(cookie.search(name) > -1){
       visited = true;
       break;
+     }
     }
+    //만약 visited의 값이 false라면 dialog가 보인다
     if(!visited){
-      popup.setAttribute('open','');
+      noticePopup.setAttribute('open','');
     }
-  }}
-  // if(!visited){
-  //   popup.setAttribute('open','');
-  // }
- cookieCheck('CGV');
+}
+cookieCheck('CGV');
 
-
+/* 
+  popupClose 클릭 시, 
+    팝업 display none
+    dontSee에 체크 되어있다면,
+      쿠키 생성,아니라면 쿠키 만료.
+*/
+popupClose.addEventListener('click',()=>{
+  noticePopup.style.display = 'none';
+  if(dontSee.checked){
+    setCookie('CGV','home', 1);
+  }else{
+    setCookie('CGV','home', -1);
+  }
+ });
+ 
 
 /* ADD BANNER */
 //BANNER SLIDE LOOP
@@ -74,34 +54,70 @@ let adWrapper = document.querySelector('.ad_wrapper'),
     adTimer,
     adWidth = 1920;
 
+/* 1. ad리스트의 ul의 넓이를 ad의 갯수만큼 확장*/
 adWrapper.style.width = `${adCount * adWidth}px`;
-console.log(adCount);
 
+/* 
+2. ad의 기본적인 이동 슬라이드 함수 adMove
+  현재 인덱스가 ad 갯수보다 작다면,
+    ul을 현재 ad인덱스 * ad너비를 곱한 값만큼 이동하고
+    animated라는 트랜지션 클래스 속성을 추가해 이동하는 과정 보여지도록
+  아니라면
+    animated라는 트랜지션 속성을 없애고, 
+    ul을 원위치로 이동
+    현재 인덱스 번호를 0으로 리셋(무한 루프)
+ */
 function adMove(num){
-  adWrapper.style.transform = `translateX(${adWidth*-num}px)`;
   curentAddIndex = num;
-}
+  if(curentAddIndex < adCount){
+     adWrapper.style.transform = `translateX(${adWidth*-num}px)`;
+     //adWrapper.style.left = `${adWidth * -num}px`;
+     adWrapper.classList.add('animated');
+  } else{
+    setTimeout(()=>{
+      adWrapper.classList.remove('animated');
+      adWrapper.style.transform = `translateX(0px)`;
+      //adWrapper.style.left = '0px';
+      curentAddIndex = 0;
+    },500);
+  }}
+
+/* 
+3. adMove 함수를 자동으로 실행시킬 adAutoMove 함수
+  setInterval로 3초마다 adMove 실행 
+*/
 function adAutoMove(){
   adTimer = setInterval(()=>{
-  //let nextIdx = curentSlideIndex+1;
-  let nextIdx = (curentAddIndex+1)%slideCount;
+  let nextIdx = curentAddIndex+1
   adMove(nextIdx);
 }, 3000);
 }
 adAutoMove();
 
-// slideWrapper에 mouseenter 이벤트가 일어나면 자동 슬라이드 멈추기
-adWrapper.addEventListener('mouseenter',()=>{
-  adMove(adTimer);
-})
-adWrapper.addEventListener('mouseleave',()=>{
-  adMove()
-})
+/*
+// slideWrapper에 mouseenter 이벤트가 일어나면 자동 슬라이드 멈추기 -> 유림 수정작업중..
+function startAdAuto() {
+  setInterval(adAutoMove, 3000);
+  //autoSlideInterval = setInterval(adAutoMove, 3000);
+}
+function stopAdAuto() {
+  clearInterval(adAutoMove);
+}
+adWrapper.addEventListener("mouseover", stopAdAuto);
+adWrapper.addEventListener("mouseleave", startAdAuto);
+*/
+
 
 //BANNER CLOSE
 let adClose = document.querySelector('.ad_close'),
     ad = document.querySelector('.ad_wrap');
 
+/* 
+adClose 버튼 클릭시. 
+  toggle을 활용하여 클래스명 active 추가/삭제 및 ad 높이 조절,
+  adClose 버튼이 클래스명 active 포함 시, chevron 아이콘으로 html 변경
+  아니라면, x마크 아이콘으로 변경 
+ */
 adClose.addEventListener('click',()=>{
   ad.classList.toggle('active');
   if(ad.classList.contains('active')){
@@ -111,15 +127,19 @@ adClose.addEventListener('click',()=>{
   }
 })
 
+
 /* MIAN MENU DROPDOWN */
 // MENU DROPDOWN
 let mainMenu = document.querySelectorAll('.menu li'),
     subMenu = document.querySelectorAll('.submenu'),
     menuDown = document.querySelector('.menu_bg'),
-		menuHeight = menuDown.offsetHeight;
+		menuHeight = menuDown.offsetHeight,
+    subMenuHeight = 0;
 
-
-let subMenuHeight = 0;
+/* 
+1.각 서브메뉴의 높이를 구하고, 
+메뉴 호버시 DROPDOWN될 서브메뉴 배경 부분의 높이를 변수 menuTotalHeight에 할당
+*/
 subMenu.forEach(item=>{
 	if(item.offsetHeight > subMenuHeight){
 		subMenuHeight = item.offsetHeight;
@@ -127,7 +147,10 @@ subMenu.forEach(item=>{
 	})
 let menuTotalHeight = `${menuDown.offsetHeight + subMenuHeight + 80}px`
 
-
+/* 
+2.각 메인메뉴에 마우스 오버 시, menuTotalHeight로 메뉴 높이 변경
+ 마우스 아웃 시, 기본 menuHeight로 변경
+*/
 mainMenu.forEach(item=>{
 	item.addEventListener('mouseover',()=>{
 		menuDown.style.height = menuTotalHeight;
@@ -145,9 +168,15 @@ let menuSticky = document.querySelector('.main_menu'),
     menuScroll = menuDown.offsetTop,
     scrollAmout = window.scrollY;
 
-
+/* 
+1.윈도우 스크롤 발생시,
+  스크롤양이 메뉴의 offsetTop보다 크다면,
+    메뉴에 클래스명 sticky추가 후, 최상단 고정 및 배경색 그라디언트 변경
+    각 메인 메뉴의 글자색 흰색으로 변경 
+  아니라면, 클래스 sticky 삭제 후, 원래대로 변경
+*/
 window.addEventListener('scroll',()=>{
-    if(window.scrollY > (menuScroll)){
+    if(window.scrollY > menuScroll){
       menuWrap.classList.add('sticky');
       menuSticky.style.background = "linear-gradient(to right, rgb(215, 67, 87), rgb(241,79,58) 59%, rgb(239, 100, 47))";
       for(li of menuLi){
@@ -155,7 +184,7 @@ window.addEventListener('scroll',()=>{
       }
     } else {
       menuWrap.classList.remove('sticky');
-      menuSticky.style.background = "#fff";
+      menuSticky.style.background = "";
       for(li of menuLi){
         li.style.color = "";
       }
@@ -169,6 +198,14 @@ let lightbox = document.querySelector('#lightbox'),
     modalClose = document.querySelector('.modal_close'),
     modal = document.querySelector('.modal_box');
 
+/* 
+modalOpen 버튼(검색 버튼) 클릭 시, 
+  모달 display block 효과로 화면에 띄우고,
+  배경색 클래스명 visible 추가해서 보이게
+modalClose 버튼 클릭 시, 
+  모달 display none 으로 숨기고,
+  배경색 클래스명 visible 삭제
+*/
 modalOpen.addEventListener('click',()=>{
   modal.style.display = 'block';
   lightbox.classList.add('visible');
