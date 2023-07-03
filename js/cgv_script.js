@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded');
+document.addEventListener('DOMContentLoaded',()=>{
+
+
 
 // HEADER 시작 (유림) //
 // HEADER 끝 (유림) //
@@ -30,8 +32,10 @@ for(let item of formend){
     e.preventDefault();
     window.alert('현재 이동이 불가합니다');
   });
-});
+};
 
 
 
 // MIIN_3 끝 (정석) //
+
+});
