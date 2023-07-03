@@ -152,9 +152,9 @@ nav{
 .user_li:hover a{ 
   color: #f5a39d;
 }
-/* .login:hover a:before{
-  content:`<i class="fa-solid fa-lock-open"></i></i><span>로그인</span>`
-} */
+.join a i{
+  margin-left: 6px;
+}
 .search_btn{
   border: 2px solid #e2e2e2;
   width: 70px;
@@ -216,7 +216,7 @@ nav{
   position: relative;
   font-size: 18px;
   line-height:54px; 
-  padding:0 30px; 
+  padding:0 35px; 
 } 
 .menu a{
   color:#2c2c2c;

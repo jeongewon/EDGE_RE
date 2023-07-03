@@ -128,22 +128,16 @@ adClose.addEventListener('click',()=>{
 })
 
 let login = document.querySelector('.login'),
-    loginIcon = document.querySelector('.login a');
+    loginIcon = document.querySelector('.login a i');
 
-//     login.addEventListener('mouseover',()=>{
-//   loginIcon.classList.toggle('hover');
-//   if(loginIcon.classList.contains('hover')){
-//     loginIcon.innerHTML = '<i class="fa-solid fa-lock-open"></i></i><span>로그인</span>'
-//   } else{
-//     loginIcon.innerHTML= '<i class="fa-solid fa-lock"></i><span>로그인</span>'
-//   }
-// })
-// login.addEventListener('mouseover',()=>{
-//     loginIcon.innerHTML = '<i class="fa-solid fa-lock-open"></i></i><span>로그인</span>'
-//   })
-// login.addEventListener('mouseleave',()=>{
-//   loginIcon.innerHTML= '<i class="fa-solid fa-lock"></i><span>로그인</span>'
-// })
+login.addEventListener('mouseover',()=>{
+    loginIcon.classList.replace('fa-lock','fa-lock-open');
+    loginIcon.style.transform = `translateX(4px)`;
+  })
+login.addEventListener('mouseout',()=>{
+  loginIcon.classList.replace('fa-lock-open','fa-lock')
+  loginIcon.style.transform = `translateX(0)`;
+})
 
 /* MIAN MENU DROPDOWN */
 // MENU DROPDOWN
@@ -185,6 +179,7 @@ let menuSticky = document.querySelector('.main_menu'),
     menuScroll = menuDown.offsetTop,
     scrollAmout = window.scrollY;
 
+
 /* 
 1.윈도우 스크롤 발생시,
   스크롤양이 메뉴의 offsetTop보다 크다면,
@@ -193,6 +188,7 @@ let menuSticky = document.querySelector('.main_menu'),
   아니라면, 클래스 sticky 삭제 후, 원래대로 변경
 */
 window.addEventListener('scroll',()=>{
+  menuScroll = menuDown.offsetTop;
     if(window.scrollY > menuScroll){
       menuWrap.classList.add('sticky');
       menuSticky.style.background = "linear-gradient(to right, rgb(215, 67, 87), rgb(241,79,58) 59%, rgb(239, 100, 47))";
