@@ -102,23 +102,30 @@ videoToggleBtn = document.querySelectorAll('.mVbtn');
 //   videoSoundoffBtn.style.display = 'block';
 // }); 
 
+PlayBtn.addEventListener('click',()=>{
+  PlayBtn.classList.remove('active');
+  video.play();
+  PlayBtn.style.display = 'none';
+  PauseBtn.style.display = 'block';
+})
 
 PauseBtn.addEventListener('click',()=>{
   PauseBtn.classList.remove('active');
   video.pause();
   PauseBtn.style.display = 'none';
+  PlayBtn.style.display = 'block';
 });
 
-// videoPlayBtn.addEventListener('click',()=>{
-//   video.play();
-//   videoPlayBtn.style.display = 'none';
-//   videoPauseBtn.style.display = 'block';
-// });
 
-
-
-
-
+if(videoSoundoffBtn.classList.add('active')){
+  video.muted = false;
+  videoSoundoffBtn.style.display = 'none';
+  videoSoundBtn.style.display = 'block';
+} else {
+  video.muted = true;
+  videoSoundoffBtn.style.display = 'block';
+  videoSoundBtn.style.display = 'none';
+}
 
 
 //영상 슬라이드 구현
@@ -126,15 +133,20 @@ let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
     videoslides = document.querySelectorAll('.MovieVideo_slide'), //li
     videoslideCount = videoslides.length,
     videoslideWidth = 1272,
-    videoslideMargin = 0,
+    videoslideMargin = 30,
     videocurrentIdx = 0,
     videoprevCrousel = document.querySelector('.mV_leftCrousel'),
     videonextCrousel = document.querySelector('.mV_rightCrousel');
 
 
+
+
+
 // 타이틀 클릭
-let allTitle = document.querySelectorAll('.movieChart_tt a'),
-movieChartlist = document.querySelectorAll('.movieChart_list > div');
+let movieChart = document.querySelector('#btnMovieChart'),
+movieReserve = document.querySelector('#btnReserMovie'),
+allTitle = document.querySelectorAll('.movieChart_tt a'),
+MovieChartSlide = document.querySelectorAll('.movieChart_list > div');
 
 allTitle.forEach(item=>{
   item.addEventListener('click',(e)=>{
@@ -143,7 +155,7 @@ allTitle.forEach(item=>{
       title.classList.remove('active');
     }
     e.currentTarget.classList.add('active');
-    for(let slide of movieChartlist){
+    for(let slide of MovieChartSlide){
       slide.style.display = 'none';
     }
     let target = e.currentTarget.getAttribute('href');
@@ -152,20 +164,6 @@ allTitle.forEach(item=>{
   })
 })
 
-movieChart.addEventListener('click',()=>{
-  MovieChartSlide.style.display = 'block';
-  ReserveMovieSlide.style.display = 'none';
-})
-
-// allTitle.forEach(item=>{
-//   item.addEventListener('click',(e)=>{
-//     e.preventDefault();
-//     for(let title of allTitle){
-//       title.classList.remove('active');
-//     }
-//     e.currentTarget.classList.add('active');
-//   })
-// })
 
 // 무비차트 슬라이드 구현
 let slideContainer = document.querySelector('.slidewrapper .MovieChart_wrap'),
@@ -181,7 +179,7 @@ nextBtn = document.querySelector('#next');
 
 slideWrapper.style.width = slideCount*(slideWidth+slideMargin)+'px';
 
-function moveSlide(num){
+function moveSlides(num){
     slideWrapper.style.left = -num*(slideWidth+slideMargin)+'px';
     currentIdx = num;
 
@@ -193,7 +191,7 @@ function moveSlide(num){
        nextBtn.style.visibility = 'hidden';
     }
 }
-moveSlide(0)
+moveSlides(0)
 
 nextBtn.addEventListener('click',()=>{
     if(currentIdx < slideCount-slidesPerView){
