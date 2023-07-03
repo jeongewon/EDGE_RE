@@ -454,7 +454,7 @@ right: 5%;
 }
 
 .MovieVideo_wrap .mVbtn:active .pausebtn{
-  box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
 .MovieVideo_wrap .mVbtn .playbtn,.pausebtn {

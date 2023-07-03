@@ -191,15 +191,15 @@ allTitle = document.querySelectorAll('.movieChart_tt a'),
 MovieChartSlide = document.querySelector('.slidewrapper'),
 ReserveMovieSlide = document.querySelector('.ReserveMovie_slidewrapper');
 
-movieReserve.addEventListener('click',()=>{
-  ReserveMovieSlide.style.display = 'block';
-  MovieChartSlide.style.display = 'none';
-})
+// movieReserve.addEventListener('click',()=>{
+//   ReserveMovieSlide.style.display = 'block';
+//   MovieChartSlide.style.display = 'none';
+// })
 
-movieChart.addEventListener('click',()=>{
-  MovieChartSlide.style.display = 'block';
-  ReserveMovieSlide.style.display = 'none';
-})
+// movieChart.addEventListener('click',()=>{
+//   MovieChartSlide.style.display = 'block';
+//   ReserveMovieSlide.style.display = 'none';
+// })
 
 allTitle.forEach(item=>{
   item.addEventListener('click',(e)=>{
