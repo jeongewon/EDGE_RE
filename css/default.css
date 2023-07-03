@@ -24,7 +24,6 @@
 
 /* 기준잡고 버튼 위치조절 */
 
-<<<<<<< HEAD
 .main3_btn {
   position: absolute;  
   right:0;   
@@ -34,18 +33,6 @@
 .test_screening {
   position: relative;
 }
-=======
-.main3_box {
-  position: relative;  
-}
-.main3_btn {
-  position: absolute; 
-  right:0;  
-  top:0;
-  transform: translateY(50px);
-
-} 
->>>>>>> c54339f02035fe11890a184ce36d9bd444308649
 
 /* 시사회/무대인사 셀(li) 크기,효과,float left */
 .test_screening .screen_cell{
@@ -55,10 +42,7 @@
   overflow: hidden; 
   float: left;
   margin-right:33px;  
-<<<<<<< HEAD
   position: relative;
-=======
->>>>>>> c54339f02035fe11890a184ce36d9bd444308649
 }
 
 /* 셀 마지막에는 margin-right:0 */
@@ -71,27 +55,17 @@
   transition: transform .3s ease-in-out;
   background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
 
-<<<<<<< HEAD
 
-=======
->>>>>>> c54339f02035fe11890a184ce36d9bd444308649
 }
 .test_screening .screen_cell:hover img{
   transform: scale(1.1);   
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> c54339f02035fe11890a184ce36d9bd444308649
 }
 
 .screen_cell figure {
   position: relative;
-<<<<<<< HEAD
-=======
-  background: rgb(0,0,0);
->>>>>>> c54339f02035fe11890a184ce36d9bd444308649
   background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
 
 
@@ -370,11 +344,7 @@ footer li:first-child {
 
 aside {
   position: fixed;
-<<<<<<< HEAD
   right:15%;
-=======
-  right:10%;
->>>>>>> c54339f02035fe11890a184ce36d9bd444308649
   bottom:40%;
 }
 aside .wr {
@@ -439,10 +409,7 @@ aside .circle_pop {
 }
 .circle_up a ,.circle_down a  {
   display: block;
-<<<<<<< HEAD
   margin-bottom: 10px;
-=======
->>>>>>> c54339f02035fe11890a184ce36d9bd444308649
 }
 
 
