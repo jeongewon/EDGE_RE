@@ -357,22 +357,22 @@ aside .circle_pop {
   position: relative;
 }
 .circle_up {
-  width:30%;  
-  height:30%;
-  margin: 0 auto;    
+  width:56px;  
+  height:56px;
+  margin: 0 auto;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
   background:#ebebeb;
   position: relative;   
-  border-radius: 50%;
-  border: 1px solid red;    
+  border-radius: 50%;  
 }
 .circle_down {
-  width:30%;
-  height:30%;
+  width:56px;  
+  height:56px;
   margin: 0 auto;    
-  background:#ebebeb; 
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
+  background:#ebebeb;   
   position: relative;   
-  border-radius: 50%;
-  border: 1px solid red;    
+  border-radius: 50%;  
 }
 
 .circle_down {  
