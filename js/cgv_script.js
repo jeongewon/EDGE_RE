@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded',()=>{
-
-
-
 // HEADER 시작 (유림) //
 // HEADER 끝 (유림) //
 
@@ -37,5 +33,3 @@ for(let item of formend){
 
 
 // MIIN_3 끝 (정석) //
-
-});

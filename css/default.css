@@ -45,6 +45,9 @@
   float: left;
   margin-right:33px;  
   position: relative;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);    
+
+
 }
 
 /* 셀 마지막에는 margin-right:0 */
@@ -55,6 +58,7 @@
 /* 셀안의 img에 트랜지션 및 호버시 이미지 스케일 + 필터로 어둡게 */
 .test_screening .screen_cell img{
   transition: transform .3s ease-in-out;
+
   
 
 }
@@ -198,7 +202,9 @@
   border-radius:27.5px;
   transform: translate(-50%);  
   font-size: 20px;
-  font-weight: bold;    
+  font-weight: bold;  
+  box-shadow: 1px 1px 3px 0px rgba(0,0,0,.5);
+  
 } 
 .main4_mapbox i{
 font-size:18px;
@@ -275,7 +281,15 @@ margin-top: 13px;
   position: absolute;
   right:70px; 
   bottom:56px;  
+    
+
   
+}
+
+.snsbtn a {
+  width:10%;
+  height:10%;
+  border-radius: 50%;
 }
 
 .snsbtn a + a{
@@ -375,19 +389,21 @@ aside .circle_pop {
   width:56px;  
   height:56px;
   margin: 0 auto;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);    
   background:#fff;
   position: relative;   
   border-radius: 50%;  
+  cursor: pointer;
 }
 .circle_down {
   width:56px;  
   height:56px;
   margin: 0 auto;    
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
-  background:#fff;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);    
+  background: #fff;
   position: relative;   
   border-radius: 50%;  
+  cursor: pointer;
 }
 
 
@@ -409,10 +425,11 @@ aside .circle_pop {
 
 .circle_up a i,.circle_down a i  {
   position: absolute;  
-  font-size: 30px;  
+  font-size: 20px;  
   left:50%;
   top:50%;
   transform:translate(-50%, -50%);
+  
 }
 .circle_up a ,.circle_down a  {
   display: block;
@@ -429,4 +446,44 @@ aside .circle_pop {
 
 
 
+.wr_guide {
+  width:120px;
+  height:34px;
+  border-radius: 30px;
+  background: #272727;
+  position: relative;
+  top:5%;
+  left:-40%;
+  transform: translate(50% 50%);
+  opacity: 1;
+  /* display: none; */
+}
+
+.wr_guide button {
+  width: 100%;
+  height: 100%; 
+}
+/* .wr_guide button:after {    
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top:50%;
+  right:-17px;
+  transform: translateY(-45%);
+} */
+
+.wr_guide button h5 {
+  font-size: 10px;    
+  color: #fff;  
+  text-align: center;
+}
+
+.circle_pop:hover .wr_guide {
+opacity: 1;
+/* display: block; */
+}
 /* MAIN_3 끝 (정석) */
+.wr_guide:hover {
+  background: #d74357;
+}
