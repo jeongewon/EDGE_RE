@@ -127,6 +127,23 @@ adClose.addEventListener('click',()=>{
   }
 })
 
+let login = document.querySelector('.login'),
+    loginIcon = document.querySelector('.login a');
+
+//     login.addEventListener('mouseover',()=>{
+//   loginIcon.classList.toggle('hover');
+//   if(loginIcon.classList.contains('hover')){
+//     loginIcon.innerHTML = '<i class="fa-solid fa-lock-open"></i></i><span>로그인</span>'
+//   } else{
+//     loginIcon.innerHTML= '<i class="fa-solid fa-lock"></i><span>로그인</span>'
+//   }
+// })
+// login.addEventListener('mouseover',()=>{
+//     loginIcon.innerHTML = '<i class="fa-solid fa-lock-open"></i></i><span>로그인</span>'
+//   })
+// login.addEventListener('mouseleave',()=>{
+//   loginIcon.innerHTML= '<i class="fa-solid fa-lock"></i><span>로그인</span>'
+// })
 
 /* MIAN MENU DROPDOWN */
 // MENU DROPDOWN
