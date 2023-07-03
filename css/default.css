@@ -449,12 +449,18 @@ right: 5%;
   transition: 0.1s;
 }
 
-.MovieVideo_wrap:hover .mVbtn .pausebtn{
+.MovieVideo_wrap .mVbtn{
+  display: none;
+}
+
+.MovieVideo_wrap:hover .mVbtn {
   display: block;
 }
 
-.MovieVideo_wrap .mVbtn:active .pausebtn{
-  box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+.mVbtn:active .pausebtn,
+.mVbtn:active .playbtn{
+  box-shadow: inset 0px 0px 12px 3px rgba(0,0,0, 0.2);
+  transition: 0.2s;
 }
 
 .MovieVideo_wrap .mVbtn .playbtn,.pausebtn {
@@ -473,14 +479,11 @@ top: 50%;
   color: #fff;
 }
 
-.mVbtn .soundbtn:active,
-.mVbtn .soundoffbtn:active  {
+.sound:active button {
   color: #e64947;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
 }
 
-.mVbtn .pausebtn,
-.mVbtn .playbtn,
 .sound .soundbtn{
   display: none;
 }

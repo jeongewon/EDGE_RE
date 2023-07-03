@@ -98,18 +98,34 @@ nextBtn = document.querySelector('#next'),
 video = document.querySelector('.MovieVideo_slide video'),
 videoPlayBtn = document.querySelector('.playbtn'),
 videoPauseBtn = document.querySelector('.pausebtn'),
+soundBtn = document.querySelectorAll('.sound button'),
 videoSoundBtn = document.querySelector('.soundbtn'),
 videoSoundoffBtn = document.querySelector('.soundoffbtn'),
 videoToggleBtn = document.querySelector('.mVbtn button');
 
 videoSoundoffBtn.addEventListener('click', ()=>{
   video.muted = false;
+  videoSoundoffBtn.style.display = 'none';
+  videoSoundBtn.style.display = 'block';
+}); 
+
+videoSoundBtn.addEventListener('click', ()=>{
+  video.muted = true;
+  videoSoundBtn.style.display = 'none';
+  videoSoundoffBtn.style.display = 'block';
 }); 
 
 videoPauseBtn.addEventListener('click',()=>{
   video.pause();
+  videoPlayBtn.style.display = 'block';
+  videoPauseBtn.style.display = 'none';
 });
 
+videoPlayBtn.addEventListener('click',()=>{
+  video.play();
+  videoPlayBtn.style.display = 'none';
+  videoPauseBtn.style.display = 'block';
+});
 
 
 //영상 슬라이드 구현
@@ -193,25 +209,25 @@ allTitle = document.querySelectorAll('.movieChart_tt a'),
 MovieChartSlide = document.querySelector('.slidewrapper'),
 ReserveMovieSlide = document.querySelector('.ReserveMovie_slidewrapper');
 
-// movieReserve.addEventListener('click',()=>{
-//   ReserveMovieSlide.style.display = 'block';
-//   MovieChartSlide.style.display = 'none';
-// })
-
-// movieChart.addEventListener('click',()=>{
-//   MovieChartSlide.style.display = 'block';
-//   ReserveMovieSlide.style.display = 'none';
-// })
-
-allTitle.forEach(item=>{
-  item.addEventListener('click',(e)=>{
-    e.preventDefault();
-    for(let title of allTitle){
-      title.classList.remove('active');
-    }
-    e.currentTarget.classList.add('active');
-  })
+movieReserve.addEventListener('click',()=>{
+  ReserveMovieSlide.style.display = 'block';
+  MovieChartSlide.style.display = 'none';
 })
+
+movieChart.addEventListener('click',()=>{
+  MovieChartSlide.style.display = 'block';
+  ReserveMovieSlide.style.display = 'none';
+})
+
+// allTitle.forEach(item=>{
+//   item.addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     for(let title of allTitle){
+//       title.classList.remove('active');
+//     }
+//     e.currentTarget.classList.add('active');
+//   })
+// })
 
 // 무비차트 슬라이드 구현
 slideWrapper.style.width = slideCount*(slideWidth+slideMargin)+'px';
