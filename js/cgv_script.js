@@ -152,6 +152,21 @@ allTitle.forEach(item=>{
   })
 })
 
+movieChart.addEventListener('click',()=>{
+  MovieChartSlide.style.display = 'block';
+  ReserveMovieSlide.style.display = 'none';
+})
+
+// allTitle.forEach(item=>{
+//   item.addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     for(let title of allTitle){
+//       title.classList.remove('active');
+//     }
+//     e.currentTarget.classList.add('active');
+//   })
+// })
+
 // 무비차트 슬라이드 구현
 let slideContainer = document.querySelector('.slidewrapper .MovieChart_wrap'),
 slideWrapper = document.querySelector('.slidewrapper .MovieChart_slide_wrap'),
