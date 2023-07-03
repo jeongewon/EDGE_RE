@@ -81,34 +81,45 @@ modalClose.addEventListener('click',()=>{
 /* HEADER 끝 (유림) */
 
 /* MAIN_1 시작 (이원) */
-let slideContainer = document.querySelector('.slidewrapper .MovieChart_wrap'),
-slideWrapper = document.querySelector('.slidewrapper .MovieChart_slide_wrap'),
-slides = document.querySelectorAll('.slidewrapper .MovieChart_slide_wrap li'),
-slideContainer2 = document.querySelector('.ReserveMovie_slidewrapper .MovieChart_wrap'),
-slideWrapper2 = document.querySelector('.ReserveMovie_slidewrapper .MovieChart_slide_wrap'),
-slides2 = document.querySelectorAll('.ReserveMovie_slidewrapper .MovieChart_slide_wrap'),
-slideCount = slides.length,
-slideCount2 = slides2.length,
-slideWidth = 222,
-slideMargin = 40,
-slidesPerView = 5,
-currentIdx = 0,
-prevBtn = document.querySelector('#prev'),
-nextBtn = document.querySelector('#next'),
-video = document.querySelector('.MovieVideo_slide video'),
-videoPlayBtn = document.querySelector('.playbtn'),
-videoPauseBtn = document.querySelector('.pausebtn'),
+// 메인 영상 버튼
+let video = document.querySelector('#Elemental'),
+PlayBtn = document.querySelector('.playbtn'),
+PauseBtn = document.querySelector('.pausebtn'),
+SoundBtn = document.querySelectorAll('.sound button'),
 videoSoundBtn = document.querySelector('.soundbtn'),
 videoSoundoffBtn = document.querySelector('.soundoffbtn'),
-videoToggleBtn = document.querySelector('.mVbtn button');
+videoToggleBtn = document.querySelectorAll('.mVbtn');
 
-videoSoundoffBtn.addEventListener('click', ()=>{
-  video.muted = false;
-}); 
+// videoSoundoffBtn.addEventListener('click', ()=>{
+//   video.muted = false;
+//   videoSoundoffBtn.style.display = 'none';
+//   videoSoundBtn.style.display = 'block';
+// }); 
 
-videoPauseBtn.addEventListener('click',()=>{
+// videoSoundBtn.addEventListener('click', ()=>{
+//   video.muted = true;
+//   videoSoundBtn.style.display = 'none';
+//   videoSoundoffBtn.style.display = 'block';
+// }); 
+
+
+PauseBtn.addEventListener('click',()=>{
+  PauseBtn.classList.remove('active');
   video.pause();
+  PauseBtn.style.display = 'none';
 });
+
+// videoPlayBtn.addEventListener('click',()=>{
+//   video.play();
+//   videoPlayBtn.style.display = 'none';
+//   videoPauseBtn.style.display = 'block';
+// });
+
+
+
+
+
+
 
 //영상 슬라이드 구현
 let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
@@ -120,86 +131,10 @@ let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
     videoprevCrousel = document.querySelector('.mV_leftCrousel'),
     videonextCrousel = document.querySelector('.mV_rightCrousel');
 
-// for(let i = 0; i<videoslideCount;i++){
-//   let cloneSlide = videoslides[i].cloneNode(true);
-//   cloneSlide.classList.add('clone');
-//   videoslideContainer.appendChild(cloneSlide);
-// }
-// for(let i = videoslideCount-1; i>=0 ;i--){
-//   let cloneSlide = videoslides[i].cloneNode(true);
-//   cloneSlide.classList.add('clone');
-//   videoslideContainer.prepend(cloneSlide);
-// }
-
-// newSlides = document.querySelectorAll('.MovieVideo_slide li');
-
-// newSlides.forEach((slide,idx)=>{
-//   slide.style.left = `${idx*(videoslideWidth+videoslideMargin)}px`;
-// });
-
-// function setSlide(){
-//   // ul {transform:translateX(-3000px)}
-//   let ulMoveAmt = (videoslideWidth + videoslideMargin)*-videoslideCount+'px';
-//   videoslideContainer.style.transform = `translateX(${ulMoveAmt})`;
-//   videoslideContainer.classList.add('animated');
-// }
-// setSlide();
-
-
-// //슬라이드 이동함수
-// function moveSlide(num){
-//   videoslideContainer.style.left = -num*(videoslideWidth+videoslideMargin)+'px';
-//   videocurrentIdx = num;
-//   if(videocurrentIdx == -videoslideCount || videocurrentIdx == videoslideCount){
-//     setTimeout(()=>{
-//       videoslideContainer.classList.remove('animated');
-//       videoslideContainer.style.left = '0px';
-//       videocurrentIdx = 0;
-//     },500);
-//     setTimeout(()=>{
-//       videoslideContainer.classList.add('animated');
-//     },1272);
-//   }
-// }
-
-// function debounce(callback, time){
-//   let slideTrigger = true;
-//   // return function(){}
-//   return ()=>{
-//     if(slideTrigger){
-//       callback();
-//       slideTrigger = false;
-//       setTimeout(()=>{
-//         slideTrigger = true;
-//       },time);
-//     }
-//   }
-// }
-
-// //좌우 컨트롤
-// videoprevCrousel.addEventListener('click',()=>{
-//     moveSlide(videocurrentIdx+1);
-// });
-// videonextCrousel.addEventListener('click',()=>{
-//     moveSlide(videocurrentIdx-1);
-// });
 
 // 타이틀 클릭
-let movieChart = document.querySelector('#btnMovieChart'),
-movieReserve = document.querySelector('#btnReserMovie'),
-allTitle = document.querySelectorAll('.movieChart_tt a'),
-MovieChartSlide = document.querySelector('.slidewrapper'),
-ReserveMovieSlide = document.querySelector('.ReserveMovie_slidewrapper');
-
-// movieReserve.addEventListener('click',()=>{
-//   ReserveMovieSlide.style.display = 'block';
-//   MovieChartSlide.style.display = 'none';
-// })
-
-// movieChart.addEventListener('click',()=>{
-//   MovieChartSlide.style.display = 'block';
-//   ReserveMovieSlide.style.display = 'none';
-// })
+let allTitle = document.querySelectorAll('.movieChart_tt a'),
+movieChartlist = document.querySelectorAll('.movieChart_list > div');
 
 allTitle.forEach(item=>{
   item.addEventListener('click',(e)=>{
@@ -208,18 +143,32 @@ allTitle.forEach(item=>{
       title.classList.remove('active');
     }
     e.currentTarget.classList.add('active');
+    for(let slide of movieChartlist){
+      slide.style.display = 'none';
+    }
+    let target = e.currentTarget.getAttribute('href');
+    console.log(target);
+    document.querySelector(target).style.display = 'block';
   })
 })
 
 // 무비차트 슬라이드 구현
+let slideContainer = document.querySelector('.slidewrapper .MovieChart_wrap'),
+slideWrapper = document.querySelector('.slidewrapper .MovieChart_slide_wrap'),
+slides = document.querySelectorAll('.slidewrapper .MovieChart_slide_wrap li'),
+slideCount = slides.length,
+slideWidth = 222,
+slideMargin = 40,
+slidesPerView = 5,
+currentIdx = 0,
+prevBtn = document.querySelector('#prev'),
+nextBtn = document.querySelector('#next');
+
 slideWrapper.style.width = slideCount*(slideWidth+slideMargin)+'px';
-slideWrapper2.style.width = slideCount*(slideWidth+slideMargin)+'px';
 
 function moveSlide(num){
     slideWrapper.style.left = -num*(slideWidth+slideMargin)+'px';
-    slideWrapper2.style.left = -num*(slideWidth+slideMargin)+'px';
     currentIdx = num;
-
 
     if(currentIdx === 0){
         prevBtn.style.visibility = 'hidden';
@@ -241,18 +190,6 @@ prevBtn.addEventListener('click',()=>{
       moveSlide(currentIdx-5);
     }
   });
-
-nextBtn.addEventListener('click',()=>{
-  if(currentIdx < slideCount2-slidesPerView){
-    moveSlide(currentIdx+5);
-  }
-});
-prevBtn.addEventListener('click',()=>{
-  if(currentIdx > 0){
-    moveSlide(currentIdx-5);
-  }
-});
-
 /* MAIN_1 끝 (이원) */
 
 /* MAIN_2 시작 (수연) */

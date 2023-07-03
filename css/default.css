@@ -402,11 +402,16 @@ height: 4000px;
 
 /* MAIN_1 시작 (이원) */
 /* 예고편 영상 */
+.movieVideo{
+  overflow: hidden;
+  position: relative;
+}
 .MovieVideo_wrap {
 position: relative;
 padding-top: 81px;
-overflow: hidden;
+/* overflow: hidden; */
 margin: 0 auto;
+transform:translateX(-50%);
 }
 
 .MovieVideo_slide_wrap {
@@ -416,28 +421,33 @@ width: 4000px;
 .MovieVideo_slide {
 position: relative;
 float: left;
+transform:scale(0.9);
+filter:brightness(0.8);
 }
-
+.MovieVideo_slide.active{
+  transform:none;
+  filter:brightness(1);
+}
 .MovieVideo_slide video{
   width: 1272px;
 }
 
-.MovieVideo_wrap .mVcrousel button{
+.movieVideo .mVcrousel button{
 position: absolute;
 color: #fff;
 font-size: 70px;
 top: 50%;
 }
 
-.MovieVideo_wrap .mVcrousel .mV_leftCrousel {
-left: 5%;
+.movieVideo .mV_leftCrousel {
+left: 8%;
 }
 
-.MovieVideo_wrap .mVcrousel .mV_rightCrousel {
-right: 5%;
+.movieVideo .mV_rightCrousel {
+right: 9%;
 }
 
-.MovieVideo_wrap .mVbtn button{
+.movieVideo .mVbtn button{
   position: absolute;
   width: 120px;
   height: 120px;
@@ -449,44 +459,39 @@ right: 5%;
   transition: 0.1s;
 }
 
-.MovieVideo_wrap:hover .mVbtn .pausebtn{
+.movieVideo .mVbtn{
+  display: none;
+}
+
+.movieVideo:hover .mVbtn {
   display: block;
 }
 
-.MovieVideo_wrap .mVbtn:active .pausebtn{
-  box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+.movieVideo .mVbtn button {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
 }
 
-.MovieVideo_wrap .mVbtn .playbtn,.pausebtn {
-left: 50%;
-transform: translateX(-50%);
-top: 50%;
+.mVbtn:active button {
+  box-shadow: inset 0px 0px 12px 3px rgba(0,0,0, 0.2);
+  transition: 0.2s;
 }
 
-.MovieVideo_wrap .sound button{
+.movieVideo .sound button{
   position: absolute;
   top: 87%;
-  right: 65px;
+  left: 73%;
   background: none;
   font-size: 35px;
   opacity: .9;
   color: #fff;
 }
 
-.mVbtn .soundbtn:active,
-.mVbtn .soundoffbtn:active  {
+.sound:active button {
   color: #e64947;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
 }
-
-.mVbtn .pausebtn,
-.mVbtn .playbtn,
-.sound .soundbtn{
-  display: none;
-}
-
-
-
 
 
 /* 무비차트 & 상영예정작 */
@@ -520,16 +525,10 @@ right: 0;
   font-weight: medium;
 }
 
-.movieChart_tt:active a {
+.movieChart_tt a.active {
   color: #e64947;
   font-weight: bold;
   border-bottom: 4px solid #e64947;
-}
-
-.movieChart_tt a:nth-child(1){
-color: #e64947;
-font-weight: bold;
-border-bottom: 4px solid #e64947;
 }
 
 /* 무비차트 div */
@@ -537,8 +536,7 @@ border-bottom: 4px solid #e64947;
 position: relative;
 }
 
-.ReserveMovie_slidewrapper {
-position: relative;
+#ReserveMovie {
 display: none;
 }
 
@@ -674,16 +672,16 @@ left: -25px;
 right: -22px;
 }
 
-.ReserveMovie_slidewrapper .mcCarousel button{
+#ReserveMovie .mcCarousel button{
 top: 138px;
 position: absolute;
 }
 
-.ReserveMovie_slidewrapper .mC_prevBtn{
+#ReserveMovie .mC_prevBtn{
 left: -25px;
 }
 
-.ReserveMovie_slidewrapper .mC_nextBtn{
+#ReserveMovie .mC_nextBtn{
 right: -22px;
 }
 
@@ -731,17 +729,12 @@ transition: 0.1s;
 }
 
 /* 예매하기 & 상세보기 버튼 호버 */
-/* .MovieChart_slide:hover .movieChart_btn a:hover{
-  box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,.4);
-  opacity: .85;
-  } */
   .MovieChart_slide:hover .movieChart_btn a:hover{
     box-shadow: 0 0 rgba(0,0,0,.4);
     border-bottom-width: 1px;
     transform: translateY(1px);
     opacity: .85;
   }
-
 
 /* MAIN_1 끝 (이원) */
 
