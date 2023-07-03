@@ -157,7 +157,7 @@ subMenu.forEach(item=>{
 	if(item.offsetHeight > subMenuHeight){
 		subMenuHeight = item.offsetHeight;
 	}
-	})
+})
 let menuTotalHeight = `${menuDown.offsetHeight + subMenuHeight + 80}px`
 
 /* 
@@ -181,7 +181,6 @@ let menuSticky = document.querySelector('.main_menu'),
     menuScroll = menuDown.offsetTop,
     body = document.body,
     scrollAmout = window.scrollY;
-
 
 /* 
 1.윈도우 스크롤 발생시,
