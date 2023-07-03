@@ -109,6 +109,8 @@ videoPauseBtn.addEventListener('click',()=>{
   video.pause();
 });
 
+
+
 //영상 슬라이드 구현
 let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
     videoslides = document.querySelectorAll('.MovieVideo_slide'), //li
