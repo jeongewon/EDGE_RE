@@ -71,14 +71,16 @@ function adMove(num){
   curentAddIndex = num;
   if(curentAddIndex < adCount){
      adWrapper.style.transform = `translateX(${adWidth*-num}px)`;
-     //adWrapper.style.left = `${adWidth * -num}px`;
      adWrapper.classList.add('animated');
+    //  let time = 3000;
+    //  adAutoMove(time);
   } else{
     setTimeout(()=>{
       adWrapper.classList.remove('animated');
       adWrapper.style.transform = `translateX(0px)`;
-      //adWrapper.style.left = '0px';
       curentAddIndex = 0;
+      // let time = 0;
+      // adMove(0);
     },500);
   }}
 
@@ -92,7 +94,7 @@ function adAutoMove(){
   adMove(nextIdx);
 }, 3000);
 }
-adAutoMove();
+adAutoMove(3000);
 
 /*
 // slideWrapper에 mouseenter 이벤트가 일어나면 자동 슬라이드 멈추기 -> 유림 수정작업중..
@@ -177,6 +179,7 @@ let menuSticky = document.querySelector('.main_menu'),
     menuWrap = document.querySelector('.menuwrap')
     menuLi = document.querySelectorAll('.menu_li a'),
     menuScroll = menuDown.offsetTop,
+    body = document.body,
     scrollAmout = window.scrollY;
 
 
@@ -188,15 +191,15 @@ let menuSticky = document.querySelector('.main_menu'),
   아니라면, 클래스 sticky 삭제 후, 원래대로 변경
 */
 window.addEventListener('scroll',()=>{
-  menuScroll = menuDown.offsetTop;
-    if(window.scrollY > menuScroll){
-      menuWrap.classList.add('sticky');
+    if(window.scrollY >= menuScroll){
+      body.classList.add('sticky');
+      menuWrap.style.hight = 0;
       menuSticky.style.background = "linear-gradient(to right, rgb(215, 67, 87), rgb(241,79,58) 59%, rgb(239, 100, 47))";
       for(li of menuLi){
         li.style.color = "#fff";
       }
     } else {
-      menuWrap.classList.remove('sticky');
+      body.classList.remove('sticky');
       menuSticky.style.background = "";
       for(li of menuLi){
         li.style.color = "";

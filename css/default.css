@@ -184,11 +184,14 @@ nav{
   background: linear-gradient(to bottom, #fff 54px, rgba(255,255,255,1) 50px);
   transition : height 0.3s;
 }
-.sticky{
+.sticky .menu_bg{
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
+}
+body.sticky {
+  padding-top:55px
 }
 .menuwrap{
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
@@ -260,6 +263,9 @@ nav{
   font-size: 16px;
   line-height: 16px;
   margin-top: 24px;
+}
+.past{
+  display: inline-block;
 }
 .qr img{
   width: 48px;
