@@ -54,7 +54,7 @@ function move_eSlide(num){
       choiceIdx = 0;
     }, 500);
     setTimeout(()=>{
-      eventM_Lists.classList.add('animated');
+      eventM_Lists.classList.add('animated');  
     }, 600);
   }
 }
@@ -73,11 +73,11 @@ function e_debounce(callback, time){
 
 //이벤트 캐러셀 좌우 버튼 컨트롤
 eprevBtn.addEventListener('click', e_debounce(()=>{
-  move_eSlide(choiceIdx - 1);
+  move_eSlide(choiceIdx - 1); 
 }, 500));
 
 enextBtn.addEventListener('click', e_debounce(()=>{
-  move_eSlide(choiceIdx + 1);
+  move_eSlide(choiceIdx + 1); eprevBtn.style.visibility = 'visible';
 }, 500));
 
 /* MAIN_2 끝 (수연) */

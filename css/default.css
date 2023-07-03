@@ -51,7 +51,7 @@
 .event .all_btn {position: absolute; right: 0; bottom: 346px;}
 .event .com_btn i {line-height: 50px;}
 .event .move_controls {position: relative; top: -208.5px;}
-.event .pre_btn {position: absolute; left: -25px;}
+.event .pre_btn {position: absolute; left: -25px; visibility: hidden;}
 .event .next_btn {position: absolute; right: -25px;}
 
 /* 특별관 섹션 */
@@ -65,13 +65,16 @@
   position: absolute; left:30px; bottom: 30px; color: #fff; z-index: 1;
 }
 .special .spe_desc h3 {
-  font-size: 40px; font-weight: bold; letter-spacing: -0.01em; 
-  text-transform: uppercase;
+  font-weight: bold; letter-spacing: -0.01em; text-transform: uppercase;
 }
+.special .spe_main h3 {font-size: 60px;}
+.special .spe_sub h3 {font-size: 28px;}
 .special .spe_desc p {
-  font-size: 30px; font-weight: 500; letter-spacing: -0.03em;
-  position: absolute; white-space: nowrap; bottom: 50px; 
+  font-weight: 500; letter-spacing: -0.03em; 
+  white-space: nowrap; position: absolute;
 }
+.special .spe_main p {font-size: 22px; bottom: 60px; left: 4px;}
+.special .spe_sub p {font-size: 18px; bottom: 33px;}
 .special article .spe_hover {
   position: absolute; left: 0; right: 0; opacity: 0;
   transition: all 0.5s ease-out;}
