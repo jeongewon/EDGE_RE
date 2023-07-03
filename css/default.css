@@ -61,7 +61,8 @@
 .test_screening .screen_cell:after{
   content: '';
   position: absolute;
-  background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
+  background: linear-gradient( rgba(0,0,0,0) 40%, rgba(0,0,0,.6) 100%);
+  
   right:0;
   left:0;
   bottom:0;
@@ -266,18 +267,20 @@ margin-top: 13px;
   text-align: center;
 }
 .helpbtn a +a {
-  margin-left:10px;
+  margin-left:5px;
 }
 
 .snsbtn {  
   display: inline-block;  
   position: absolute;
   right:70px; 
-  bottom:56px;
+  bottom:56px;  
   
 }
 
-
+.snsbtn a + a{
+  margin-left: 5px;
+}
 /* footer */
 footer {
   margin-bottom: 27px;
@@ -305,10 +308,7 @@ footer li:last-child{
 footer li:first-child {
   padding-left:15px ;
 }
-/* 
-.footer_upper {
-   box-shadow: 1px 0 rgba(0, 0, 0, 0.1);  
-} */
+
 .footer_write p {  
   white-space: pre-line;
   line-height: 27px;
@@ -327,8 +327,7 @@ footer li:first-child {
 
 .footer_write form a {
   display: inline-block;
-  color: white;
-  background: red;
+  color: white;  
   padding: 5px;
   cursor: pointer;
 }
@@ -377,7 +376,7 @@ aside .circle_pop {
   height:56px;
   margin: 0 auto;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
-  background:#ebebeb;
+  background:#fff;
   position: relative;   
   border-radius: 50%;  
 }
@@ -386,14 +385,11 @@ aside .circle_pop {
   height:56px;
   margin: 0 auto;    
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
-  background:#ebebeb;   
+  background:#fff;
   position: relative;   
   border-radius: 50%;  
 }
 
-.circle_down {  
-  /* background:palevioletred;  */
-}
 
 .circle_pop a {
   width:150px;
@@ -425,10 +421,10 @@ aside .circle_pop {
 
 
 
-@keyframes paconi {
-  0% {top:10%;}       
-  50% {top:40%;}  
-  100% {top:10%;}
+@keyframes paconi {s
+  0% {top:5%;}       
+  50% {top:25%;}  
+  100% {top:5%;}
 }
 
 
