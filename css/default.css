@@ -422,13 +422,6 @@ float: left;
   width: 1272px;
 }
 
-
-
-.MovieVideo_slide_wrap.animated{
-	transition:left 0.5s ease-in;
-}
-
-
 .MovieVideo_wrap .mVcrousel button{
 position: absolute;
 color: #fff;
@@ -461,7 +454,7 @@ right: 5%;
 }
 
 .MovieVideo_wrap .mVbtn:active .pausebtn{
-  box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
 .MovieVideo_wrap .mVbtn .playbtn,.pausebtn {
@@ -514,26 +507,6 @@ letter-spacing: -0.03em;
   padding-top: 18px;
 }
 
-.movieChart_tt a:nth-child(2) {
-color: #3a3a3a;
-font-weight: medium;
-}
-
-.movieChart_tt a:nth-child(1){
-color: #e64947;
-font-weight: bold;
-margin-right: 30px;
-border-bottom: 4px solid #e64947;
-}
-
-.movieChart_tt a:nth-child(2):active{
-color: #e64947; 
-font-weight: bold;
-border-bottom: 4px solid #e64947;
-}
-
-
-
 .movieChart .all_btn {
 position: absolute;
 top: 115px;
@@ -541,7 +514,23 @@ right: 0;
 }
 
 /* 무비차트 / 상영예정작 클릭 */
+.movieChart_tt a {
+  margin-right: 30px;
+  color: #3a3a3a;
+  font-weight: medium;
+}
 
+.movieChart_tt:active a {
+  color: #e64947;
+  font-weight: bold;
+  border-bottom: 4px solid #e64947;
+}
+
+.movieChart_tt a:nth-child(1){
+color: #e64947;
+font-weight: bold;
+border-bottom: 4px solid #e64947;
+}
 
 /* 무비차트 div */
 .slidewrapper{
