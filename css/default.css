@@ -1,4 +1,3 @@
-
 /* HEADER 시작 (유림) */
 /* HEADER 끝 (유림) */
 
@@ -13,27 +12,26 @@
 /* body layout */
 
 /* 중앙정렬 */
+/* body {
+  position: relative;
+} */
 .main_total >  .main3_container{
   text-align: center; 
+  position: relative;
 } 
 
 /* main3 */
 
 /* 기준잡고 버튼 위치조절 */
-.main3_container {
-  position: relative;
-}
-
-
-.main_content_teather {
-  position: relative;
-}
 
 .main3_btn {
-  position: absolute;
-  right: 10px;
-  top:0;
-  transform: translateY(-100%);
+  position: absolute;  
+  right:0;   
+  top:5px;    
+} 
+
+.test_screening {
+  position: relative;
 }
 
 /* 시사회/무대인사 셀(li) 크기,효과,float left */
@@ -43,8 +41,8 @@
   border-radius: 15px;
   overflow: hidden; 
   float: left;
-  margin-right:33px;
-  position: relative;  
+  margin-right:33px;  
+  position: relative;
 }
 
 /* 셀 마지막에는 margin-right:0 */
@@ -55,19 +53,25 @@
 /* 셀안의 img에 트랜지션 및 호버시 이미지 스케일 + 필터로 어둡게 */
 .test_screening .screen_cell img{
   transition: transform .3s ease-in-out;
+  background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
+
+
 }
 .test_screening .screen_cell:hover img{
   transform: scale(1.1);   
-  /* filter: brightness(0.7); */
+
+
+
 }
 
 .screen_cell figure {
   position: relative;
-  background: rgb(0,0,0);
+  background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
+
+
 }
 .screen_cell figure:hover::after
 { 
-  background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
   content:'';
   position:absolute;
   top: 0;
@@ -83,11 +87,11 @@
   color: #fff;
   position: absolute;
   left:30px;
-  bottom: 31px;    
+  bottom: 20px;    
   text-align:left;
   font-size: 22px;
   font-weight: bold;
-  line-height: 35px;
+  line-height: 27px;
   z-index: 5;
 }  
 
@@ -119,8 +123,7 @@
   height: 354px;
 }
 
-.main4_allbox .main4_mapbox {
-  /* text-align: center;   */
+.main4_allbox .main4_mapbox {  
   position: relative;
   width: 635px;
   height: 354px;
@@ -341,12 +344,12 @@ footer li:first-child {
 
 aside {
   position: fixed;
-  right:30%;
+  right:15%;
   bottom:40%;
 }
 aside .wr {
   width: 230px;
-  height: 300px;
+  height: 230px;
   /* background: #d74357; */
   position: absolute;
   left:85%;
@@ -354,23 +357,27 @@ aside .wr {
 
 aside .circle_pop {
   width:230px;
-  height:150px;  
+  height:80px;  
   /* background: #3a3a3a; */
   position: relative;
 }
 .circle_up {
-  width:145px;  
-  height:74px;
-  margin: 0 auto;    
-  /* background:green;  */
-  position: relative;
+  width:56px;  
+  height:56px;
+  margin: 0 auto;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
+  background:#ebebeb;
+  position: relative;   
+  border-radius: 50%;  
 }
 .circle_down {
-  width:145px;
-  height:74px;
+  width:56px;  
+  height:56px;
   margin: 0 auto;    
-  /* background:green;  */
-  position: relative;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
+  background:#ebebeb;   
+  position: relative;   
+  border-radius: 50%;  
 }
 
 .circle_down {  
@@ -387,8 +394,9 @@ aside .circle_pop {
   animation:paconi 2s ease-in-out infinite;
   position: absolute;   
   left:50%;
-  top:50%;
+  top:0%;
   transform:translate(-50%, -50%);
+  margin-bottom: 20px;
 }
 
 
@@ -397,29 +405,19 @@ aside .circle_pop {
   font-size: 30px;  
   left:50%;
   top:50%;
-  transform:translate(-50%, -50%);    
+  transform:translate(-50%, -50%);
 }
 .circle_up a ,.circle_down a  {
   display: block;
-}
-
-.circle_up a i{
-  transform: rotate(0deg);  
-  transform: translateX(-20px);
-  transition: 0.3s;
+  margin-bottom: 10px;
 }
 
 
-.circle_up:hover a i {
-  transform: rotate(90deg);
-  transform-origin: top;
-}
 
 @keyframes paconi {
-  0% {top:60%;}     
-  50% {top:50%;}
-  50% {top:20%;}
-  100% {top:60%;}
+  0% {top:10%;}       
+  50% {top:40%;}  
+  100% {top:10%;}
 }
 
 
