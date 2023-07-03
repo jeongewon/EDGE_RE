@@ -470,13 +470,14 @@ transform: translateX(-50%);
 top: 50%;
 }
 
-.MovieVideo_wrap .mVbtn .soundbtn,
-.MovieVideo_wrap .mVbtn .soundoffbtn {
-  top: 85%;
-  right: 43px;
+.MovieVideo_wrap .sound button{
+  position: absolute;
+  top: 87%;
+  right: 65px;
   background: none;
   font-size: 35px;
   opacity: .9;
+  color: #fff;
 }
 
 .mVbtn .soundbtn:active,
@@ -486,8 +487,8 @@ top: 50%;
 }
 
 .mVbtn .pausebtn,
-.mVbtn .soundbtn,
-.mVbtn .playbtn{
+.mVbtn .playbtn,
+.sound .soundbtn{
   display: none;
 }
 
