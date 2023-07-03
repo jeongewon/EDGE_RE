@@ -86,8 +86,9 @@ slideWrapper = document.querySelector('.slidewrapper .MovieChart_slide_wrap'),
 slides = document.querySelectorAll('.slidewrapper .MovieChart_slide_wrap li'),
 slideContainer2 = document.querySelector('.ReserveMovie_slidewrapper .MovieChart_wrap'),
 slideWrapper2 = document.querySelector('.ReserveMovie_slidewrapper .MovieChart_slide_wrap'),
-slides2 = document.querySelectorAll('.ReserveMovie_slidewrapper .MovieChart_slide_wrap li'),
+slides2 = document.querySelectorAll('.ReserveMovie_slidewrapper .MovieChart_slide_wrap'),
 slideCount = slides.length,
+slideCount2 = slides2.length,
 slideWidth = 222,
 slideMargin = 40,
 slidesPerView = 5,
@@ -118,9 +119,6 @@ let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
     videocurrentIdx = 0,
     videoprevCrousel = document.querySelector('.mV_leftCrousel'),
     videonextCrousel = document.querySelector('.mV_rightCrousel');
-
-
-
 
 // for(let i = 0; i<videoslideCount;i++){
 //   let cloneSlide = videoslides[i].cloneNode(true);
@@ -203,7 +201,17 @@ movieChart.addEventListener('click',()=>{
   ReserveMovieSlide.style.display = 'none';
 })
 
-// 무비차트 & 상영예정작 슬라이드 구현
+allTitle.forEach(item=>{
+  item.addEventListener('click',(e)=>{
+    e.preventDefault();
+    for(let title of allTitle){
+      title.classList.remove('active');
+    }
+    e.currentTarget.classList.add('active');
+  })
+})
+
+// 무비차트 슬라이드 구현
 slideWrapper.style.width = slideCount*(slideWidth+slideMargin)+'px';
 slideWrapper2.style.width = slideCount*(slideWidth+slideMargin)+'px';
 
@@ -211,6 +219,7 @@ function moveSlide(num){
     slideWrapper.style.left = -num*(slideWidth+slideMargin)+'px';
     slideWrapper2.style.left = -num*(slideWidth+slideMargin)+'px';
     currentIdx = num;
+
 
     if(currentIdx === 0){
         prevBtn.style.visibility = 'hidden';
@@ -220,7 +229,6 @@ function moveSlide(num){
        nextBtn.style.visibility = 'hidden';
     }
 }
-
 moveSlide(0)
 
 nextBtn.addEventListener('click',()=>{
@@ -228,11 +236,23 @@ nextBtn.addEventListener('click',()=>{
       moveSlide(currentIdx+5);
     }
   });
-  prevBtn.addEventListener('click',()=>{
+prevBtn.addEventListener('click',()=>{
     if(currentIdx > 0){
       moveSlide(currentIdx-5);
     }
   });
+
+nextBtn.addEventListener('click',()=>{
+  if(currentIdx < slideCount2-slidesPerView){
+    moveSlide(currentIdx+5);
+  }
+});
+prevBtn.addEventListener('click',()=>{
+  if(currentIdx > 0){
+    moveSlide(currentIdx-5);
+  }
+});
+
 /* MAIN_1 끝 (이원) */
 
 /* MAIN_2 시작 (수연) */
