@@ -81,29 +81,13 @@ modalClose.addEventListener('click',()=>{
 /* HEADER 끝 (유림) */
 
 /* MAIN_1 시작 (이원) */
-// 메인 영상 버튼
+// 무비 트레일러 버튼
 let video = document.querySelector('#Elemental'),
-// PlayBtn = document.querySelector('.playbtn'),
-// PauseBtn = document.querySelector('.pausebtn'),
-// SoundBtn = document.querySelectorAll('.sound button'),
-// videoSoundBtn = document.querySelector('.soundbtn'),
 videoSoundoffBtn = document.querySelector('.soundoffbtn'),
 videoToggleBtn = document.querySelector('.mVbtn'),
 videoSoundBtn = document.querySelector('.sound');
 
-// videoSoundoffBtn.addEventListener('click', ()=>{
-//   video.muted = false;
-//   videoSoundoffBtn.style.display = 'none';
-//   videoSoundBtn.style.display = 'block';
-// }); 
-
-// videoSoundBtn.addEventListener('click', ()=>{
-//   video.muted = true;
-//   videoSoundBtn.style.display = 'none';
-//   videoSoundoffBtn.style.display = 'block';
-// }); 
-
-//영상 슬라이드 구현
+// 무비 트레일러
 let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
     videoslides = document.querySelectorAll('.MovieVideo_slide'), //li
     videoslideCount = videoslides.length,
@@ -114,7 +98,7 @@ let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
     videoprevCrousel = document.querySelector('.mV_leftCrousel'),
     videonextCrousel = document.querySelector('.mV_rightCrousel');
 
-//복사본 생성하기
+// 무비 영상 복사본 생성하기
     for(var i = 0;i<videoslideCount;i++){
       var cloneSlide = videoslides[i].cloneNode(true);
       cloneSlide.classList.add('clone');
@@ -126,18 +110,18 @@ let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
       videoslideWrapper.prepend(cloneSlide);
   }
 
-//슬라이드 배치
+// 무비 트레일러 슬라이드 배치
 let allSlides = videoslideWrapper.querySelectorAll('li');
 videoslideWrapper.style.width = videoslideWidth * allSlides.length + 'px';
 
-//슬라이드 가운데로 재배치하기
+// 무비 트레일러 슬라이드 가운데로 재배치
 function setSlide(){
   videoslideWrapper.style.transform = `translateX(-${videoslideWidth*(showSlides+1)}px)`;
   setTimeout(()=>{videoslideWrapper.classList.add('animated')},100);
 }
 setSlide();
 
-//SLIDE이동함수
+// 무비 슬라이드 이동함수
 function moveslide(num){
   videoslideWrapper.style.left = -num * videoslideWidth + 'px';
   videocurrentIdx = num;
@@ -152,16 +136,12 @@ function moveslide(num){
     let slideVideo = item.querySelector('video');
     slideVideo.pause();
   });
-  
-
-
 
   if(videocurrentIdx == showSlides || videocurrentIdx == -showSlides){
       setTimeout(function(){
         videoslideWrapper.classList.remove('animated');
         videoslideWrapper.style.left = '0px'; 
         videocurrentIdx = 0;
-
         for(slide of allSlides){
           slide.classList.remove('active');
           console.log('active제거');
@@ -178,7 +158,7 @@ function moveslide(num){
 }
 moveslide(0);
 
-//버튼으로 이동하기
+// 무비 트레일러 캐러셀 클릭 시 이동
  videonextCrousel.addEventListener('click',()=>{
   moveslide(videocurrentIdx+1);
 })
@@ -186,7 +166,7 @@ videoprevCrousel.addEventListener('click',()=>{
   moveslide(videocurrentIdx-1);
 })
 
-// 영상 재생 버튼 및 음소거 버튼
+// 무비 트레일러 버튼 클릭 시 active 추가 및 제거
 videoToggleBtn.addEventListener('click',()=>{
   videoToggleBtn.classList.toggle('active');
   let activeVideo = videoslideWrapper.querySelector('.active video');
@@ -207,7 +187,7 @@ videoSoundBtn.addEventListener('click',()=>{
   }
 })
 
-// 무비차트 & 상영예정작 타이틀 클릭
+// 무비차트 & 상영예정작 타이틀 클릭 시 해당 슬라이드 등장
 let movieChart = document.querySelector('#btnMovieChart'),
 movieReserve = document.querySelector('#btnReserMovie'),
 allTitle = document.querySelectorAll('.movieChart_tt a'),
@@ -229,7 +209,7 @@ allTitle.forEach(item=>{
   })
 })
 
-// 무비차트 슬라이드 구현
+// 무비차트 및 상영예정작 슬라이드
 let slideContainers = document.querySelectorAll('.slidewrapper')
 
 slideContainers.forEach(item=>{
@@ -238,42 +218,42 @@ slideContainers.forEach(item=>{
 
 function multipleSlide(target){
   
-  let slideWrapper = target.querySelector('.MovieChart_slide_wrap'),
-  slides = document.querySelectorAll('.MovieChart_slide'),
-  slideCount = slides.length,
-  slideWidth = 222,
-  slideMargin = 40,
-  slidesPerView = 5,
-  currentIdx = 0,
-  prevBtn = target.querySelector('#prev'),
-  nextBtn = target.querySelector('#next');
+let slideWrapper = target.querySelector('.MovieChart_slide_wrap'),
+slides = document.querySelectorAll('.MovieChart_slide'),
+slideCount = slides.length,
+slideWidth = 222,
+slideMargin = 40,
+slidesPerView = 5,
+currentIdx = 0,
+prevBtn = target.querySelector('.mC_prevBtn'),
+nextBtn = target.querySelector('.mC_nextBtn');
   
-  slideWrapper.style.width = slideCount*(slideWidth+slideMargin)+'px';
-  
-  function moveSlides(num){
-      slideWrapper.style.left = -num*(slideWidth+slideMargin)+'px';
-      currentIdx = num;
-  
-      if(currentIdx === 0){
-          prevBtn.style.visibility = 'hidden';
-          nextBtn.style.visibility = 'visible';
-      } else {
-         prevBtn.style.visibility = 'visible';
-         nextBtn.style.visibility = 'hidden';
-      }
-  }
-  moveSlides(0)
-  
-  nextBtn.addEventListener('click',()=>{
-      if(currentIdx < slideCount-slidesPerView){
-        moveSlides(currentIdx+5);
-      }
-    });
-  prevBtn.addEventListener('click',()=>{
-      if(currentIdx > 0){
-        moveSlides(currentIdx-5);
-      }
-    });
+slideWrapper.style.width = slideCount*(slideWidth+slideMargin)+'px';
+
+function moveSlides(num){
+    slideWrapper.style.left = -num*(slideWidth+slideMargin)+'px';
+    currentIdx = num;
+
+    if(currentIdx === 0){
+        prevBtn.style.visibility = 'hidden';
+        nextBtn.style.visibility = 'visible';
+    } else {
+        prevBtn.style.visibility = 'visible';
+        nextBtn.style.visibility = 'hidden';
+    }
+}
+moveSlides(0)
+
+nextBtn.addEventListener('click',()=>{
+    if(currentIdx < slideCount-slidesPerView){
+      moveSlides(currentIdx+5);
+    }
+  });
+prevBtn.addEventListener('click',()=>{
+    if(currentIdx > 0){
+      moveSlides(currentIdx-5);
+    }
+  });
 }
 /* MAIN_1 끝 (이원) */
 
