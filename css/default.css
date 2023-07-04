@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 /* HEADER 시작 (유림) */
 /* HEADER 끝 (유림) */
 
@@ -1037,29 +1040,36 @@ body.sticky {
 
 /* 중앙정렬 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main_total >  .main3_container{
   text-align: center; 
 } 
 =======
 .main_total >  .main3_container{text-align: center; position: relative;} 
 >>>>>>> main
+=======
+.main_total >  .main3_container{text-align: center; position: relative;} 
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 
 /* main3 */
 
 /* 기준잡고 버튼 위치조절 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main3_box {
   position: relative;  
 }
+=======
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 .main3_btn {
-  position: absolute; 
-  right:0;  
-  top:0;
-  transform: translateY(50px);
-
+  position: absolute;  
+  right:0;   
+  top:0%;
+  transform: translateY(113px);      
 } 
 
+<<<<<<< HEAD
 =======
 .main3_btn {
   position: absolute;  
@@ -1068,12 +1078,17 @@ body.sticky {
   transform: translateY(113px);      
 } 
 
+=======
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 .test_screening {
   position: relative;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 /* 시사회/무대인사 셀(li) 크기,효과,float left */
 .test_screening .screen_cell{
   width:402px;
@@ -1083,10 +1098,15 @@ body.sticky {
   float: left;
   margin-right:33px;  
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   position: relative;
 
 >>>>>>> main
+=======
+  position: relative;
+
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 }
 
 /* 셀 마지막에는 margin-right:0 */
@@ -1096,6 +1116,7 @@ body.sticky {
 
 /* 셀안의 img에 트랜지션 및 호버시 이미지 스케일 + 필터로 어둡게 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .test_screening .screen_cell img{
   transition: transform .3s ease-in-out;
   background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
@@ -1103,13 +1124,25 @@ body.sticky {
 }
 .test_screening .screen_cell:hover img{
   transform: scale(1.1);   
+=======
+.test_screening .screen_cell img{transition: transform .3s ease-in-out;}
+.test_screening .screen_cell:after{
+  content: '';
+  position: absolute;
+  background: linear-gradient( rgba(0,0,0,0) 40%, rgba(0,0,0,.6) 100%);  
+  right:0;
+  left:0;
+  bottom:0;
+  top:0;
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 
 }
+.test_screening .screen_cell:hover img{transform: scale(1.1);}
 
 .screen_cell figure {
   position: relative;
-  background: rgb(0,0,0);
   background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
+<<<<<<< HEAD
 
 
 =======
@@ -1130,6 +1163,8 @@ body.sticky {
   position: relative;
   background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
 >>>>>>> main
+=======
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 }
 .screen_cell figure:hover::after
 { 
@@ -1248,12 +1283,18 @@ body.sticky {
   transform: translate(-50%);  
   font-size: 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-weight: bold;    
 =======
   font-weight: bold;  
   box-shadow: 0px 0px 3px 1px rgba(0,0,0,.3);
   
 >>>>>>> main
+=======
+  font-weight: bold;  
+  box-shadow: 1px 1px 3px 0px rgba(0,0,0,.5);
+  
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 } 
 .main4_mapbox i{
 font-size:18px;
@@ -1322,24 +1363,39 @@ margin-top: 13px;
   text-align: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .helpbtn a +a {
   margin-left:10px;
 }
 =======
 .helpbtn a + a {margin-left:5px;}
 >>>>>>> main
+=======
+.helpbtn a + a {margin-left:5px;}
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 
 .snsbtn {  
   display: inline-block;  
   position: absolute;
   right:70px; 
 <<<<<<< HEAD
+<<<<<<< HEAD
   bottom:56px;
   
+=======
+  bottom:56px;    
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 }
 
+.snsbtn a {
+  width:10%;
+  height:10%;
+  border-radius: 50%;
+}
 
+.snsbtn a + a{margin-left: 5px;}
 /* footer */
+<<<<<<< HEAD
 footer {
   margin-bottom: 27px;
 }
@@ -1357,12 +1413,16 @@ footer {
 /* footer */
 footer {margin-bottom: 27px;}
 >>>>>>> main
+=======
+footer {margin-bottom: 27px;}
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 
 
 footer * {
   font-size: 13px;
   text-align: left;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 footer li{
   float: left;  
@@ -1378,6 +1438,11 @@ footer li{float: left;}
 footer li + li{padding-left: 55px;}
 footer li:hover a {text-decoration: underline;}
 >>>>>>> main
+=======
+footer li{float: left;}
+footer li + li{padding-left: 55px;}
+footer li:hover a {text-decoration: underline;}
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 footer li:last-child{
   padding-right: 30px;
 }
@@ -1387,6 +1452,7 @@ footer li:first-child {
   padding-left:15px ;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 
 .footer_upper {
    box-shadow: 1px 0 rgba(0, 0, 0, 0.1);  
@@ -1394,6 +1460,9 @@ footer li:first-child {
 =======
 
 >>>>>>> main
+=======
+
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 .footer_write p {  
   white-space: pre-line;
   line-height: 27px;
@@ -1401,12 +1470,16 @@ footer li:first-child {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .footer_write {
   position: relative;
 }
 =======
 .footer_write {position: relative;}
 >>>>>>> main
+=======
+.footer_write {position: relative;}
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 .footer_write form {
   display: inline-block;
   position: absolute;
@@ -1417,15 +1490,20 @@ footer li:first-child {
 .footer_write form a {
   display: inline-block;
 <<<<<<< HEAD
+<<<<<<< HEAD
   color: white;
   background: red;
 =======
   color: white;  
 >>>>>>> main
+=======
+  color: white;  
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
   padding: 5px;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .footer_write #cgv_chain *{
   cursor:pointer;
@@ -1433,12 +1511,16 @@ footer li:first-child {
 =======
 .footer_write #cgv_chain *{cursor:pointer;}
 >>>>>>> main
+=======
+.footer_write #cgv_chain *{cursor:pointer;}
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 
 .footer_write span a {
   color:#d74357;
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .footer_box {
   padding:41px 0;
@@ -1452,6 +1534,11 @@ footer li:first-child {
 
 .footer_write {margin-top: 47px;}
 >>>>>>> main
+=======
+.footer_box {padding:41px 0;}
+
+.footer_write {margin-top: 47px;}
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 
 /* aside */
  
@@ -1459,19 +1546,26 @@ footer li:first-child {
 aside {
   position: fixed;
 <<<<<<< HEAD
+<<<<<<< HEAD
   right:10%;
 =======
   right:15%;
 >>>>>>> main
+=======
+  right:15%;
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
   bottom:40%;
 }
 aside .wr {
   width: 230px;
   height: 230px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* background: #d74357; */
 =======
 >>>>>>> main
+=======
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
   position: absolute;
   left:85%;
 }
@@ -1480,15 +1574,19 @@ aside .circle_pop {
   width:230px;
   height:80px;  
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* background: #3a3a3a; */
 =======
 >>>>>>> main
+=======
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
   position: relative;
 }
 .circle_up {
   width:56px;  
   height:56px;
   margin: 0 auto;
+<<<<<<< HEAD
 <<<<<<< HEAD
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
   background:#ebebeb;
@@ -1501,18 +1599,32 @@ aside .circle_pop {
   border-radius: 50%;  
   cursor: pointer;
 >>>>>>> main
+=======
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);    
+  background:#fff;
+  position: relative;   
+  border-radius: 50%;  
+  cursor: pointer;
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 }
 .circle_down {
   width:56px;  
   height:56px;
   margin: 0 auto;    
 <<<<<<< HEAD
+<<<<<<< HEAD
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);    
   background:#ebebeb;   
+=======
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);    
+  background: #fff;
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
   position: relative;   
   border-radius: 50%;  
+  cursor: pointer;
 }
 
+<<<<<<< HEAD
 .circle_down {  
   /* background:palevioletred;  */
 }
@@ -1525,6 +1637,8 @@ aside .circle_pop {
 }
 
 >>>>>>> main
+=======
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 
 .circle_pop a {
   width:150px;
@@ -1539,33 +1653,30 @@ aside .circle_pop {
   top:0%;
   transform:translate(-50%, -50%);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  margin-bottom: 20px;
+>>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 }
-
 
 .circle_up a i,.circle_down a i  {
   position: absolute;  
-  font-size: 30px;  
+  font-size: 20px;  
   left:50%;
   top:50%;
   transform:translate(-50%, -50%);
+  
 }
 .circle_up a ,.circle_down a  {
   display: block;
-}
-
-
-.circle_up:hover a i {
-  transform: rotate(90deg);
-  transform-origin: top;
+  margin-bottom: 10px;
 }
 
 @keyframes paconi {
-  0% {top:10%;}       
-  50% {top:40%;}  
-  100% {top:10%;}
+  0% {top:5%;}       
+  50% {top:25%;}  
+  100% {top:5%;}
 }
-
-
 
 /* MAIN_3 끝 (정석) */
 =======
