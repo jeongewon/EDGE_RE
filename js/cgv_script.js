@@ -32,12 +32,5 @@ for(let item of formend){
 };
 
 
-btntouch.addEventListener('click',(e)=>{
-e.preventDefault();
-e.target.classList.
-('active');
-
-});
-
 
 // MIIN_3 끝 (정석) //

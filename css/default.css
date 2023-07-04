@@ -12,13 +12,7 @@
 /* body layout */
 
 /* 중앙정렬 */
-/* body {
-  position: relative;
-} */
-.main_total >  .main3_container{
-  text-align: center; 
-  position: relative;
-} 
+.main_total >  .main3_container{text-align: center; position: relative;} 
 
 /* main3 */
 
@@ -28,12 +22,12 @@
   position: absolute;  
   right:0;   
   top:0%;
-  transform: translateY(113px);
-      
+  transform: translateY(113px);      
 } 
 
 .test_screening {
   position: relative;
+  cursor: pointer;
 }
 
 /* 시사회/무대인사 셀(li) 크기,효과,float left */
@@ -54,35 +48,22 @@
 }
 
 /* 셀안의 img에 트랜지션 및 호버시 이미지 스케일 + 필터로 어둡게 */
-.test_screening .screen_cell img{
-  transition: transform .3s ease-in-out;
-
-  
-
-}
+.test_screening .screen_cell img{transition: transform .3s ease-in-out;}
 .test_screening .screen_cell:after{
   content: '';
   position: absolute;
-  background: linear-gradient( rgba(0,0,0,0) 40%, rgba(0,0,0,.6) 100%);
-  
+  background: linear-gradient( rgba(0,0,0,0) 40%, rgba(0,0,0,.6) 100%);  
   right:0;
   left:0;
   bottom:0;
   top:0;
 
 }
-.test_screening .screen_cell:hover img{
-  transform: scale(1.1);   
-
-
-
-}
+.test_screening .screen_cell:hover img{transform: scale(1.1);}
 
 .screen_cell figure {
   position: relative;
   background: linear-gradient( rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 100%);
-
-
 }
 .screen_cell figure:hover::after
 { 
@@ -270,18 +251,13 @@ margin-top: 13px;
   line-height: 44px;
   text-align: center;
 }
-.helpbtn a +a {
-  margin-left:5px;
-}
+.helpbtn a + a {margin-left:5px;}
 
 .snsbtn {  
   display: inline-block;  
   position: absolute;
   right:70px; 
-  bottom:56px;  
-    
-
-  
+  bottom:56px;    
 }
 
 .snsbtn a {
@@ -290,28 +266,18 @@ margin-top: 13px;
   border-radius: 50%;
 }
 
-.snsbtn a + a{
-  margin-left: 5px;
-}
+.snsbtn a + a{margin-left: 5px;}
 /* footer */
-footer {
-  margin-bottom: 27px;
-}
+footer {margin-bottom: 27px;}
 
 
 footer * {
   font-size: 13px;
   text-align: left;
 }
-footer li{
-  float: left;  
-}
-footer li + li{
-  padding-left: 55px;
-}
-footer li:hover a {
-  text-decoration: underline;
-}
+footer li{float: left;}
+footer li + li{padding-left: 55px;}
+footer li:hover a {text-decoration: underline;}
 footer li:last-child{
   padding-right: 30px;
 }
@@ -327,9 +293,7 @@ footer li:first-child {
 }
 
 
-.footer_write {
-  position: relative;
-}
+.footer_write {position: relative;}
 .footer_write form {
   display: inline-block;
   position: absolute;
@@ -344,22 +308,16 @@ footer li:first-child {
   cursor: pointer;
 }
 
-.footer_write #cgv_chain *{
-  cursor:pointer;
-}
+.footer_write #cgv_chain *{cursor:pointer;}
 
 .footer_write span a {
   color:#d74357;
   font-weight: bold;
 }
 
-.footer_box {
-  padding:41px 0;
-}
+.footer_box {padding:41px 0;}
 
-.footer_write {
-  margin-top: 47px;
-}
+.footer_write {margin-top: 47px;}
 
 /* aside */
  
@@ -372,7 +330,6 @@ aside {
 aside .wr {
   width: 230px;
   height: 230px;
-  /* background: #d74357; */
   position: absolute;
   left:85%;
 }
@@ -380,7 +337,6 @@ aside .wr {
 aside .circle_pop {
   width:230px;
   height:80px;  
-  /* background: #3a3a3a; */
   position: relative;
 }
 .circle_up {
@@ -420,7 +376,6 @@ aside .circle_pop {
   margin-bottom: 20px;
 }
 
-
 .circle_up a i,.circle_down a i  {
   position: absolute;  
   font-size: 20px;  
@@ -434,54 +389,10 @@ aside .circle_pop {
   margin-bottom: 10px;
 }
 
-
-
 @keyframes paconi {
   0% {top:5%;}       
   50% {top:25%;}  
   100% {top:5%;}
 }
 
-
-
-.circle_pop.active {
-  width:120px;
-  height:34px;
-  border-radius: 30px;
-  background: #272727;
-  position: relative;
-  top:5%;
-  left:-40%;
-  transform: translate(50% 50%);
-  opacity: 1;
-  /* display: none; */
-}
-
-.wr_guide button {
-  width: 100%;
-  height: 100%; 
-}
-/* .wr_guide button:after {    
-  content: '';
-  width: 0;
-  height: 0;
-  position: absolute;
-  top:50%;
-  right:-17px;
-  transform: translateY(-45%);
-} */
-
-.wr_guide button h5 {
-  font-size: 10px;    
-  color: #fff;  
-  text-align: center;
-}
-
-.circle_pop:hover .wr_guide {
-opacity: 1;
-/* display: block; */
-}
 /* MAIN_3 끝 (정석) */
-.wr_guide:hover {
-  background: #d74357;
-}
