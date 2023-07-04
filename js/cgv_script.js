@@ -187,10 +187,6 @@ videoprevCrousel.addEventListener('click',()=>{
 })
 
 // 영상 재생 버튼 및 음소거 버튼
-// let activeVideo = videoslideWrapper.querySelector('.active video');
-
-
-
 videoToggleBtn.addEventListener('click',()=>{
   videoToggleBtn.classList.toggle('active');
   let activeVideo = videoslideWrapper.querySelector('.active video');
