@@ -79,7 +79,6 @@ eprevBtn.addEventListener('click', e_debounce(()=>{
 enextBtn.addEventListener('click', e_debounce(()=>{
   move_eSlide(choiceIdx + 1); eprevBtn.style.visibility = 'visible';
 }, 500));
-
 /* MAIN_2 끝 (수연) */
 
 /* MAIN_3 시작 (정석) */

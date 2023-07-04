@@ -6,11 +6,21 @@
 
 /* MAIN_2 시작 (수연) */
 /* 키워드 섹션 */
-.keyword_wrap {line-height: 81px;}
-.keyword h2 {float: left; padding-right: 60px;}
-.keyword ul {float: right;}
-.keyword ul li {float: left;}
-.keyword ul li:not(:last-child) {padding-right: 16px;}
+.keyword_wrap {
+  line-height: 81px;
+}
+.keyword h2 {
+  float: left; padding-right: 60px;
+}
+.keyword ul {
+  float: right;
+}
+.keyword ul li {
+  float: left;
+}
+.keyword ul li:not(:last-child) {
+  padding-right: 16px;
+}
 .hash {
   background: #fff; color: #3a3a3a; line-height: 81px;
   letter-spacing: -0.03em; padding: 4px 16px;
@@ -23,15 +33,21 @@
 }
 
 /* EVENT 섹션 */
-.event h2, .special h2 {text-align: center;}
+.event h2, .special h2 {
+  text-align: center;
+}
 .event .event_move_wrapper {
   position: relative; width: 1272px; height: 302px; overflow: hidden;
 }
 .event .event_move_wrapper .event_lists { 
   position: relative; width: 1272px; height: 302px;
 }
-.event .event_lists li {position: absolute; width: 402px; left: 0; top: 0;}
-.event .event_move_wrapper .event_lists.animated {transition: left 0.5s ease-in;}
+.event .event_lists li {
+  position: absolute; width: 402px; left: 0; top: 0;
+}
+.event .event_move_wrapper .event_lists.animated {
+  transition: left 0.5s ease-in;
+}
 .event figure > a {
   display: inline-block; border-radius: 15px; overflow: hidden; 
   vertical-align: top;
@@ -40,48 +56,99 @@
   width: 402px; height: 237px; vertical-align: top;
   transition: all 0.3s ease-in-out;
 }
-.event figure:hover img {transform: scale(1.1);}
-.event li:not(:last-child) {padding-right: 33px;}
-.event figcaption a {color: #3a3a3a;}
-.event figcaption h3 {padding: 15px 0 10px;}
-.event figcaption p {letter-spacing: -0.03em;}
+.event figure:hover img {
+  transform: scale(1.1);
+}
+.event li:not(:last-child) {
+  padding-right: 33px;
+}
+.event figcaption a {
+  color: #3a3a3a;
+}
+.event figcaption h3 {
+  padding: 15px 0 10px;
+}
+.event figcaption p {
+  letter-spacing: -0.03em;
+}
 /* .event_wrap의 높이: 382px, .event h2의 높이: 40px, .all_btn의 높이: 32px */
-.event_wrap {position: relative;}
+.event_wrap {
+  position: relative;
+}  
 /* (382 - 40) + (40의 50%) - (32 / 2) */
-.event .all_btn {position: absolute; right: 0; bottom: 346px;}
-.event .com_btn i {line-height: 50px;}
-.event .move_controls {position: relative; top: -208.5px;}
-.event .pre_btn {position: absolute; left: -25px; visibility: hidden;}
-.event .next_btn {position: absolute; right: -25px;}
+.event .all_btn {   
+  position: absolute; right: 0; bottom: 346px;
+}
+.event .com_btn i {
+  line-height: 50px;
+}
+.event .move_controls {
+  position: relative; top: -208.5px;
+}
+.event .pre_btn {
+  position: absolute; left: -25px; visibility: hidden;
+}
+.event .next_btn {
+  position: absolute; right: -25px;
+}
 
 /* 특별관 섹션 */
-.spe_main {float: left; margin-right: 20px;}
-.special figure .spe_sub {float: right;}
-.special figure .spe_sub .screenx {margin-bottom: 20px;}
-.special article > a {display: inline-block;}
-.special article > a img {border-radius: 5px; vertical-align: top;}
-.special  article {position: relative;}
+.spe_main {
+  float: left; margin-right: 20px;
+}
+.special figure .spe_sub {
+  float: right;
+}
+.special figure .spe_sub .screenx {
+  margin-bottom: 20px;
+}
+.special article > a {
+  display: inline-block;
+}
+.special article > a img {
+  border-radius: 5px; vertical-align: top;
+}
+.special  article {
+  position: relative;
+}
 .special .spe_desc {
   position: absolute; left:30px; bottom: 30px; color: #fff; z-index: 1;
 }
 .special .spe_desc h3 {
   font-weight: bold; letter-spacing: -0.01em; text-transform: uppercase;
 }
-.special .spe_main h3 {font-size: 60px;}
-.special .spe_sub h3 {font-size: 28px;}
+.special .spe_main h3 {
+  font-size: 60px;
+}
+.special .spe_sub h3 {
+  font-size: 28px;
+}
 .special .spe_desc p {
   font-weight: 500; letter-spacing: -0.03em; 
   white-space: nowrap; position: absolute;
 }
-.special .spe_main p {font-size: 22px; bottom: 60px; left: 4px;}
-.special .spe_sub p {font-size: 18px; bottom: 33px;}
+.special .spe_main p {
+  font-size: 22px; bottom: 60px; left: 4px;
+}
+.special .spe_sub p {
+  font-size: 18px; bottom: 33px;
+}
 .special article .spe_hover {
   position: absolute; left: 0; right: 0; opacity: 0;
-  transition: all 0.5s ease-out;}
-.special article:hover .spe_hover {opacity: 1;}
-.special .special_wrap .spe_tt {position: relative;}
-.special figure {position: relative;}
-.special .all_btn {position: absolute; right: 0; top: -76.1px;}
+  transition: all 0.5s ease-out;
+}
+.special article:hover .spe_hover {
+  opacity: 1;
+}
+.special .special_wrap .spe_tt {
+  position: relative;
+}
+.special figure {
+  position: relative;
+}
+.special .all_btn {
+  position: absolute; right: 0; top: -76.1px;
+}
 /* MAIN_2 끝 (수연) */
 
 /* MAIN_3 시작 (정석) */
