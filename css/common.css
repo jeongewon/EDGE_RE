@@ -77,7 +77,11 @@ body {
 }
 
 /* colors */
+<<<<<<< HEAD
 .light_gray-bg { background: #ebebeb;}
+=======
+.light_gray_bg { background: #ebebeb;}
+>>>>>>> main
 .dark_g1 { color: #3a3a3a; }
 .dark_g2 { color: #8a8a8a; }
 .dark_g3 { color: #303030; }
