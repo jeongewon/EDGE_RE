@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 document.addEventListener('DOMContentLoaded',()=>{
 
 
-
-=======
->>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 // HEADER 시작 (유림) //
 // HEADER 끝 (유림) //
 
@@ -21,8 +18,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 let gotoTop = document.querySelector('.circle_down a');
 let formend = document.querySelectorAll('.footer_form a')
-<<<<<<< HEAD
-=======
+
 /* HEADER 시작 (유림) */
 
 /* POP UP PORTFOLIO NOTICE */
@@ -502,10 +498,9 @@ enextBtn.addEventListener('click', e_debounce(()=>{
 let gotoTop = document.querySelector('.circle_down');
 let formend = document.querySelectorAll('.footer_form a')
 // let btntouch = document.querySelector('.circle_pop a');
->>>>>>> main
-=======
+
+
 // let btntouch = document.querySelector('.circle_pop a');
->>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
 let scromamt = window.scrollY;
 gotoTop.addEventListener('click', function(e){
 e.preventDefault();
@@ -522,16 +517,6 @@ for(let item of formend){
     window.alert('현재 이동이 불가합니다');
   });
 };
-<<<<<<< HEAD
-
-
-
-// MIIN_3 끝 (정석) //
-<<<<<<< HEAD
-
 });
-=======
+
 // MIIN_3 끝 (정석) //
->>>>>>> main
-=======
->>>>>>> 304b61ebb6d5af89d8ac121bec592a9adce67c47
