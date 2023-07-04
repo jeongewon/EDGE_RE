@@ -46,7 +46,7 @@ popupClose.addEventListener('click',()=>{
  
 
 /* ADD BANNER */
-//BANNER SLIDE LOOP
+//BANNER FADEIN & OUT
 let adWrapper = document.querySelector('.ad_wrapper'),
     adSlide = document.querySelectorAll('.ad_wrapper li'),
     adCount = adSlide.length,
@@ -54,60 +54,28 @@ let adWrapper = document.querySelector('.ad_wrapper'),
     adTimer,
     adWidth = 1920;
 
-/* 1. ad리스트의 ul의 넓이를 ad의 갯수만큼 확장*/
-adWrapper.style.width = `${adCount * adWidth}px`;
-
 /* 
-2. ad의 기본적인 이동 슬라이드 함수 adMove
-  현재 인덱스가 ad 갯수보다 작다면,
-    ul을 현재 ad인덱스 * ad너비를 곱한 값만큼 이동하고
-    animated라는 트랜지션 클래스 속성을 추가해 이동하는 과정 보여지도록
-  아니라면
-    animated라는 트랜지션 속성을 없애고, 
-    ul을 원위치로 이동
-    현재 인덱스 번호를 0으로 리셋(무한 루프)
- */
-function adMove(num){
-  curentAddIndex = num;
-  if(curentAddIndex < adCount){
-     adWrapper.style.transform = `translateX(${adWidth*-num}px)`;
-     adWrapper.classList.add('animated');
-    //  let time = 3000;
-    //  adAutoMove(time);
-  } else{
-    setTimeout(()=>{
-      adWrapper.classList.remove('animated');
-      adWrapper.style.transform = `translateX(0px)`;
-      curentAddIndex = 0;
-      // let time = 0;
-      // adMove(0);
-    },500);
-  }}
-
-/* 
-3. adMove 함수를 자동으로 실행시킬 adAutoMove 함수
-  setInterval로 3초마다 adMove 실행 
+ad리스트의 ul의 넓이를 ad의 갯수만큼 확장
+admoveSlide 실행 시, 각 요소에 active 클래스로 opacity 조절
+adAutoMove 실행 시, 3초마다 슬라이드 이동
 */
+adWrapper.style.width = `${adCount.length * adWidth}px`;
+
+function admoveSlide(num){
+  adSlide.forEach(item=>{
+    item.classList.remove('active');
+  })
+  adSlide[num].classList.add('active');
+  curentAddIndex = num;
+}
+
 function adAutoMove(){
   adTimer = setInterval(()=>{
-  let nextIdx = curentAddIndex+1
-  adMove(nextIdx);
+  let nextIdx = (curentAddIndex+1)%adCount;
+  admoveSlide(nextIdx);
 }, 3000);
 }
-adAutoMove(3000);
-
-/*
-// slideWrapper에 mouseenter 이벤트가 일어나면 자동 슬라이드 멈추기 -> 유림 수정작업중..
-function startAdAuto() {
-  setInterval(adAutoMove, 3000);
-  //autoSlideInterval = setInterval(adAutoMove, 3000);
-}
-function stopAdAuto() {
-  clearInterval(adAutoMove);
-}
-adWrapper.addEventListener("mouseover", stopAdAuto);
-adWrapper.addEventListener("mouseleave", startAdAuto);
-*/
+adAutoMove();
 
 
 //BANNER CLOSE
@@ -133,8 +101,8 @@ let login = document.querySelector('.login'),
     loginIcon = document.querySelector('.login a i');
 
 login.addEventListener('mouseover',()=>{
-    loginIcon.classList.replace('fa-lock','fa-lock-open');
-    loginIcon.style.transform = `translateX(4px)`;
+  loginIcon.classList.replace('fa-lock','fa-lock-open');
+  loginIcon.style.transform = `translateX(4px)`;
   })
 login.addEventListener('mouseout',()=>{
   loginIcon.classList.replace('fa-lock-open','fa-lock')
@@ -192,7 +160,7 @@ let menuSticky = document.querySelector('.main_menu'),
 window.addEventListener('scroll',()=>{
     if(window.scrollY >= menuScroll){
       body.classList.add('sticky');
-      menuWrap.style.hight = 0;
+      menuWrap.style.height = 0;
       menuSticky.style.background = "linear-gradient(to right, rgb(215, 67, 87), rgb(241,79,58) 59%, rgb(239, 100, 47))";
       for(li of menuLi){
         li.style.color = "#fff";
