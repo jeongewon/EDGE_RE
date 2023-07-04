@@ -200,65 +200,297 @@ modalClose.addEventListener('click',()=>{
 /* HEADER 끝 (유림) */
 
 /* MAIN_1 시작 (이원) */
-let slideContainer = document.querySelector('.MovieChart_wrap'),
-slideWrapper = document.querySelector('.MovieChart_slide_wrap'),
-slides = document.querySelectorAll('.MovieChart_slide_wrap li'),
-slideCount = slides.length,
-slideWidth = 222,
-slideMargin = 40,
-slidesPerView = 5,
-currentIdx = 0,
-prevBtn = document.querySelector('#prev'),
-nextBtn = document.querySelector('#next'),
-video = document.getElementById('eleMental'),
-videoPlayBtn = document.querySelector('.playbtn'),
-videoPauseBtn = document.querySelector('.pausebtn');
+// 메인 영상 버튼
+let video = document.querySelector('#Elemental'),
+// PlayBtn = document.querySelector('.playbtn'),
+// PauseBtn = document.querySelector('.pausebtn'),
+// SoundBtn = document.querySelectorAll('.sound button'),
+// videoSoundBtn = document.querySelector('.soundbtn'),
+videoSoundoffBtn = document.querySelector('.soundoffbtn'),
+videoToggleBtn = document.querySelector('.mVbtn'),
+videoSoundBtn = document.querySelector('.sound');
 
-// 예고편 영상 재생
-videoPlayBtn.addEventListener('click',()=>{
-    video.play();
-});
-videoPauseBtn.addEventListener('click',()=>{
-    video.pause();
-});
+// videoSoundoffBtn.addEventListener('click', ()=>{
+//   video.muted = false;
+//   videoSoundoffBtn.style.display = 'none';
+//   videoSoundBtn.style.display = 'block';
+// }); 
 
-slideWrapper.style.width = slideCount*(slideWidth+slideMargin)+'px';
+// videoSoundBtn.addEventListener('click', ()=>{
+//   video.muted = true;
+//   videoSoundBtn.style.display = 'none';
+//   videoSoundoffBtn.style.display = 'block';
+// }); 
 
-function moveSlide(num){
-    slideWrapper.style.left = -num*(slideWidth+slideMargin)+'px';
-    currentIdx = num;
+//영상 슬라이드 구현
+let videoslideWrapper = document.querySelector('.MovieVideo_slide_wrap'), //ul
+    videoslides = document.querySelectorAll('.MovieVideo_slide'), //li
+    videoslideCount = videoslides.length,
+    videoslideWidth = 1272,
+    videoslideMargin = 30,
+    showSlides = 3,
+    videocurrentIdx = 0,
+    videoprevCrousel = document.querySelector('.mV_leftCrousel'),
+    videonextCrousel = document.querySelector('.mV_rightCrousel');
 
-    if(currentIdx === 0){
-        prevBtn.classList.add('disabled');
-    } else{
-        prevBtn.classList.remove('disabled');
-    }
+//복사본 생성하기
+    for(var i = 0;i<videoslideCount;i++){
+      var cloneSlide = videoslides[i].cloneNode(true);
+      cloneSlide.classList.add('clone');
+      videoslideWrapper.appendChild(cloneSlide);
+  }
+  for(var i = videoslideCount -1; i>=0 ; i--){
+      var cloneSlide = videoslides[i].cloneNode(true);
+      cloneSlide.classList.add('clone');
+      videoslideWrapper.prepend(cloneSlide);
+  }
+
+//슬라이드 배치
+let allSlides = videoslideWrapper.querySelectorAll('li');
+videoslideWrapper.style.width = videoslideWidth * allSlides.length + 'px';
+
+//슬라이드 가운데로 재배치하기
+function setSlide(){
+  videoslideWrapper.style.transform = `translateX(-${videoslideWidth*(showSlides+1)}px)`;
+  setTimeout(()=>{videoslideWrapper.classList.add('animated')},100);
 }
-moveSlide(0)
+setSlide();
 
-nextBtn.addEventListener('click',()=>{
-    if(currentIdx < slideCount-slidesPerView){
-      moveSlide(currentIdx+5);
-    }
+//SLIDE이동함수
+function moveslide(num){
+  videoslideWrapper.style.left = -num * videoslideWidth + 'px';
+  videocurrentIdx = num;
+  console.log(videocurrentIdx);
+  let activeIdx = videocurrentIdx + showSlides+1;
+  for(slide of allSlides){
+    slide.classList.remove('active');
+  }
+    allSlides[activeIdx].classList.add('active');
+
+  allSlides.forEach(item=>{
+    let slideVideo = item.querySelector('video');
+    slideVideo.pause();
   });
+  
+
+
+
+  if(videocurrentIdx == showSlides || videocurrentIdx == -showSlides){
+      setTimeout(function(){
+        videoslideWrapper.classList.remove('animated');
+        videoslideWrapper.style.left = '0px'; 
+        videocurrentIdx = 0;
+
+        for(slide of allSlides){
+          slide.classList.remove('active');
+          console.log('active제거');
+        }
+        allSlides[4].classList.add('active');
+      },500);
+
+      setTimeout(function(){
+        videoslideWrapper.classList.add('animated');
+      },600);
+  }
+  videoToggleBtn.classList.remove('active');
+  videoSoundBtn.classList.remove('active');
+}
+moveslide(0);
+
+//버튼으로 이동하기
+ videonextCrousel.addEventListener('click',()=>{
+  moveslide(videocurrentIdx+1);
+})
+videoprevCrousel.addEventListener('click',()=>{
+  moveslide(videocurrentIdx-1);
+})
+
+// 영상 재생 버튼 및 음소거 버튼
+videoToggleBtn.addEventListener('click',()=>{
+  videoToggleBtn.classList.toggle('active');
+  let activeVideo = videoslideWrapper.querySelector('.active video');
+  if(videoToggleBtn.classList.contains('active')){
+    activeVideo.play();
+  }else{
+    activeVideo.pause();
+  }
+})
+
+videoSoundBtn.addEventListener('click',()=>{
+  videoSoundBtn.classList.toggle('active');
+  let activeVideo = videoslideWrapper.querySelector('.active video');
+  if(videoSoundBtn.classList.contains('active')){
+    activeVideo.muted = true;
+  } else {
+    activeVideo.muted = false;
+  }
+})
+
+// 무비차트 & 상영예정작 타이틀 클릭
+let movieChart = document.querySelector('#btnMovieChart'),
+movieReserve = document.querySelector('#btnReserMovie'),
+allTitle = document.querySelectorAll('.movieChart_tt a'),
+MovieChartSlide = document.querySelectorAll('.movieChart_list > div');
+
+allTitle.forEach(item=>{
+  item.addEventListener('click',(e)=>{
+    e.preventDefault();
+    for(let title of allTitle){
+      title.classList.remove('active');
+    }
+    e.currentTarget.classList.add('active');
+    for(let slide of MovieChartSlide){
+      slide.style.display = 'none';
+    }
+    let target = e.currentTarget.getAttribute('href');
+    console.log(target);
+    document.querySelector(target).style.display = 'block';
+  })
+})
+
+// 무비차트 슬라이드 구현
+let slideContainers = document.querySelectorAll('.slidewrapper')
+
+slideContainers.forEach(item=>{
+  multipleSlide(item);
+});
+
+function multipleSlide(target){
+  
+  let slideWrapper = target.querySelector('.MovieChart_slide_wrap'),
+  slides = document.querySelectorAll('.MovieChart_slide'),
+  slideCount = slides.length,
+  slideWidth = 222,
+  slideMargin = 40,
+  slidesPerView = 5,
+  currentIdx = 0,
+  prevBtn = target.querySelector('#prev'),
+  nextBtn = target.querySelector('#next');
+  
+  slideWrapper.style.width = slideCount*(slideWidth+slideMargin)+'px';
+  
+  function moveSlides(num){
+      slideWrapper.style.left = -num*(slideWidth+slideMargin)+'px';
+      currentIdx = num;
+  
+      if(currentIdx === 0){
+          prevBtn.style.visibility = 'hidden';
+          nextBtn.style.visibility = 'visible';
+      } else {
+         prevBtn.style.visibility = 'visible';
+         nextBtn.style.visibility = 'hidden';
+      }
+  }
+  moveSlides(0)
+  
+  nextBtn.addEventListener('click',()=>{
+      if(currentIdx < slideCount-slidesPerView){
+        moveSlides(currentIdx+5);
+      }
+    });
   prevBtn.addEventListener('click',()=>{
-    if(currentIdx > 0){
-      moveSlide(currentIdx-5);
-    }
-  });
+      if(currentIdx > 0){
+        moveSlides(currentIdx-5);
+      }
+    });
+}
 /* MAIN_1 끝 (이원) */
 
-/* MAIN_2 시작 (수연) */
-/* MAIN_2 시작 (수연) */
-
-/* MAIN_3 시작 (정석) */
-/* MAIN_3 끝 (정석) */
- /* HEADER 끝 (유림) */
-
-
 
 /* MAIN_2 시작 (수연) */
+let eventM_Wrapper = document.querySelector('.event_move_wrapper'),
+    eventM_Lists = document.querySelector('.event_lists'),
+    event_Slides = eventM_Lists.querySelectorAll('.event_lists li'),
+    eSlide_Count = event_Slides.length,
+    event_SlidesPreView = 3,
+    eSlide_Width = 402,
+    eSlide_Margin = 33,
+    choiceIdx = 0,
+    eprevBtn = document.querySelector('.move_controls button.pre_btn'),
+    enextBtn = document.querySelector('.move_controls button.next_btn');
+
+for(let i = 0; i < eSlide_Count; i++){
+  let clone_eSlide = event_Slides[i].cloneNode(true);
+  clone_eSlide.classList.add('clone');
+  eventM_Lists.appendChild(clone_eSlide);
+}
+
+for(let i = eSlide_Count - 1; i >= 0; i--){
+  let clone_eSlide = event_Slides[i].cloneNode(true);
+  clone_eSlide.classList.add('clone');
+  eventM_Lists.prepend(clone_eSlide);
+}
+
+new_eSlides = document.querySelectorAll('.event .event_lists li');
+
+new_eSlides.forEach((slide, idx)=>{
+  slide.style.left = `${idx * (eSlide_Width + eSlide_Margin)}px`;
+});
+
+function set_eSlide(){
+  let e_ulMoveAmt = (eSlide_Width + eSlide_Margin) * -eSlide_Count + 'px';
+  eventM_Lists.style.transform = `translateX(${e_ulMoveAmt})`;
+  eventM_Lists.classList.add('animated');
+}
+set_eSlide();
+
+//이벤트 섹션 슬라이드 이동함수
+function move_eSlide(num){
+  eventM_Lists.style.left = -num * (eSlide_Width + eSlide_Margin) + 'px';
+  choiceIdx = num;
+  console.log(choiceIdx);
+
+  if(choiceIdx == -eSlide_Count || choiceIdx == eSlide_Count){
+    setTimeout(()=>{
+      eventM_Lists.classList.remove('animated');
+      eventM_Lists.style.left = '0px';
+      choiceIdx = 0;
+    }, 500);
+    setTimeout(()=>{
+      eventM_Lists.classList.add('animated');  
+    }, 600);
+  }
+}
+move_eSlide(0);
+
+function e_debounce(callback, time){
+  let eslideTrigger = true;
+
+  return ()=>{
+    if(eslideTrigger){
+      callback(); eslideTrigger = false;
+      setTimeout(()=>{eslideTrigger = true;}, time);
+    }
+  }
+}
+
+//이벤트 캐러셀 좌우 버튼 컨트롤
+eprevBtn.addEventListener('click', e_debounce(()=>{
+  move_eSlide(choiceIdx - 1); 
+}, 500));
+
+enextBtn.addEventListener('click', e_debounce(()=>{
+  move_eSlide(choiceIdx + 1); eprevBtn.style.visibility = 'visible';
+}, 500));
 /* MAIN_2 끝 (수연) */
+// MAIN_3 시작 (정석) //
+let gotoTop = document.querySelector('.circle_down');
+let formend = document.querySelectorAll('.footer_form a')
+// let btntouch = document.querySelector('.circle_pop a');
+let scromamt = window.scrollY;
+gotoTop.addEventListener('click', function(e){
+e.preventDefault();
+window.scrollTo({
+  top:0,
+  left:0,
+  behavior: 'smooth'
+  });
+});
 
-/* MAIN_3 시작 (정석) */
-/* MAIN_3 끝 (정석) */
+for(let item of formend){
+  item.addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.alert('현재 이동이 불가합니다');
+  });
+};
+// MIIN_3 끝 (정석) //

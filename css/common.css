@@ -77,7 +77,7 @@ body {
 }
 
 /* colors */
-.light_gray-bg { background: #ebebeb;}
+.light_gray_bg { background: #ebebeb;}
 .dark_g1 { color: #3a3a3a; }
 .dark_g2 { color: #8a8a8a; }
 .dark_g3 { color: #303030; }
@@ -108,15 +108,3 @@ body {
   color:#fff;
   font-size: 32px;
 }
-
-/* HEADER 시작 (유림) */
-/* HEADER 끝 (유림) */
-
-/* MAIN_1 시작 (이원) */
-/* MAIN_1 끝 (이원) */
-
-/* MAIN_2 시작 (수연) */
-/* MAIN_2 끝 (수연) */
-
-/* MAIN_3 시작 (정석) */
-/* MAIN_3 끝 (정석) */
