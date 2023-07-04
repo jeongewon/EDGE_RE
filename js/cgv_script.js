@@ -90,6 +90,8 @@ videoSoundBtn = document.querySelector('.soundbtn'),
 videoSoundoffBtn = document.querySelector('.soundoffbtn'),
 videoToggleBtn = document.querySelectorAll('.mVbtn');
 
+
+
 videoSoundoffBtn.addEventListener('click', ()=>{
   video.muted = false;
   videoSoundoffBtn.style.display = 'none';
@@ -101,8 +103,6 @@ videoSoundBtn.addEventListener('click', ()=>{
   videoSoundBtn.style.display = 'none';
   videoSoundoffBtn.style.display = 'block';
 }); 
-
-
 
 PlayBtn.addEventListener('click',()=>{
   PlayBtn.classList.remove('active');
