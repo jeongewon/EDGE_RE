@@ -45,8 +45,6 @@
   float: left;
   margin-right:33px;  
   position: relative;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);    
-
 
 }
 
@@ -446,7 +444,7 @@ aside .circle_pop {
 
 
 
-.wr_guide {
+.circle_pop.active {
   width:120px;
   height:34px;
   border-radius: 30px;

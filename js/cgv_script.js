@@ -13,6 +13,7 @@
 
 let gotoTop = document.querySelector('.circle_down a');
 let formend = document.querySelectorAll('.footer_form a')
+// let btntouch = document.querySelector('.circle_pop a');
 let scromamt = window.scrollY;
 gotoTop.addEventListener('click', function(e){
 e.preventDefault();
@@ -30,6 +31,13 @@ for(let item of formend){
   });
 };
 
+
+btntouch.addEventListener('click',(e)=>{
+e.preventDefault();
+e.target.classList.
+('active');
+
+});
 
 
 // MIIN_3 끝 (정석) //
