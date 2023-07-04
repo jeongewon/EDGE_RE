@@ -1,47 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CGV</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/default.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <!-- HEADER 시작 (유림) -->
   <header>
-    <section class="ad_top"> 
-      <div class="ad_wrap">
-        <a href="#"><img src="images/add_elemental.jpg" alt=""></a>
+    <!-- 포트폴리오 고지 팝업 -->
+    <dialog class="notice_portfolio">
+      <img class="popup_logo" src="images/logo.png" alt="">
+      <div id="notice_tt">
+        <h2>
+          본 웹 사이트는 <strong>구직용 포트폴리오</strong> 사이트입니다.<br>
+          CJ CGV와는 무관함을 안내드립니다.
+        </h2>
+        <p>
+          본 사이트에 사용된 모든 이미지와 내용의 저작권은<br>
+          CJ CGV에 있으므로 무단으로 사용할 수 없습니다.
+        </p>
       </div>
-      <button class="ad_close"><i class="fa-solid fa-xmark"></i></button>
+      <h2>제작기간 : 23.05.19 ~ 23.07.06</h2>
+      <div class="popup_pages">
+        <h2>구현 완료 페이지:</h2>
+        <h3 class="pages_link"><a href="index.html">메인페이지</a> <a href="https://github.com/edgecgv/EDGE_RE.git"  target='_blank' class="underlined">깃허브<i class="fa-brands fa-github"></i></a></h3>
+      </div>
+      <h2>주요 사용 언어 :</h2>
+      <h3>HTML5, CSS, Javascript</h3>
+      <hr>
+      <h2>제작 팀원 :</h2>
+      <h3>채*석, 한*연, 정*원, 김*림</h3>
+      <h2>기획 : 공동 기획</h2>
+      <h3><a href="https://drive.google.com/file/d/1L8oMKY-kjuhY97RJKJJeO9a0udMcbQcv/view?usp=sharing"  target='_blank' class="underlined">기획서 바로가기</a></h3>
+      <h2>디자인 및 구현 :</h2>
+      <ul>
+        <li><h3>김*림 - 헤더, 팝업, 배너, 메뉴, 모달</h3></li>
+        <li><h3>정*원 - 메인1, 무비트레일러, 무비차트/상영예정작</h3></li>
+        <li><h3>한*연 - 메인2, 키워드, 이벤트, 특별관</h3></li>
+        <li><h3>채*석 - 메인3, 무대인사/시사회, 푸터, 어사이드</h3></li>
+      </ul>
+      <hr>
+      <button class="popup_close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="cookie">
+        <label for="dont_see">오늘 하루 보지 않기</label>
+        <input id="dont_see" type="checkbox">
+      </div>
+    </dialog>
+    <!-- 상단 광고 배너 -->
+    <section class="ad_top navy_bg"> 
+      <h2 class="hidden">Ad Banner</h2>
+      <div class="ad_wrap">
+        <ul class="ad_wrapper cf">
+          <li class="active"><a href="#"><img src="images/add_elemental.jpg" alt="영화 엘리멘탈 광고 배너"></a></li>
+          <li><a href="#"><img src="images/add_mosteruniversity.jpg" alt="영화 몬스터 대학교 광고 배너"></a></li>
+          <li><a href="#"><img src="images/add_soul.gif" alt="영화 소울 광고 배너"></a></li>
+        </ul>
+      </div>
+      <button class="ad_close navy_bg"><i class="fa-solid fa-xmark"></i></button>
     </section>
     <div class="header container sm_pd">
       <h1 class="logo">
-        <a href=""><img src="images/logo.png" alt="CGV"></a>
+        <a href="">CGV</a>
         <span>CULTUREFLEX</span>
       </h1>
+       <!-- 유저 네비게이션 -->
       <nav class="user_nav">
         <ul class="cf">
-          <li class="user_li">
+          <li class="user_li login">
             <a href="#">
               <i class="fa-solid fa-lock"></i>
               <span>로그인</span> 
             </a>
           </li>
-          <li class="user_li">
+          <li class="user_li join">
             <a href="#">
-                <i class="fa-solid fa-user"></i>
-                <span>회원가입</span> 
+              <i class="fa-solid fa-user-plus"></i>
+              <span>회원가입</span> 
             </a>
           </li>
           <li class="user_li">
             <a href="#">
-                <i class="fa-solid fa-user-plus"></i>
-                <span>MY CGV</span> 
+              <i class="fa-solid fa-user"></i>
+              <span>MY CGV</span> 
             </a>
           </li>
           <li>
@@ -52,6 +116,7 @@
         </ul>
       </nav>
     </div>
+    <!-- 메뉴 -->
     <section class="menuwrap">
       <div class="menu_bg">
         <div class="main_menu">
@@ -66,11 +131,11 @@
               </ul>   
               <div class="past_qr">
                 <a href="#" class="past">
-                  <img src="images/paconi.png" alt="">
+                  <img src="images/paconi.png" alt="패스트 오더">
                   <p>패스트오더</p>
                 </a>
                 <div class="qr">
-                  <img src="images/App_qrcode.gif" alt="">
+                  <img src="images/App_qrcode.gif" alt="CGV 앱 다운로드 QR코드">
                   <p>앱 다운로드<br><strong>CGV앱</strong>에서 더 편리하게 이용하세요</p>
                 </div> 
               </div>             
@@ -115,30 +180,30 @@
         </div>
       </div>
     </section>
+    <!-- 검색창 모달 -->
     <div id="lightbox">
       <div class="modal_box">
         <div class="modal_left">
-            <div class="search_m">
-                <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="search_m">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h2>영화 검색</h2>
+          <form action="">
+            <label for="moviesearch">영화명</label>
+            <div class="search_box">
+              <input type="text" name="moviesearch" id="moviesearch" placeholder="Search...">
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <h2>영화 검색</h2>
-            <form action="">
-              <label for="moviesearch">영화명</label>
-              <div class="search_box">
-                <input type="text" name="moviesearch" id="moviesearch" placeholder="Search...">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-              </div>
-              
-            </form>
-            <div class="latest_wrap">
-              <h3>최근검색어</h3>
-              <a href="">전체삭제</a>
-            </div>
-            <ul class="latest cf">
-                <li>해리포터 <i class="fa-solid fa-xmark"></i></li>
-                <li>범죄도시3 <i class="fa-solid fa-xmark"></i></li>
-                <li>더 퍼스트 슬램덩크 <i class="fa-solid fa-xmark"></i></li>
-            </ul>
+          </form>
+          <div class="latest_wrap">
+            <h3>최근검색어</h3>
+            <a href="">전체삭제</a>
+          </div>
+          <ul class="latest cf">
+            <li>해리포터 <i class="fa-solid fa-xmark"></i></li>
+            <li>범죄도시3 <i class="fa-solid fa-xmark"></i></li>
+            <li>더 퍼스트 슬램덩크 <i class="fa-solid fa-xmark"></i></li>
+          </ul>
         </div>
         <div class="modal_right">
             <h2>인기 검색어</h2>
