@@ -15,7 +15,7 @@ header{
   left: -60%;
   top: 50px;
   width: 320px;
-  height: 560px;
+  height: 610px;
   padding: 30px;
   border: 3px solid #063d6c;
   box-shadow: 2px 2px 5px rgba(0,0,0,.3);
@@ -37,11 +37,11 @@ header{
   margin-bottom: 14px;
 }
 #notice_tt h2{
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 8px;
 }
 #notice_tt p{
-  font-size: 12px;
+  font-size: 13px;
 }
 .notice_portfolio h2{
   font-size: 14px;
@@ -51,6 +51,16 @@ header{
 .notice_portfolio h3{
   font-size: 13px;
   line-height: 1.8em;
+}
+.pages_link a{
+  margin-right: 10px;
+}
+.fa-github{
+  margin-left: 5px;
+}
+.underlined{
+  text-decoration: underline;
+  color:#102e47;
 }
 .popup_close{
   background: none;
@@ -67,7 +77,7 @@ header{
   right: 15px;
 }
 .cookie label{
-  font-size: 10px;
+  font-size: 12px;
   vertical-align: 3px;
 }
 
