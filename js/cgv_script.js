@@ -179,8 +179,10 @@ window.addEventListener('scroll', () => {
 let lightbox = document.querySelector('#lightbox'),
   modalOpen = document.querySelector('#modal_open'),
   modalClose = document.querySelector('.modal_close'),
-  modal = document.querySelector('.modal_box');
-
+  modal = document.querySelector('.modal_box'),
+  searchInput = document.querySelector('#moviesearch'),
+  searchBox = document.querySelector('.search_box');
+  
 /* 
 modalOpen 버튼(검색 버튼) 클릭 시, 
   모달 display block 효과로 화면에 띄우고,
@@ -192,11 +194,14 @@ modalClose 버튼 클릭 시,
 modalOpen.addEventListener('click', () => {
   modal.style.display = 'block';
   lightbox.classList.add('visible');
+  searchInput.focus();
 });
 modalClose.addEventListener('click', () => {
   modal.style.display = 'none';
   lightbox.classList.remove('visible');
 });
+
+
 /* HEADER 끝 (유림) */
 
 /* MAIN_1 시작 (이원) */

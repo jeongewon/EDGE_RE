@@ -1,7 +1,4 @@
 /* HEADER 시작 (유림) */
-body{
-  overflow-x: hidden;
-}
 :focus {
   outline: 3px solid rgba(255, 169, 169, 0.6);
 }
@@ -10,7 +7,7 @@ body{
 header {
   position: relative;
   z-index: 10000;
-  margin-bottom: 81px;
+  margin-bottom: 27px;
 }
 
 .notice_portfolio {
@@ -105,7 +102,6 @@ header {
 /* ADD BANNER */
 .ad_top {
   position: relative;
-  width: 1920px;
 }
 
 .ad_top:after {
@@ -254,7 +250,7 @@ nav {
 }
 
 body.sticky {
-  padding-top: 55px
+  padding-top: 54px
 }
 
 .menuwrap {
@@ -478,14 +474,14 @@ body.sticky {
   padding-left: 10px;
 }
 
-.search_box i {
+.movie_search_btn i {
   color: #f2a4a3;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 40px;
   cursor: pointer;
 }
 
-.search_box button {
+.movie_search_btn {
   border: none;
   background: none;
 }
@@ -494,18 +490,12 @@ body.sticky {
   width: 250px;
   height: 34px;
   border-radius: 5px;
-  border: none;
   background: none;
 }
 
 #moviesearch::placeholder {
   color: rgb(175, 175, 175);
   font-style: italic;
-}
-
-#moviesearch:focus {
-  outline: none !important;
-  border-color: #f2a4a3;
 }
 
 .modal_box h3 {
