@@ -1025,8 +1025,8 @@ body.sticky {
 /* body layout */
 
 /* 중앙정렬 */
-.main_total >  .main3_container{text-align: center; position: relative;} 
-
+.main3_total >  .main3_container{text-align: center; position: relative;} 
+.main3_total h3 {display: none;}
 /* main3 */
 
 /* 기준잡고 버튼 위치조절 */
