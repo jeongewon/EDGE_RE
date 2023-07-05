@@ -1513,8 +1513,10 @@ footer li:first-child {
 /* aside */
 aside {
   position: fixed;
-  right: 15%;
-  bottom: 30%;
+  left: 50%;
+  bottom: 25%;
+  z-index: 999;
+  margin-left: 300px;
 }
 
 aside .wr {
@@ -1523,6 +1525,8 @@ aside .wr {
   position: absolute;
   left: 85%;
   visibility:hidden;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 aside .circle_pop {
