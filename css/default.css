@@ -1497,11 +1497,15 @@ footer li:first-child {
   cursor: pointer;
 }
 
+
 .footer_write span a {
   color: #d74357;
   font-weight: bold;
 }
 
+.footer_write span{
+  color:#8a8a8a;
+} 
 .footer_box {
   padding: 81px 0 41px;
 }
