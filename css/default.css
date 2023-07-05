@@ -890,6 +890,7 @@ body.sticky {
 .slidewrapper .mcCarousel button {
   top: 138px;
   position: absolute;
+  z-index: 100;
 }
 
 .slidewrapper .mC_prevBtn {
@@ -1519,7 +1520,7 @@ footer li:first-child {
 /* aside */
 aside {
   position: fixed;
-  right: 15%;
+  right: calc(50% - 675px);
   bottom: 30%;
 }
 
@@ -1557,6 +1558,29 @@ aside .circle_pop {
   border-radius: 50%;
   cursor: pointer;
 }
+.circle_pop{
+  position: relative;
+}
+.circle_pop span{
+  padding: 10px 15px;
+  position: absolute;
+  top:10px;
+  left: -45px;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 22.5px;
+  box-shadow: 0px 3px 7px 0 rgb(0 0 0 / 5%);
+  background:  #e64947;
+  font-size: 16px;
+  color:#fff;
+  letter-spacing: 0.05em;
+  z-index: 10000;
+}
+
+.circle_pop:hover span{
+ opacity: 1;
+}
+
 
 .circle_pop a {
   width: 150px;
