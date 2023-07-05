@@ -1503,7 +1503,7 @@ footer li:first-child {
 }
 
 .footer_box {
-  padding: 41px 0;
+  padding: 81px 0 41px;
 }
 
 .footer_write {
@@ -1522,6 +1522,7 @@ aside .wr {
   height: 230px;
   position: absolute;
   left: 85%;
+  visibility:hidden;
 }
 
 aside .circle_pop {
@@ -1595,5 +1596,10 @@ aside .circle_pop {
   100% {
     top: 5%;
   }
+}
+
+.wr.active {
+visibility: visible;
+opacity: 1;
 }
 /* MAIN_3 끝 (정석) */
