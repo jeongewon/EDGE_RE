@@ -1,5 +1,4 @@
 /* HEADER 시작 (유림) */
-
 :focus {
   outline: 3px solid rgba(255, 169, 169, 0.6);
 }
@@ -8,6 +7,7 @@
 header {
   position: relative;
   z-index: 10000;
+  margin-bottom: 27px;
 }
 
 .notice_portfolio {
@@ -81,6 +81,7 @@ header {
   right: 15px;
   font-size: 20px;
   color: #063d6c;
+  cursor: pointer;
 }
 
 .cookie {
@@ -94,10 +95,13 @@ header {
   vertical-align: 3px;
 }
 
+#dont_see{
+  cursor: pointer;
+}
+
 /* ADD BANNER */
 .ad_top {
   position: relative;
-  width: 1920px;
 }
 
 .ad_top:after {
@@ -144,6 +148,7 @@ header {
   left: 90%;
   bottom: -23px;
   z-index: 8;
+  cursor: pointer;
 }
 
 
@@ -213,6 +218,7 @@ nav {
   display: block;
   transform: translateY(-20%);
   transition: .3s;
+  cursor: pointer;
 }
 
 .search_btn i {
@@ -244,7 +250,7 @@ nav {
 }
 
 body.sticky {
-  padding-top: 55px
+  padding-top: 54px
 }
 
 .menuwrap {
@@ -252,8 +258,7 @@ body.sticky {
   text-align: center;
   width: 100%;
   height: 54px;
-  margin-bottom: 54px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .main_menu {
@@ -469,13 +474,14 @@ body.sticky {
   padding-left: 10px;
 }
 
-.search_box i {
+.movie_search_btn i {
   color: #f2a4a3;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 40px;
+  cursor: pointer;
 }
 
-.search_box button {
+.movie_search_btn {
   border: none;
   background: none;
 }
@@ -484,18 +490,12 @@ body.sticky {
   width: 250px;
   height: 34px;
   border-radius: 5px;
-  border: none;
   background: none;
 }
 
 #moviesearch::placeholder {
   color: rgb(175, 175, 175);
   font-style: italic;
-}
-
-#moviesearch:focus {
-  outline: none !important;
-  border-color: #f2a4a3;
 }
 
 .modal_box h3 {
@@ -636,6 +636,12 @@ body.sticky {
   color: #fff;
   font-size: 45px;
   transition: 0.1s;
+}
+
+.mVbtn button,
+.sound button,
+.mVcrousel button{
+  cursor: pointer;
 }
 
 .movieVideo .mVbtn {
@@ -884,6 +890,7 @@ body.sticky {
 .slidewrapper .mcCarousel button {
   top: 138px;
   position: absolute;
+  z-index: 100;
 }
 
 .slidewrapper .mC_prevBtn {
@@ -989,7 +996,6 @@ body.sticky {
 .event .event_move_wrapper {
   position: relative;
   width: 1272px;
-  height: 302px;
   overflow: hidden;
 }
 
@@ -1215,7 +1221,7 @@ body.sticky {
 .test_screening .screen_cell:after {
   content: '';
   position: absolute;
-  background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .6) 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .6) 100%);
   right: 0;
   left: 0;
   bottom: 0;
@@ -1226,11 +1232,6 @@ body.sticky {
   transform: scale(1.1);
 }
 
-.screen_cell figure {
-  position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .4) 100%);
-}
-
 .screen_cell figure:hover::after {
   content: '';
   position: absolute;
@@ -1238,7 +1239,6 @@ body.sticky {
   left: 0;
   right: 0;
   bottom: 0;
-  /* z-index: 2; */
 }
 
 /* 셀안의 h3 텍스트 효과  */
@@ -1497,24 +1497,30 @@ footer li:first-child {
   cursor: pointer;
 }
 
+
 .footer_write span a {
   color: #d74357;
   font-weight: bold;
 }
 
+.footer_write span{
+  color:#8a8a8a;
+} 
 .footer_box {
-  padding: 41px 0;
+  padding: 81px 0 41px;
 }
 
 .footer_write {
   margin-top: 47px;
 }
 
+
 /* aside */
 aside {
   position: fixed;
-  right: 15%;
+  right: calc(50% - 675px);
   bottom: 30%;
+  z-index: 100;
 }
 
 aside .wr {
@@ -1522,6 +1528,9 @@ aside .wr {
   height: 230px;
   position: absolute;
   left: 85%;
+  visibility:hidden;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 aside .circle_pop {
@@ -1530,17 +1539,7 @@ aside .circle_pop {
   position: relative;
 }
 
-.circle_up {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  position: relative;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
+.circle_top,
 .circle_down {
   width: 56px;
   height: 56px;
@@ -1550,6 +1549,33 @@ aside .circle_pop {
   position: relative;
   border-radius: 50%;
   cursor: pointer;
+}
+.circle_top a:focus,
+.circle_down a:focus{
+ outline: none;
+}
+
+.circle_pop span{
+  padding: 10px 15px;
+  position: absolute;
+  top:10px;
+  left: -45px;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 22.5px;
+  box-shadow: 0px 3px 7px 0 rgb(0 0 0 / 5%);
+  background:  #e64947;
+  font-size: 16px;
+  color:#fff;
+  letter-spacing: 0.05em;
+  z-index: 10000;
+  box-shadow: 2px 4px 5px -3px #7a2724;
+	background:linear-gradient(to bottom, #e64a47 5%, #e6524a 100%);
+}
+
+ 
+.circle_pop:hover span{
+ opacity: 1;
 }
 
 .circle_pop a {
@@ -1568,7 +1594,8 @@ aside .circle_pop {
 }
 
 .circle_up a i,
-.circle_down a i {
+.circle_down a i,
+.circle_top a i{
   position: absolute;
   font-size: 20px;
   left: 50%;
@@ -1578,7 +1605,8 @@ aside .circle_pop {
 }
 
 .circle_up a,
-.circle_down a {
+.circle_down a,
+.circle_top a {
   display: block;
   margin-bottom: 10px;
 }
@@ -1596,4 +1624,9 @@ aside .circle_pop {
     top: 5%;
   }
 }
+
+.wr.active {
+  visibility: visible;
+  opacity: 1;
+  }
 /* MAIN_3 끝 (정석) */

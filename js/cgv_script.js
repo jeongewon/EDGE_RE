@@ -179,8 +179,10 @@ window.addEventListener('scroll', () => {
 let lightbox = document.querySelector('#lightbox'),
   modalOpen = document.querySelector('#modal_open'),
   modalClose = document.querySelector('.modal_close'),
-  modal = document.querySelector('.modal_box');
-
+  modal = document.querySelector('.modal_box'),
+  searchInput = document.querySelector('#moviesearch'),
+  searchBox = document.querySelector('.search_box');
+  
 /* 
 modalOpen 버튼(검색 버튼) 클릭 시, 
   모달 display block 효과로 화면에 띄우고,
@@ -192,11 +194,14 @@ modalClose 버튼 클릭 시,
 modalOpen.addEventListener('click', () => {
   modal.style.display = 'block';
   lightbox.classList.add('visible');
+  searchInput.focus();
 });
 modalClose.addEventListener('click', () => {
   modal.style.display = 'none';
   lightbox.classList.remove('visible');
 });
+
+
 /* HEADER 끝 (유림) */
 
 /* MAIN_1 시작 (이원) */
@@ -244,7 +249,7 @@ setSlide();
 function moveslide(num) {
   videoslideWrapper.style.left = -num * videoslideWidth + 'px';
   videocurrentIdx = num;
-  console.log(videocurrentIdx);
+
   let activeIdx = videocurrentIdx + showSlides + 1;
   for (slide of allSlides) {
     slide.classList.remove('active');
@@ -419,7 +424,6 @@ set_eSlide();
 function move_eSlide(num) {
   eventM_Lists.style.left = -num * (eSlide_Width + eSlide_Margin) + 'px';
   choiceIdx = num;
-  console.log(choiceIdx);
 
   if (choiceIdx == -eSlide_Count || choiceIdx == eSlide_Count) {
     setTimeout(() => {
@@ -454,19 +458,33 @@ enextBtn.addEventListener('click', e_debounce(() => {
   move_eSlide(choiceIdx + 1); eprevBtn.style.visibility = 'visible';
 }, 500));
 /* MAIN_2 끝 (수연) */
-
 // MAIN_3 시작 (정석) //
+let scrollBtn = document.querySelector('aside .wr');
+let scrolOST = scrollBtn.offsetTop;
 let gotoTop = document.querySelector('.circle_down');
-let formend = document.querySelectorAll('.footer_form a')
+let gotoBottom = document.querySelector('.circle_top');
+let formend = document.querySelectorAll('.footer_form a');
+
 // let btntouch = document.querySelector('.circle_pop a');
 let scromamt = window.scrollY;
 gotoTop.addEventListener('click', function (e) {
   e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  });
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+gotoBottom.addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+});
+
+window.addEventListener('scroll',()=>{
+scromamt = window.scrollY;
+if (scromamt > 400) {
+  scrollBtn.classList.add('active');
+}
+else {
+  scrollBtn.classList.remove('active');
+}
 });
 
 for (let item of formend) {
