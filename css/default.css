@@ -99,6 +99,11 @@ header {
   cursor: pointer;
 }
 
+.ewon {
+  color: #e64947;
+  font-weight: bold;
+}
+
 /* ADD BANNER */
 .ad_top {
   position: relative;
@@ -150,7 +155,6 @@ header {
   z-index: 8;
   cursor: pointer;
 }
-
 
 /* HEADER */
 .header {
